@@ -1,0 +1,14 @@
+# Python
+.venv/
+venv/
+__pycache__/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Environment files
+.env
+env
+
+# Dataset folder
+dtu/
