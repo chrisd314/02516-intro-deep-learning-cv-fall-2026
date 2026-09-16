@@ -2,6 +2,7 @@
 .venv/
 venv/
 __pycache__/
+idlcv_test
 
 # Environment files
 .env
@@ -9,11 +10,6 @@ env
 
 # Dataset folder
 dtu/
-
-# dataset - not committed, the zip is 259 MB and github rejects anything over 100 MB
-# download it from DTU Learn and unzip it next to the notebook
-hotdog_nothotdog/
-hotdog_nothotdog.zip
 
 # local logs
 run.log
