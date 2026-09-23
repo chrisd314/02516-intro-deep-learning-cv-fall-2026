@@ -4,6 +4,9 @@ venv/
 __pycache__/
 idlcv_test
 
+# Jupyter
+.ipynb_checkpoints
+
 # Environment files
 .env
 env
