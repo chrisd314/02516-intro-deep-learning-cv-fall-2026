@@ -2,6 +2,7 @@
 .venv/
 venv/
 __pycache__/
+idlcv_test
 
 # Jupyter
 .ipynb_checkpoints
@@ -12,3 +13,6 @@ env
 
 # Dataset folder
 dtu/
+
+# local logs
+run.log
