@@ -11,8 +11,5 @@ idlcv_test
 .env
 env
 
-# Dataset folder
-dtu/
-
 # local logs
 run.log
