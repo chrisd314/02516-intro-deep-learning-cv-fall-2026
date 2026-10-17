@@ -13,3 +13,9 @@ env
 
 # local logs
 run.log
+
+# Project 2
+project2/cache/
+datasets/ucf101_noleakage/
+*.zip
+project2/results/runs/
