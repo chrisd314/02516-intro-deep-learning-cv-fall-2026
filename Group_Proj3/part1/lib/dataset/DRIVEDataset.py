@@ -33,14 +33,17 @@ def _files_by_id(folder, extensions):
     return files
 
 
-def _binary_mask_tensor(path, pil_size):
+def _binary_mask_tensor(path, pil_size, expected_size=None):
     with Image.open(path) as source:
+        if expected_size is not None and source.size != expected_size:
+            raise ValueError(f"Image and mask sizes differ for {path}: "
+                             f"{expected_size} vs {source.size}")
         mask = source.convert("L").resize(
             pil_size, resample=_RESAMPLING.NEAREST
         )
 
     array = np.asarray(mask, dtype=np.uint8)
-    # Assumes vessels or valid FOV pixels are nonzero; check a sample visually.
+    # Vessel foreground and valid FOV pixels are nonzero.
     array = (array > 0).astype(np.float32)
     return torch.from_numpy(array.copy()).unsqueeze(0)
 
@@ -52,6 +55,7 @@ class DRIVEDataset(Dataset):
         sample_ids=None,
         image_transform=None,
         size=256,
+        data_root=None,
     ):
         if split not in {"train", "val", "test", "official_test"}:
             raise ValueError(
@@ -64,9 +68,10 @@ class DRIVEDataset(Dataset):
             (size, size) if isinstance(size, int) else tuple(size)
         )
         self.pil_size = (self.width, self.height)
+        data_path = DATA_PATH if data_root is None else Path(data_root) / "DRIVE"
 
         if split == "official_test":
-            split_dir = DATA_PATH / "test"
+            split_dir = data_path / "test"
             image_dir = split_dir / "images"
             fov_dir = split_dir / "mask"
             target_dir = None
@@ -76,7 +81,7 @@ class DRIVEDataset(Dataset):
                 raise ValueError(
                     f"Pass fixed sample_ids for the labeled '{split}' split"
                 )
-            split_dir = DATA_PATH / "training"
+            split_dir = data_path / "training"
             image_dir = split_dir / "images"
             target_dir = split_dir / "1st_manual"
             fov_dir = split_dir / "mask"
@@ -134,6 +139,7 @@ class DRIVEDataset(Dataset):
         sample_id, image_path, fov_path, target_path = self.samples[index]
 
         with Image.open(image_path) as source:
+            original_size = source.size
             image = source.convert("RGB").resize(
                 self.pil_size, resample=_RESAMPLING.BILINEAR
             )
@@ -144,7 +150,7 @@ class DRIVEDataset(Dataset):
         else:
             image_tensor = self.image_transform(image)
 
-        valid_region = _binary_mask_tensor(fov_path, self.pil_size)
+        valid_region = _binary_mask_tensor(fov_path, self.pil_size, original_size)
 
         result = {
             "image": image_tensor,
@@ -154,7 +160,7 @@ class DRIVEDataset(Dataset):
 
         if target_path is not None:
             result["target"] = _binary_mask_tensor(
-                target_path, self.pil_size
+                target_path, self.pil_size, original_size
             )
 
         return result

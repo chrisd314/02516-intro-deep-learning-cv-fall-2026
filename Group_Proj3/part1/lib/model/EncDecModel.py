@@ -3,6 +3,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class EncDec(nn.Module):
+    """Map [B, 3, H, W] to binary logits [B, 1, H, W], with H and W >= 16."""
+
     def __init__(self):
         super().__init__()
 
@@ -20,13 +22,9 @@ class EncDec(nn.Module):
         self.bottleneck_conv = nn.Conv2d(64, 64, 3, padding=1)
 
         # decoder (upsampling)
-        self.upsample0 = nn.Upsample(16)  # 8 -> 16
         self.dec_conv0 = nn.Conv2d(64, 64, 3, padding=1)
-        self.upsample1 = nn.Upsample(32)  # 16 -> 32
         self.dec_conv1 = nn.Conv2d(64, 64, 3, padding=1)
-        self.upsample2 = nn.Upsample(64)  # 32 -> 64
         self.dec_conv2 = nn.Conv2d(64, 64, 3, padding=1)
-        self.upsample3 = nn.Upsample(128)  # 64 -> 128
         self.dec_conv3 = nn.Conv2d(64, 1, 3, padding=1)
 
     def forward(self, x):
@@ -39,9 +37,13 @@ class EncDec(nn.Module):
         # bottleneck
         b = F.relu(self.bottleneck_conv(e3))
 
-        # decoder
-        d0 = F.relu(self.dec_conv0(self.upsample0(b)))
-        d1 = F.relu(self.dec_conv1(self.upsample1(d0)))
-        d2 = F.relu(self.dec_conv2(self.upsample2(d1)))
-        d3 = self.dec_conv3(self.upsample3(d2))  # no activation
-        return d3
+        # Restore the recorded spatial sizes. Only shapes are reused here;
+        # encoder features are not concatenated into the decoder.
+        d0 = F.interpolate(b, size=e2.shape[-2:], mode="nearest")
+        d0 = F.relu(self.dec_conv0(d0))
+        d1 = F.interpolate(d0, size=e1.shape[-2:], mode="nearest")
+        d1 = F.relu(self.dec_conv1(d1))
+        d2 = F.interpolate(d1, size=e0.shape[-2:], mode="nearest")
+        d2 = F.relu(self.dec_conv2(d2))
+        d3 = F.interpolate(d2, size=x.shape[-2:], mode="nearest")
+        return self.dec_conv3(d3)  # logits; sigmoid is applied outside the model

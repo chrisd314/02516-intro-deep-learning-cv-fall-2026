@@ -21,20 +21,38 @@ def main():
     parser.add_argument("--dataset", choices=("PH2", "DRIVE"), default="PH2")
     parser.add_argument("--model", choices=("encdec", "unet"), default="unet")
     parser.add_argument("--checkpoint", required=True)
-    parser.add_argument("--output-dir", default="predictions")
+    parser.add_argument("--output-dir", default="predictions",
+                        help="Destination directory; existing prediction masks are protected.")
     parser.add_argument("--size", type=int, default=128)
     parser.add_argument("--split", choices=("train", "val", "test", "official_test"), default="test")
     parser.add_argument("--split-seed", type=int, default=42)
     parser.add_argument("--batch-size", type=int, default=6)
+    parser.add_argument("--data-root", default=None,
+                        help="Folder containing PH2_Dataset_images and DRIVE; defaults to HPC.")
     args = parser.parse_args()
+    if args.dataset == "PH2" and args.split == "official_test":
+        parser.error("--split official_test is available only for DRIVE")
+    if args.size < 32 or args.batch_size < 1:
+        parser.error("--size must be at least 32 and --batch-size must be positive")
+    if os.path.lexists(args.output_dir) and not os.path.isdir(args.output_dir):
+        parser.error(f"Output path is not a directory: {args.output_dir}")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if args.dataset == "DRIVE" and args.split == "official_test":
-        dataset = DRIVEDataset("official_test", size=args.size, image_transform=transforms.ToTensor())
+        dataset = DRIVEDataset("official_test", size=args.size,
+                               image_transform=transforms.ToTensor(), data_root=args.data_root)
     else:
-        split_ids = ph2_splits(args.split_seed) if args.dataset == "PH2" else drive_splits(args.split_seed)
+        split_fn = ph2_splits if args.dataset == "PH2" else drive_splits
+        split_ids = split_fn(args.split_seed, data_root=args.data_root)
         cls = PH2Dataset if args.dataset == "PH2" else DRIVEDataset
-        dataset = cls(args.split, split_ids[args.split], size=args.size, image_transform=transforms.ToTensor())
+        dataset = cls(args.split, split_ids[args.split], size=args.size,
+                      image_transform=transforms.ToTensor(), data_root=args.data_root)
+    output_paths = [os.path.join(args.output_dir, f"prediction_{index:03d}.png")
+                    for index in range(len(dataset))]
+    for path in output_paths:
+        if os.path.lexists(path):
+            parser.error(f"Prediction output already exists: {path}. "
+                         "Choose a new --output-dir.")
     loader = DataLoader(dataset, args.batch_size, shuffle=False)
     model = (EncDec() if args.model == "encdec" else UNet()).to(device)
     model.load_state_dict(torch.load(args.checkpoint, map_location=device))
@@ -46,9 +64,10 @@ def main():
             probabilities = torch.sigmoid(model(batch["image"].to(device)))
             predictions = (probabilities >= 0.5).squeeze(1).cpu().numpy()
             for prediction in predictions:
-                Image.fromarray((prediction.astype(np.uint8) * 255)).save(
-                    os.path.join(args.output_dir, f"prediction_{index:03d}.png")
-                )
+                with open(output_paths[index], "xb") as handle:
+                    Image.fromarray((prediction.astype(np.uint8) * 255)).save(
+                        handle, format="PNG"
+                    )
                 index += 1
     print(f"saved {index} masks to {args.output_dir}")
 

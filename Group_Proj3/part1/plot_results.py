@@ -2,6 +2,8 @@
 
 import argparse
 import csv
+import json
+import os
 import re
 from pathlib import Path
 
@@ -57,9 +59,28 @@ def parse_log(path):
     return [experiment for experiment in experiments if experiment["results"]]
 
 
+def parse_records(directory):
+    """Read completed train.py sidecars, preserving full metric precision."""
+    experiments = []
+    for path in sorted(directory.glob("*.pth.json")):
+        record = json.loads(path.read_text(encoding="utf-8"))
+        if record["status"] != "completed":
+            print(f"Skipping incomplete run record: {path}")
+            continue
+        config = record["config"]
+        experiments.append({
+            "dataset": config["dataset"], "model": config["model"], "loss": config["loss"],
+            "epochs": [{"epoch": row["epoch"], "train": row["train_loss"],
+                        "val": row["val_loss"], "dice": row["val_metrics"]["dice"]}
+                       for row in record["history"]],
+            "results": record["final_metrics"],
+        })
+    return experiments
+
+
 def write_summary(experiments, output):
     fields = ["dataset", "model", "loss", "split", "loss_value", *METRICS]
-    with output.open("w", newline="") as handle:
+    with output.open("x", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
         for experiment in experiments:
@@ -77,12 +98,29 @@ def write_summary(experiments, output):
                 })
 
 
+def save_figure(figure, output):
+    """Create a new PNG exclusively and close the figure even if saving fails."""
+    try:
+        with Path(output).open("xb") as handle:
+            figure.savefig(handle, format="png", dpi=200)
+    finally:
+        plt.close(figure)
+
+
 def save_metric_bars(experiments, output):
     rows = [
         (experiment, experiment["results"]["test"])
         for experiment in experiments
         if "test" in experiment["results"]
     ]
+    if not rows:
+        figure, axis = plt.subplots(figsize=(10, 4))
+        axis.text(0.5, 0.5, "No completed test results available",
+                  ha="center", va="center", transform=axis.transAxes)
+        axis.set_axis_off()
+        figure.tight_layout()
+        save_figure(figure, output)
+        return
     labels = [
         f'{experiment["dataset"]}\n{experiment["model"]}\n{experiment["loss"]}'
         for experiment, _ in rows
@@ -101,8 +139,7 @@ def save_metric_bars(experiments, output):
     axis.legend(ncol=len(METRICS))
     axis.grid(axis="y", alpha=0.25)
     figure.tight_layout()
-    figure.savefig(output, dpi=200)
-    plt.close(figure)
+    save_figure(figure, output)
 
 
 def save_ablation(experiments, output):
@@ -120,10 +157,13 @@ def save_ablation(experiments, output):
         for index, model in enumerate(("encdec", "unet")):
             values = [
                 next(
-                    experiment["results"]["test"]["dice"]
-                    for experiment in selected
-                    if experiment["model"] == model
-                    and experiment["loss"] == loss
+                    (
+                        experiment["results"]["test"]["dice"]
+                        for experiment in selected
+                        if experiment["model"] == model
+                        and experiment["loss"] == loss
+                    ),
+                    np.nan,
                 )
                 for loss in losses
             ]
@@ -131,9 +171,10 @@ def save_ablation(experiments, output):
                 x + (index - 0.5) * width, values, width, label=model
             )
             for bar, value in zip(bars, values):
+                missing = np.isnan(value)
                 axis.annotate(
-                    f"{value:.2f}",
-                    (bar.get_x() + bar.get_width() / 2, value),
+                    "N/A" if missing else f"{value:.2f}",
+                    (bar.get_x() + bar.get_width() / 2, 0 if missing else value),
                     xytext=(0, 3),
                     textcoords="offset points",
                     ha="center",
@@ -148,8 +189,7 @@ def save_ablation(experiments, output):
         axis.grid(axis="y", alpha=0.25)
         axis.legend()
     figure.tight_layout()
-    figure.savefig(output, dpi=200)
-    plt.close(figure)
+    save_figure(figure, output)
 
 
 def save_convergence(experiments, output):
@@ -171,26 +211,47 @@ def save_convergence(experiments, output):
         axis.set_ylabel("Validation Dice")
         axis.set_ylim(0, 1.05)
         axis.grid(alpha=0.25)
-        axis.legend(fontsize=8)
+        if axis.lines:
+            axis.legend(fontsize=8)
+        else:
+            axis.text(0.5, 0.5, "No epoch history available",
+                      ha="center", va="center", transform=axis.transAxes)
     figure.tight_layout()
-    figure.savefig(output, dpi=200)
-    plt.close(figure)
+    save_figure(figure, output)
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("log", type=Path, help="LSF output file, e.g. modelrun.123.out")
-    parser.add_argument("--output-dir", type=Path, default=Path("plots"))
+    parser.add_argument("log", type=Path, nargs="?",
+                        help="LSF output file, e.g. modelrun.123.out")
+    parser.add_argument("--records-dir", type=Path,
+                        help="Read completed .pth.json records instead of a text log.")
+    parser.add_argument("--output-dir", type=Path, default=Path("plots"),
+                        help="Destination directory; existing report outputs are protected.")
     args = parser.parse_args()
+    if (args.log is None) == (args.records_dir is None):
+        parser.error("Provide either a log path or --records-dir")
+    if os.path.lexists(args.output_dir) and not args.output_dir.is_dir():
+        parser.error(f"Output path is not a directory: {args.output_dir}")
+    outputs = {
+        "summary": args.output_dir / "metrics_summary.csv",
+        "metrics": args.output_dir / "test_metrics.png",
+        "ablation": args.output_dir / "loss_ablation.png",
+        "convergence": args.output_dir / "training_curves.png",
+    }
+    for path in outputs.values():
+        if os.path.lexists(path):
+            parser.error(f"Report output already exists: {path}. "
+                         "Choose a new --output-dir.")
 
-    experiments = parse_log(args.log)
+    experiments = parse_log(args.log) if args.log is not None else parse_records(args.records_dir)
     if not experiments:
-        raise SystemExit(f"No completed experiment results found in {args.log}")
+        raise SystemExit(f"No completed experiment results found in {args.log or args.records_dir}")
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    write_summary(experiments, args.output_dir / "metrics_summary.csv")
-    save_metric_bars(experiments, args.output_dir / "test_metrics.png")
-    save_ablation(experiments, args.output_dir / "loss_ablation.png")
-    save_convergence(experiments, args.output_dir / "training_curves.png")
+    write_summary(experiments, outputs["summary"])
+    save_metric_bars(experiments, outputs["metrics"])
+    save_ablation(experiments, outputs["ablation"])
+    save_convergence(experiments, outputs["convergence"])
     print(f"Parsed {len(experiments)} experiments")
     print(f"Saved figures and metrics to {args.output_dir}")
 

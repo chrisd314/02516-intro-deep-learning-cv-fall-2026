@@ -30,20 +30,20 @@ def _binary_mask_tensor(mask_path, pil_size):
         )
 
     array = np.asarray(mask, dtype=np.uint8)
-    # Assumes lesion pixels are nonzero; confirm with a visual sample.
+    # Lesion foreground is nonzero; nearest-neighbor resizing preserves labels.
     array = (array > 0).astype(np.float32)
     return torch.from_numpy(array.copy()).unsqueeze(0)
 
 
 class PH2Dataset(Dataset):
     def __init__(self, split, sample_ids=None, image_transform=None, size=256,
-                 split_seed=42):
+                 split_seed=42, data_root=None):
         if split not in {"train", "val", "test"}:
             raise ValueError("split must be 'train', 'val', or 'test'")
 
         if sample_ids is None:
             from lib.splits import ph2_splits
-            sample_ids = ph2_splits(split_seed)[split]
+            sample_ids = ph2_splits(split_seed, data_root=data_root)[split]
 
         self.split = split
         self.image_transform = image_transform
@@ -52,14 +52,15 @@ class PH2Dataset(Dataset):
         )
         self.pil_size = (self.width, self.height)
 
-        if not DATA_PATH.is_dir():
-            raise FileNotFoundError(f"PH2 dataset folder not found: {DATA_PATH}")
+        data_path = DATA_PATH if data_root is None else Path(data_root) / "PH2_Dataset_images"
+        if not data_path.is_dir():
+            raise FileNotFoundError(f"PH2 dataset folder not found: {data_path}")
 
         # Build the available-case map from the actual folders. IDs are not
         # consecutive, so don't generate them from a numeric range.
         case_dirs = {
             path.name: path
-            for path in DATA_PATH.iterdir()
+            for path in data_path.iterdir()
             if path.is_dir() and re.fullmatch(r"IMD\d+", path.name)
         }
 

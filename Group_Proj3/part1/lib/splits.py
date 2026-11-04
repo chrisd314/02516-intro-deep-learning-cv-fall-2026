@@ -7,18 +7,24 @@ import re
 
 def _partition(ids, seed, fractions=(0.7, 0.15, 0.15)):
     ids = list(ids)
+    if len(ids) != len(set(ids)):
+        raise ValueError("Dataset IDs must be unique before splitting")
     random.Random(seed).shuffle(ids)
     n_train = int(len(ids) * fractions[0])
     n_val = int(len(ids) * fractions[1])
-    return {
+    splits = {
         "train": ids[:n_train],
         "val": ids[n_train:n_train + n_val],
         "test": ids[n_train + n_val:],
     }
+    if not all(splits.values()):
+        raise ValueError("Not enough samples for nonempty train/val/test splits")
+    return splits
 
 
-def ph2_splits(seed=42):
-    data_path = Path("/dtu/datasets1/02516/PH2_Dataset_images")
+def ph2_splits(seed=42, data_root=None):
+    root = Path("/dtu/datasets1/02516") if data_root is None else Path(data_root)
+    data_path = root / "PH2_Dataset_images"
     ids = sorted(
         path.name
         for path in data_path.iterdir()
@@ -29,12 +35,14 @@ def ph2_splits(seed=42):
     return _partition(ids, seed)
 
 
-def drive_splits(seed=42):
-    data_path = Path("/dtu/datasets1/02516/DRIVE/training/images")
+def drive_splits(seed=42, data_root=None):
+    root = Path("/dtu/datasets1/02516") if data_root is None else Path(data_root)
+    data_path = root / "DRIVE/training/images"
     ids = sorted(
         match.group(1)
         for path in data_path.iterdir()
         if path.is_file()
+        and path.suffix.lower() in {".tif", ".tiff", ".jpg", ".jpeg", ".png"}
         for match in [re.match(r"^(\d+)", path.stem)]
         if match is not None
     )
