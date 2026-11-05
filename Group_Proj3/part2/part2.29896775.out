@@ -1,0 +1,305 @@
+Saved Part 2 visualizations to runs/part2_29896775_visualizations
+Starting fully_supervised
+Training PH2 unet supervision=full strategy=uniform clicks=10+10 device=cuda
+epoch 1/20 train_loss=0.41694 val_loss=0.71800 val_dice=0.13637 time=3.2s
+epoch 2/20 train_loss=0.30121 val_loss=0.60600 val_dice=0.72234 time=2.2s
+epoch 3/20 train_loss=0.26925 val_loss=0.27896 val_dice=0.85551 time=2.2s
+epoch 4/20 train_loss=0.26360 val_loss=0.25870 val_dice=0.83844 time=1.9s
+epoch 5/20 train_loss=0.21634 val_loss=0.22822 val_dice=0.88497 time=1.9s
+epoch 6/20 train_loss=0.23040 val_loss=0.39301 val_dice=0.79791 time=1.6s
+epoch 7/20 train_loss=0.20490 val_loss=0.20995 val_dice=0.89810 time=1.9s
+epoch 8/20 train_loss=0.18743 val_loss=0.21766 val_dice=0.89655 time=1.6s
+epoch 9/20 train_loss=0.21792 val_loss=0.21265 val_dice=0.88543 time=1.6s
+epoch 10/20 train_loss=0.19856 val_loss=0.27350 val_dice=0.85319 time=1.6s
+epoch 11/20 train_loss=0.17861 val_loss=0.31610 val_dice=0.86965 time=1.6s
+epoch 12/20 train_loss=0.22479 val_loss=0.40667 val_dice=0.82956 time=1.6s
+epoch 13/20 train_loss=0.18159 val_loss=0.19582 val_dice=0.90556 time=1.9s
+epoch 14/20 train_loss=0.15670 val_loss=0.16889 val_dice=0.91843 time=1.9s
+epoch 15/20 train_loss=0.16495 val_loss=0.22199 val_dice=0.87752 time=1.6s
+epoch 16/20 train_loss=0.17127 val_loss=0.14644 val_dice=0.92597 time=1.9s
+epoch 17/20 train_loss=0.15060 val_loss=0.19235 val_dice=0.89601 time=1.6s
+epoch 18/20 train_loss=0.17044 val_loss=0.17094 val_dice=0.91027 time=1.6s
+epoch 19/20 train_loss=0.18786 val_loss=0.16828 val_dice=0.89992 time=1.6s
+epoch 20/20 train_loss=0.19066 val_loss=0.21395 val_dice=0.88916 time=1.6s
+train dense_evaluation_bce=0.119952 {'dice': 0.9307762326625197, 'iou': 0.8705158462576028, 'accuracy': 0.956467546735493, 'sensitivity': 0.90475080190842, 'specificity': 0.9811957880627421}
+val dense_evaluation_bce=0.146442 {'dice': 0.9259739030651696, 'iou': 0.8621521448201798, 'accuracy': 0.9490763346354271, 'sensitivity': 0.9030845644863176, 'specificity': 0.9741335688446304}
+test dense_evaluation_bce=0.168442 {'dice': 0.8783038742548528, 'iou': 0.7830140927619529, 'accuracy': 0.9337158203125134, 'sensitivity': 0.8349584892797695, 'specificity': 0.9733656864729926}
+Saved /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/full_unet_bce.pth.json
+Starting points_uniform_01p_01n
+Training PH2 unet supervision=points strategy=uniform clicks=1+1 device=cuda
+epoch 1/20 train_loss=0.46076 val_loss=0.55018 val_dice=0.68669 time=5.9s
+epoch 2/20 train_loss=0.33735 val_loss=0.50408 val_dice=0.72472 time=2.1s
+epoch 3/20 train_loss=0.29415 val_loss=0.40234 val_dice=0.82909 time=2.1s
+epoch 4/20 train_loss=0.24870 val_loss=0.45967 val_dice=0.75555 time=1.7s
+epoch 5/20 train_loss=0.24424 val_loss=0.46418 val_dice=0.78072 time=1.6s
+epoch 6/20 train_loss=0.21645 val_loss=0.31108 val_dice=0.83744 time=1.9s
+epoch 7/20 train_loss=0.17880 val_loss=0.32695 val_dice=0.82515 time=1.6s
+epoch 8/20 train_loss=0.16221 val_loss=0.37269 val_dice=0.79048 time=1.6s
+epoch 9/20 train_loss=0.11534 val_loss=0.35881 val_dice=0.81337 time=1.5s
+epoch 10/20 train_loss=0.10535 val_loss=0.55731 val_dice=0.72003 time=1.5s
+epoch 11/20 train_loss=0.23031 val_loss=0.41007 val_dice=0.78686 time=1.5s
+epoch 12/20 train_loss=0.12633 val_loss=0.49556 val_dice=0.73108 time=1.5s
+epoch 13/20 train_loss=0.06579 val_loss=0.37162 val_dice=0.80680 time=1.5s
+epoch 14/20 train_loss=0.04978 val_loss=0.39322 val_dice=0.78582 time=1.5s
+epoch 15/20 train_loss=0.03739 val_loss=0.43921 val_dice=0.78248 time=1.5s
+epoch 16/20 train_loss=0.02162 val_loss=0.43550 val_dice=0.79040 time=1.6s
+epoch 17/20 train_loss=0.01745 val_loss=0.49983 val_dice=0.77320 time=1.5s
+epoch 18/20 train_loss=0.01790 val_loss=0.48034 val_dice=0.78265 time=1.5s
+epoch 19/20 train_loss=0.07872 val_loss=0.47796 val_dice=0.78557 time=1.5s
+epoch 20/20 train_loss=0.09527 val_loss=0.61267 val_dice=0.77116 time=1.5s
+train dense_evaluation_bce=0.298564 {'dice': 0.8299049764372581, 'iou': 0.7092628886757909, 'accuracy': 0.8905735560825939, 'sensitivity': 0.8252486589935274, 'specificity': 0.9218085037827577}
+val dense_evaluation_bce=0.311077 {'dice': 0.8374378235712582, 'iou': 0.7203380950719149, 'accuracy': 0.8859680175781482, 'sensitivity': 0.8328266425148212, 'specificity': 0.914920499225291}
+test dense_evaluation_bce=0.337275 {'dice': 0.7775053515311537, 'iou': 0.6359989816766102, 'accuracy': 0.8807332356771076, 'sensitivity': 0.7274283238761372, 'specificity': 0.9422832914662581}
+Saved /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_01p_01n.pth.json
+Starting points_uniform_05p_05n
+Training PH2 unet supervision=points strategy=uniform clicks=5+5 device=cuda
+epoch 1/20 train_loss=0.42450 val_loss=0.52038 val_dice=0.65881 time=3.1s
+epoch 2/20 train_loss=0.30058 val_loss=0.83973 val_dice=0.63592 time=1.7s
+epoch 3/20 train_loss=0.25158 val_loss=1.23188 val_dice=0.69937 time=1.6s
+epoch 4/20 train_loss=0.22890 val_loss=0.34389 val_dice=0.83596 time=1.9s
+epoch 5/20 train_loss=0.19743 val_loss=0.37408 val_dice=0.82463 time=1.5s
+epoch 6/20 train_loss=0.18757 val_loss=0.27335 val_dice=0.85636 time=1.9s
+epoch 7/20 train_loss=0.19567 val_loss=0.24278 val_dice=0.88114 time=2.0s
+epoch 8/20 train_loss=0.17573 val_loss=0.25832 val_dice=0.87409 time=1.5s
+epoch 9/20 train_loss=0.14810 val_loss=0.22093 val_dice=0.88757 time=1.9s
+epoch 10/20 train_loss=0.14080 val_loss=0.25137 val_dice=0.88113 time=1.6s
+epoch 11/20 train_loss=0.12541 val_loss=0.23490 val_dice=0.87071 time=1.6s
+epoch 12/20 train_loss=0.15141 val_loss=0.37011 val_dice=0.82224 time=1.6s
+epoch 13/20 train_loss=0.12695 val_loss=0.28683 val_dice=0.85095 time=1.5s
+epoch 14/20 train_loss=0.10340 val_loss=0.40440 val_dice=0.81699 time=1.5s
+epoch 15/20 train_loss=0.10905 val_loss=0.26301 val_dice=0.86374 time=1.8s
+epoch 16/20 train_loss=0.11544 val_loss=0.23153 val_dice=0.88329 time=1.6s
+epoch 17/20 train_loss=0.11230 val_loss=0.36832 val_dice=0.85030 time=1.5s
+epoch 18/20 train_loss=0.10036 val_loss=0.33599 val_dice=0.84434 time=1.6s
+epoch 19/20 train_loss=0.11330 val_loss=0.23311 val_dice=0.87620 time=1.6s
+epoch 20/20 train_loss=0.09591 val_loss=0.26808 val_dice=0.86129 time=1.6s
+train dense_evaluation_bce=0.227353 {'dice': 0.8777390203936026, 'iou': 0.7821166701362637, 'accuracy': 0.917866298130584, 'sensitivity': 0.9114329227203009, 'specificity': 0.920942401629102}
+val dense_evaluation_bce=0.220926 {'dice': 0.8875703422480631, 'iou': 0.7978664862655442, 'accuracy': 0.9185424804687665, 'sensitivity': 0.9116915781640803, 'specificity': 0.9222749887639987}
+test dense_evaluation_bce=0.257775 {'dice': 0.8350977040175853, 'iou': 0.7168821856543856, 'accuracy': 0.9052103678385609, 'sensitivity': 0.8378347667375643, 'specificity': 0.9322608514654626}
+Saved /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_05p_05n.pth.json
+Starting points_uniform_10p_10n
+Training PH2 unet supervision=points strategy=uniform clicks=10+10 device=cuda
+epoch 1/20 train_loss=0.39533 val_loss=0.49935 val_dice=0.57975 time=2.4s
+epoch 2/20 train_loss=0.27497 val_loss=0.96567 val_dice=0.66856 time=1.7s
+epoch 3/20 train_loss=0.23051 val_loss=0.41831 val_dice=0.71594 time=1.9s
+epoch 4/20 train_loss=0.22544 val_loss=0.25475 val_dice=0.86711 time=2.0s
+epoch 5/20 train_loss=0.19247 val_loss=0.28797 val_dice=0.86458 time=1.5s
+epoch 6/20 train_loss=0.19619 val_loss=0.24730 val_dice=0.88331 time=2.0s
+epoch 7/20 train_loss=0.17246 val_loss=0.27513 val_dice=0.86364 time=1.6s
+epoch 8/20 train_loss=0.15505 val_loss=0.23499 val_dice=0.87671 time=1.9s
+epoch 9/20 train_loss=0.16706 val_loss=0.25270 val_dice=0.87490 time=1.5s
+epoch 10/20 train_loss=0.18228 val_loss=0.26269 val_dice=0.84978 time=1.5s
+epoch 11/20 train_loss=0.17662 val_loss=0.36760 val_dice=0.84435 time=1.5s
+epoch 12/20 train_loss=0.19386 val_loss=0.20226 val_dice=0.90190 time=1.9s
+epoch 13/20 train_loss=0.13819 val_loss=0.22101 val_dice=0.89205 time=1.6s
+epoch 14/20 train_loss=0.11308 val_loss=0.23759 val_dice=0.88578 time=1.5s
+epoch 15/20 train_loss=0.13274 val_loss=0.17785 val_dice=0.90915 time=1.9s
+epoch 16/20 train_loss=0.12806 val_loss=0.18044 val_dice=0.91251 time=1.5s
+epoch 17/20 train_loss=0.11774 val_loss=0.29534 val_dice=0.87167 time=1.5s
+epoch 18/20 train_loss=0.10962 val_loss=0.26388 val_dice=0.87031 time=1.5s
+epoch 19/20 train_loss=0.14381 val_loss=0.20493 val_dice=0.89714 time=1.5s
+epoch 20/20 train_loss=0.10669 val_loss=0.18526 val_dice=0.90283 time=1.5s
+train dense_evaluation_bce=0.185368 {'dice': 0.8928214186316377, 'iou': 0.8063933259332138, 'accuracy': 0.9321725027901815, 'sensitivity': 0.8733496859753803, 'specificity': 0.9602984959208161}
+val dense_evaluation_bce=0.177846 {'dice': 0.9091526645184996, 'iou': 0.8334371226357248, 'accuracy': 0.9374206542968877, 'sensitivity': 0.8878723023762235, 'specificity': 0.9644155852319447}
+test dense_evaluation_bce=0.208885 {'dice': 0.8536633274406357, 'iou': 0.7446881425635646, 'accuracy': 0.9196675618489747, 'sensitivity': 0.8179209840421159, 'specificity': 0.9605175741988576}
+Saved /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_10p_10n.pth.json
+Starting points_uniform_20p_20n
+Training PH2 unet supervision=points strategy=uniform clicks=20+20 device=cuda
+epoch 1/20 train_loss=0.39009 val_loss=0.49723 val_dice=0.51211 time=3.0s
+epoch 2/20 train_loss=0.25808 val_loss=1.00840 val_dice=0.68923 time=1.6s
+epoch 3/20 train_loss=0.21853 val_loss=0.29183 val_dice=0.85424 time=2.2s
+epoch 4/20 train_loss=0.21245 val_loss=0.35363 val_dice=0.78497 time=1.6s
+epoch 5/20 train_loss=0.18188 val_loss=0.30034 val_dice=0.85270 time=1.6s
+epoch 6/20 train_loss=0.18769 val_loss=0.31850 val_dice=0.81507 time=1.6s
+epoch 7/20 train_loss=0.15989 val_loss=0.21033 val_dice=0.88816 time=2.0s
+epoch 8/20 train_loss=0.15258 val_loss=0.25648 val_dice=0.86631 time=1.7s
+epoch 9/20 train_loss=0.16281 val_loss=0.22072 val_dice=0.87604 time=1.7s
+epoch 10/20 train_loss=0.15726 val_loss=0.30347 val_dice=0.86051 time=1.7s
+epoch 11/20 train_loss=0.14439 val_loss=0.20588 val_dice=0.88804 time=1.9s
+epoch 12/20 train_loss=0.16363 val_loss=0.24717 val_dice=0.87747 time=1.6s
+epoch 13/20 train_loss=0.12909 val_loss=0.36019 val_dice=0.81312 time=1.5s
+epoch 14/20 train_loss=0.11586 val_loss=0.20153 val_dice=0.89309 time=2.0s
+epoch 15/20 train_loss=0.12231 val_loss=0.19664 val_dice=0.90145 time=2.1s
+epoch 16/20 train_loss=0.13530 val_loss=0.22202 val_dice=0.88123 time=1.7s
+epoch 17/20 train_loss=0.11512 val_loss=0.20375 val_dice=0.89234 time=1.7s
+epoch 18/20 train_loss=0.12157 val_loss=0.26964 val_dice=0.86196 time=1.7s
+epoch 19/20 train_loss=0.15143 val_loss=0.25313 val_dice=0.87482 time=1.5s
+epoch 20/20 train_loss=0.14512 val_loss=0.19375 val_dice=0.89311 time=1.9s
+train dense_evaluation_bce=0.198530 {'dice': 0.880517023315504, 'iou': 0.7865390020697693, 'accuracy': 0.9235181535993336, 'sensitivity': 0.871195989110236, 'specificity': 0.948535874930728}
+val dense_evaluation_bce=0.193747 {'dice': 0.8931055987116082, 'iou': 0.8068570928465431, 'accuracy': 0.9281616210937647, 'sensitivity': 0.8509405989144023, 'specificity': 0.9702331750337174}
+test dense_evaluation_bce=0.252776 {'dice': 0.8313536822224011, 'iou': 0.7113817667294581, 'accuracy': 0.9037211100260613, 'sensitivity': 0.8283750097652613, 'specificity': 0.9339716520345884}
+Saved /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_20p_20n.pth.json
+Starting points_uniform_50p_50n
+Training PH2 unet supervision=points strategy=uniform clicks=50+50 device=cuda
+epoch 1/20 train_loss=0.36774 val_loss=0.41670 val_dice=0.66543 time=2.7s
+epoch 2/20 train_loss=0.24030 val_loss=0.71864 val_dice=0.67661 time=1.8s
+epoch 3/20 train_loss=0.20974 val_loss=0.33972 val_dice=0.80994 time=2.0s
+epoch 4/20 train_loss=0.20298 val_loss=0.19368 val_dice=0.91111 time=1.9s
+epoch 5/20 train_loss=0.19434 val_loss=0.42964 val_dice=0.79871 time=1.6s
+epoch 6/20 train_loss=0.17897 val_loss=0.19116 val_dice=0.90587 time=1.9s
+epoch 7/20 train_loss=0.15787 val_loss=0.23708 val_dice=0.88093 time=1.5s
+epoch 8/20 train_loss=0.15653 val_loss=0.20856 val_dice=0.89345 time=1.5s
+epoch 9/20 train_loss=0.16202 val_loss=0.17496 val_dice=0.90830 time=1.9s
+epoch 10/20 train_loss=0.15208 val_loss=0.16507 val_dice=0.91695 time=1.9s
+epoch 11/20 train_loss=0.13541 val_loss=0.16197 val_dice=0.91421 time=1.9s
+epoch 12/20 train_loss=0.15531 val_loss=0.18487 val_dice=0.90506 time=1.5s
+epoch 13/20 train_loss=0.13731 val_loss=0.25036 val_dice=0.87177 time=1.5s
+epoch 14/20 train_loss=0.13160 val_loss=0.15998 val_dice=0.91726 time=1.9s
+epoch 15/20 train_loss=0.13277 val_loss=0.16332 val_dice=0.91447 time=1.6s
+epoch 16/20 train_loss=0.12845 val_loss=0.17592 val_dice=0.90573 time=1.6s
+epoch 17/20 train_loss=0.12202 val_loss=0.18876 val_dice=0.90242 time=1.5s
+epoch 18/20 train_loss=0.13175 val_loss=0.17882 val_dice=0.90237 time=1.5s
+epoch 19/20 train_loss=0.13463 val_loss=0.22465 val_dice=0.89161 time=1.5s
+epoch 20/20 train_loss=0.13655 val_loss=0.20027 val_dice=0.89545 time=1.5s
+train dense_evaluation_bce=0.147341 {'dice': 0.9178816355409839, 'iou': 0.8482266503256981, 'accuracy': 0.9468205043247792, 'sensitivity': 0.9187902638885255, 'specificity': 0.9602230986351183}
+val dense_evaluation_bce=0.159977 {'dice': 0.9172563724703686, 'iou': 0.8471593359207379, 'accuracy': 0.94231160481772, 'sensitivity': 0.9066496680069994, 'specificity': 0.9617409396774831}
+test dense_evaluation_bce=0.195875 {'dice': 0.8663601463847509, 'iou': 0.764228730687224, 'accuracy': 0.921173095703141, 'sensitivity': 0.8919158848637554, 'specificity': 0.932919509684576}
+Saved /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_50p_50n.pth.json
+Starting points_interior_10p_10n
+Training PH2 unet supervision=points strategy=interior clicks=10+10 device=cuda
+epoch 1/20 train_loss=0.36861 val_loss=0.51652 val_dice=0.50423 time=3.1s
+epoch 2/20 train_loss=0.21553 val_loss=0.49859 val_dice=0.74489 time=2.1s
+epoch 3/20 train_loss=0.17379 val_loss=0.41202 val_dice=0.78525 time=2.2s
+epoch 4/20 train_loss=0.15334 val_loss=0.22668 val_dice=0.88236 time=2.1s
+epoch 5/20 train_loss=0.12154 val_loss=0.27072 val_dice=0.87694 time=1.7s
+epoch 6/20 train_loss=0.13280 val_loss=0.25121 val_dice=0.85553 time=1.6s
+epoch 7/20 train_loss=0.11856 val_loss=0.36915 val_dice=0.79334 time=1.5s
+epoch 8/20 train_loss=0.11981 val_loss=0.21300 val_dice=0.89248 time=1.9s
+epoch 9/20 train_loss=0.10692 val_loss=0.18562 val_dice=0.90562 time=1.9s
+epoch 10/20 train_loss=0.10205 val_loss=0.29182 val_dice=0.85522 time=1.5s
+epoch 11/20 train_loss=0.11142 val_loss=0.30502 val_dice=0.81287 time=1.5s
+epoch 12/20 train_loss=0.10345 val_loss=1.02791 val_dice=0.73596 time=1.5s
+epoch 13/20 train_loss=0.09633 val_loss=0.39963 val_dice=0.79337 time=1.5s
+epoch 14/20 train_loss=0.08031 val_loss=0.31907 val_dice=0.83510 time=1.5s
+epoch 15/20 train_loss=0.06536 val_loss=0.23617 val_dice=0.87662 time=1.6s
+epoch 16/20 train_loss=0.09102 val_loss=0.21221 val_dice=0.89877 time=1.5s
+epoch 17/20 train_loss=0.07257 val_loss=0.22370 val_dice=0.90061 time=1.5s
+epoch 18/20 train_loss=0.07371 val_loss=0.20203 val_dice=0.89538 time=1.6s
+epoch 19/20 train_loss=0.08904 val_loss=0.22335 val_dice=0.88816 time=1.6s
+epoch 20/20 train_loss=0.08147 val_loss=0.17952 val_dice=0.90838 time=1.9s
+train dense_evaluation_bce=0.189460 {'dice': 0.8919604186757317, 'iou': 0.8049896715871125, 'accuracy': 0.9278102329799138, 'sensitivity': 0.9212215962694519, 'specificity': 0.9309605743082182}
+val dense_evaluation_bce=0.179523 {'dice': 0.9083846960256354, 'iou': 0.8321472708548753, 'accuracy': 0.9336812337239718, 'sensitivity': 0.9322514955551973, 'specificity': 0.9344601836108235}
+test dense_evaluation_bce=0.227788 {'dice': 0.8527979191534615, 'iou': 0.743372012125588, 'accuracy': 0.9159484863281421, 'sensitivity': 0.8498938263013558, 'specificity': 0.9424686281945801}
+Saved /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_interior_10p_10n.pth.json
+Starting points_boundary_10p_10n
+Training PH2 unet supervision=points strategy=boundary clicks=10+10 device=cuda
+epoch 1/20 train_loss=0.60566 val_loss=0.55319 val_dice=0.47158 time=3.5s
+epoch 2/20 train_loss=0.53578 val_loss=0.47971 val_dice=0.75036 time=2.1s
+epoch 3/20 train_loss=0.51533 val_loss=0.51887 val_dice=0.72064 time=1.7s
+epoch 4/20 train_loss=0.45720 val_loss=0.48158 val_dice=0.71307 time=1.6s
+epoch 5/20 train_loss=0.45565 val_loss=0.55632 val_dice=0.66808 time=1.6s
+epoch 6/20 train_loss=0.45159 val_loss=0.41714 val_dice=0.75329 time=1.9s
+epoch 7/20 train_loss=0.44132 val_loss=0.59200 val_dice=0.60978 time=1.5s
+epoch 8/20 train_loss=0.40785 val_loss=0.49590 val_dice=0.69659 time=1.5s
+epoch 9/20 train_loss=0.38432 val_loss=0.49959 val_dice=0.71311 time=1.5s
+epoch 10/20 train_loss=0.36235 val_loss=0.64742 val_dice=0.63068 time=1.5s
+epoch 11/20 train_loss=0.32426 val_loss=0.55498 val_dice=0.61760 time=1.5s
+epoch 12/20 train_loss=0.32292 val_loss=0.83965 val_dice=0.62316 time=1.5s
+epoch 13/20 train_loss=0.30823 val_loss=0.69726 val_dice=0.65837 time=1.5s
+epoch 14/20 train_loss=0.27293 val_loss=0.61346 val_dice=0.65940 time=1.5s
+epoch 15/20 train_loss=0.24834 val_loss=0.64568 val_dice=0.58988 time=1.5s
+epoch 16/20 train_loss=0.21931 val_loss=0.72597 val_dice=0.58968 time=1.5s
+epoch 17/20 train_loss=0.17893 val_loss=0.62031 val_dice=0.61370 time=1.5s
+epoch 18/20 train_loss=0.18135 val_loss=0.82823 val_dice=0.61234 time=1.5s
+epoch 19/20 train_loss=0.21145 val_loss=0.96559 val_dice=0.61439 time=1.5s
+epoch 20/20 train_loss=0.17990 val_loss=0.70305 val_dice=0.61710 time=1.5s
+train dense_evaluation_bce=0.440152 {'dice': 0.7148097362179666, 'iou': 0.5561898159066856, 'accuracy': 0.7957131522042499, 'sensitivity': 0.7914472088196728, 'specificity': 0.797752903117723}
+val dense_evaluation_bce=0.417141 {'dice': 0.7532867751824853, 'iou': 0.6042181635579048, 'accuracy': 0.8139933268229546, 'sensitivity': 0.8051768995138046, 'specificity': 0.8187966923655311}
+test dense_evaluation_bce=0.453375 {'dice': 0.6702812097077997, 'iou': 0.5040774144138175, 'accuracy': 0.7944925944010834, 'sensitivity': 0.7291682941901119, 'specificity': 0.82071950569274}
+Saved /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_boundary_10p_10n.pth.json
+Saved 8 verified experiment records to /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/report
+Completed suite: /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 29896775: <idlcv-points> in cluster <dcc> Done
+
+Job <idlcv-points> was submitted from host <hpclogin1> by user <s263578> in cluster <dcc> at Thu Nov  5 10:24:20 2026
+Job was executed on host(s) <4*n-62-18-13>, in queue <c02516>, as user <s263578> in cluster <dcc> at Thu Nov  5 10:24:22 2026
+</zhome/bf/0/233720> was used as the home directory.
+</zhome/bf/0/233720/IDLCV/Proj3_Git/part1> was used as the working directory.
+Started at Thu Nov  5 10:24:22 2026
+Terminated at Thu Nov  5 10:30:33 2026
+Results reported at Thu Nov  5 10:30:33 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q c02516
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -J idlcv-points
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=4GB]"
+#BSUB -W 12:00
+#BSUB -o /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/part2.%J.out
+#BSUB -e /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/part2.%J.err
+
+set -euo pipefail
+
+PROJECT_DIR="/zhome/bf/0/233720/IDLCV/Proj3_Git/part2"
+cd "$PROJECT_DIR"
+if [[ ! -f run_experiments.py || ! -f lib/points.py ]]; then
+    echo "Set PROJECT_DIR to Group_Proj3/part2, not the Part 1 folder." >&2
+    exit 1
+fi
+
+ENVIRONMENT="/zhome/bf/0/233720/IDLCV/~venvs/IDLCV_venv/bin/activate"
+if [[ ! -f "$ENVIRONMENT" ]]; then
+    echo "Environment activation file not found: $ENVIRONMENT" >&2
+    exit 1
+fi
+source "$ENVIRONMENT"
+python -c "import torch, torchvision, numpy, PIL, matplotlib; assert torch.cuda.is_available(), 'No CUDA GPU available in this job'"
+
+DATA_ROOT="${DATA_ROOT:-/dtu/datasets1/02516}"
+RUN_DIR="${RUN_DIR:-runs/part2_${LSB_JOBID:-$(date +%Y%m%d_%H%M%S)}}"
+VISUAL_DIR="${RUN_DIR}_visualizations"
+read -r -a task_counts <<< "${CLICK_COUNTS:-1 5 10 20 50}"
+read -r -a task_strategies <<< "${STRATEGIES:-uniform interior boundary}"
+python -u visualize_points.py \
+    --data-root "$DATA_ROOT" \
+    --output-dir "$VISUAL_DIR" \
+    --size "${SIZE:-128}" \
+    --split-seed "${SPLIT_SEED:-42}" \
+    --click-seed "${CLICK_SEED:-42}" \
+    --positive-clicks "${STRATEGY_CLICKS:-10}" \
+    --negative-clicks "${STRATEGY_CLICKS:-10}" \
+    --strategy "${VISUAL_STRATEGY:-uniform}" \
+    --margin "${MARGIN:-3}"
+task_args=(--data-root "$DATA_ROOT" --output-dir "$RUN_DIR" --require-cuda
+    --model "${MODEL:-unet}" --size "${SIZE:-128}" --batch-size "${BATCH_SIZE:-6}"
+    --epochs "${EPOCHS:-20}" --lr "${LR:-0.001}" --seed "${SEED:-42}"
+    --split-seed "${SPLIT_SEED:-42}" --click-seed "${CLICK_SEED:-42}"
+    --num-workers "${NUM_WORKERS:-0}" --num-threads 4 --margin "${MARGIN:-3}"
+    --strategy-clicks "${STRATEGY_CLICKS:-10}"
+    --click-counts "${task_counts[@]}" --strategies "${task_strategies[@]}")
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   724.01 sec.
+    Max Memory :                                 1607 MB
+    Average Memory :                             755.40 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               14777.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                17
+    Run time :                                   371 sec.
+    Turnaround time :                            373 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </zhome/bf/0/233720/IDLCV/Proj3_Git/part2/part2.29896775.err> for stderr output of this job.
+

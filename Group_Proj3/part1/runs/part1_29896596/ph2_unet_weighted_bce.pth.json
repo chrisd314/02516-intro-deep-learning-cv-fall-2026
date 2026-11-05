@@ -1,0 +1,517 @@
+{
+  "status": "completed",
+  "config": {
+    "dataset": "PH2",
+    "model": "unet",
+    "loss": "weighted_bce",
+    "size": 128,
+    "batch_size": 6,
+    "epochs": 20,
+    "lr": 0.001,
+    "split_seed": 42,
+    "seed": 42,
+    "num_workers": 0,
+    "num_threads": 4,
+    "data_root": "/dtu/datasets1/02516",
+    "checkpoint": "runs/part1_29896596/ph2_unet_weighted_bce.pth"
+  },
+  "working_directory": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part1",
+  "device": "cuda",
+  "torch_version": "2.8.0+cu128",
+  "loss_parameters": {
+    "positive_weight": 2.0
+  },
+  "metric_aggregation": "global_valid_pixels",
+  "loss_aggregation": "mean_valid_pixels",
+  "prediction_threshold": 0.5,
+  "metric_smoothing": 1e-07,
+  "preprocessing": {
+    "size": 128,
+    "image_range": [
+      0,
+      1
+    ],
+    "image_resize": "bilinear",
+    "mask_resize": "nearest",
+    "mask_foreground": "nonzero",
+    "augmentation": "none"
+  },
+  "splits": {
+    "train": [
+      "IMD133",
+      "IMD424",
+      "IMD196",
+      "IMD431",
+      "IMD210",
+      "IMD278",
+      "IMD019",
+      "IMD004",
+      "IMD126",
+      "IMD064",
+      "IMD356",
+      "IMD402",
+      "IMD306",
+      "IMD146",
+      "IMD388",
+      "IMD398",
+      "IMD065",
+      "IMD328",
+      "IMD040",
+      "IMD006",
+      "IMD389",
+      "IMD021",
+      "IMD061",
+      "IMD304",
+      "IMD423",
+      "IMD393",
+      "IMD076",
+      "IMD208",
+      "IMD009",
+      "IMD432",
+      "IMD048",
+      "IMD279",
+      "IMD018",
+      "IMD047",
+      "IMD382",
+      "IMD137",
+      "IMD118",
+      "IMD433",
+      "IMD042",
+      "IMD404",
+      "IMD403",
+      "IMD112",
+      "IMD016",
+      "IMD371",
+      "IMD390",
+      "IMD090",
+      "IMD285",
+      "IMD203",
+      "IMD142",
+      "IMD219",
+      "IMD200",
+      "IMD171",
+      "IMD198",
+      "IMD372",
+      "IMD063",
+      "IMD002",
+      "IMD392",
+      "IMD430",
+      "IMD022",
+      "IMD152",
+      "IMD197",
+      "IMD049",
+      "IMD385",
+      "IMD408",
+      "IMD349",
+      "IMD149",
+      "IMD240",
+      "IMD025",
+      "IMD020",
+      "IMD409",
+      "IMD374",
+      "IMD411",
+      "IMD132",
+      "IMD156",
+      "IMD396",
+      "IMD075",
+      "IMD199",
+      "IMD150",
+      "IMD092",
+      "IMD434",
+      "IMD157",
+      "IMD251",
+      "IMD207",
+      "IMD347",
+      "IMD369",
+      "IMD043",
+      "IMD024",
+      "IMD367",
+      "IMD280",
+      "IMD407",
+      "IMD125",
+      "IMD155",
+      "IMD376",
+      "IMD182",
+      "IMD384",
+      "IMD140",
+      "IMD037",
+      "IMD420",
+      "IMD211",
+      "IMD088",
+      "IMD406",
+      "IMD008",
+      "IMD039",
+      "IMD419",
+      "IMD177",
+      "IMD176",
+      "IMD331",
+      "IMD284",
+      "IMD436",
+      "IMD348",
+      "IMD410",
+      "IMD256",
+      "IMD044",
+      "IMD078",
+      "IMD400",
+      "IMD364",
+      "IMD378",
+      "IMD339",
+      "IMD305",
+      "IMD030",
+      "IMD153",
+      "IMD147",
+      "IMD015",
+      "IMD154",
+      "IMD395",
+      "IMD254",
+      "IMD162",
+      "IMD135",
+      "IMD091",
+      "IMD164",
+      "IMD170",
+      "IMD058",
+      "IMD169",
+      "IMD242",
+      "IMD437",
+      "IMD386",
+      "IMD035",
+      "IMD413",
+      "IMD375",
+      "IMD143"
+    ],
+    "val": [
+      "IMD107",
+      "IMD381",
+      "IMD023",
+      "IMD080",
+      "IMD168",
+      "IMD144",
+      "IMD368",
+      "IMD027",
+      "IMD173",
+      "IMD041",
+      "IMD360",
+      "IMD243",
+      "IMD017",
+      "IMD134",
+      "IMD161",
+      "IMD166",
+      "IMD033",
+      "IMD175",
+      "IMD418",
+      "IMD427",
+      "IMD159",
+      "IMD417",
+      "IMD050",
+      "IMD399",
+      "IMD160",
+      "IMD421",
+      "IMD057",
+      "IMD003",
+      "IMD139",
+      "IMD379"
+    ],
+    "test": [
+      "IMD226",
+      "IMD103",
+      "IMD204",
+      "IMD429",
+      "IMD397",
+      "IMD085",
+      "IMD370",
+      "IMD435",
+      "IMD383",
+      "IMD312",
+      "IMD108",
+      "IMD101",
+      "IMD032",
+      "IMD013",
+      "IMD014",
+      "IMD206",
+      "IMD380",
+      "IMD031",
+      "IMD365",
+      "IMD405",
+      "IMD036",
+      "IMD425",
+      "IMD045",
+      "IMD105",
+      "IMD120",
+      "IMD138",
+      "IMD426",
+      "IMD010",
+      "IMD038",
+      "IMD394"
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.545172894852502,
+      "val_loss": 0.8943264484405518,
+      "val_metrics": {
+        "dice": 0.39446433312912843,
+        "iou": 0.24569017136708637,
+        "accuracy": 0.7308919270833881,
+        "sensitivity": 0.24853617310986142,
+        "specificity": 0.9936889679513995
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.4050600507429668,
+      "val_loss": 0.8033073425292969,
+      "val_metrics": {
+        "dice": 0.6867562019508838,
+        "iou": 0.5229464650594187,
+        "accuracy": 0.715002441406308,
+        "sensitivity": 0.8858416932511749,
+        "specificity": 0.6219258076582168
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.354742796931948,
+      "val_loss": 0.5669435679912567,
+      "val_metrics": {
+        "dice": 0.7527396122776886,
+        "iou": 0.6035144062038278,
+        "accuracy": 0.7970520019531663,
+        "sensitivity": 0.8759309362147162,
+        "specificity": 0.7540771844249028
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.36617385468312674,
+      "val_loss": 0.3012979418039322,
+      "val_metrics": {
+        "dice": 0.8902241340795237,
+        "iou": 0.8021656997750676,
+        "accuracy": 0.9220174153645992,
+        "sensitivity": 0.8965716164687612,
+        "specificity": 0.9358807944106081
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.2962431871465274,
+      "val_loss": 0.3227101773023605,
+      "val_metrics": {
+        "dice": 0.8678485280164565,
+        "iou": 0.7665480719607557,
+        "accuracy": 0.8960062662760628,
+        "sensitivity": 0.9682198134378049,
+        "specificity": 0.8566628846571341
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.3276458220822471,
+      "val_loss": 0.3083400219678879,
+      "val_metrics": {
+        "dice": 0.8733701444931858,
+        "iou": 0.7752059296354795,
+        "accuracy": 0.9035583496093946,
+        "sensitivity": 0.9430218002042475,
+        "specificity": 0.882057874175407
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.27938154063054493,
+      "val_loss": 0.40819986164569855,
+      "val_metrics": {
+        "dice": 0.8146967037254207,
+        "iou": 0.6873318468666181,
+        "accuracy": 0.8453694661458648,
+        "sensitivity": 0.9638355437359956,
+        "specificity": 0.7808267829137667
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.2712162009307316,
+      "val_loss": 0.28259097337722777,
+      "val_metrics": {
+        "dice": 0.8868897065479883,
+        "iou": 0.7967671413742774,
+        "accuracy": 0.9135660807291842,
+        "sensitivity": 0.9608300114798867,
+        "specificity": 0.8878157480364809
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3160693543297904,
+      "val_loss": 0.26040771007537844,
+      "val_metrics": {
+        "dice": 0.8966659729448778,
+        "iou": 0.8126876820233631,
+        "accuracy": 0.9242370605468904,
+        "sensitivity": 0.9320495883978771,
+        "specificity": 0.9199806394634618
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.27799162971121927,
+      "val_loss": 0.36671748459339143,
+      "val_metrics": {
+        "dice": 0.840470416517833,
+        "iou": 0.7248374069024595,
+        "accuracy": 0.8719177246094011,
+        "sensitivity": 0.9566764928150145,
+        "specificity": 0.8257394562078411
+      }
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.25097604649407523,
+      "val_loss": 0.22404740154743194,
+      "val_metrics": {
+        "dice": 0.9180812022222782,
+        "iou": 0.8485675672777618,
+        "accuracy": 0.9425516764323033,
+        "sensitivity": 0.9127876455895326,
+        "specificity": 0.9587677144195269
+      }
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.3134221151471138,
+      "val_loss": 0.2972068727016449,
+      "val_metrics": {
+        "dice": 0.8675794062477423,
+        "iou": 0.7661282486687151,
+        "accuracy": 0.8971638997396043,
+        "sensitivity": 0.9551996861786156,
+        "specificity": 0.865544845100035
+      }
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.23627019354275294,
+      "val_loss": 0.23432588428258896,
+      "val_metrics": {
+        "dice": 0.9162930355945789,
+        "iou": 0.8455173452699463,
+        "accuracy": 0.9415812174479286,
+        "sensitivity": 0.9066092865755354,
+        "specificity": 0.9606346233024297
+      }
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.21598133402211325,
+      "val_loss": 0.3493397980928421,
+      "val_metrics": {
+        "dice": 0.8621384054952914,
+        "iou": 0.7576830166858998,
+        "accuracy": 0.8942850748698131,
+        "sensitivity": 0.9372703306085843,
+        "specificity": 0.8708658497107326
+      }
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.2423471355012485,
+      "val_loss": 0.22312623709440232,
+      "val_metrics": {
+        "dice": 0.9062049692153437,
+        "iou": 0.828496147550886,
+        "accuracy": 0.9300781250000142,
+        "sensitivity": 0.9577552539126967,
+        "specificity": 0.9149990728314737
+      }
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.25158529707363675,
+      "val_loss": 0.1920371100306511,
+      "val_metrics": {
+        "dice": 0.9347393817658333,
+        "iou": 0.8774748317602719,
+        "accuracy": 0.9539937337239677,
+        "sensitivity": 0.9342244169210114,
+        "specificity": 0.9647644520433962
+      }
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.20722704402038028,
+      "val_loss": 0.22055205702781677,
+      "val_metrics": {
+        "dice": 0.9219312224431062,
+        "iou": 0.8551692077869245,
+        "accuracy": 0.9435872395833448,
+        "sensitivity": 0.9444813005128762,
+        "specificity": 0.9431001373466815
+      }
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.24246491747243062,
+      "val_loss": 0.2551769971847534,
+      "val_metrics": {
+        "dice": 0.8920362650936654,
+        "iou": 0.8051132333939875,
+        "accuracy": 0.9183776855468916,
+        "sensitivity": 0.9561111527745181,
+        "specificity": 0.8978197395756717
+      }
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.28602088796240943,
+      "val_loss": 0.27660939246416094,
+      "val_metrics": {
+        "dice": 0.9109668164809682,
+        "iou": 0.836491330353568,
+        "accuracy": 0.9383768717448042,
+        "sensitivity": 0.8939006732162115,
+        "specificity": 0.9626083922897409
+      }
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.26189946361950467,
+      "val_loss": 0.2281977877020836,
+      "val_metrics": {
+        "dice": 0.9060360274104017,
+        "iou": 0.8282137713051991,
+        "accuracy": 0.9301167805989725,
+        "sensitivity": 0.9553265992489312,
+        "specificity": 0.9163819683002906
+      }
+    }
+  ],
+  "best_epoch": 16,
+  "best_val_loss": 0.1920371100306511,
+  "final_metrics": {
+    "train": {
+      "loss": 0.17373511918953488,
+      "dice": 0.9336369409810661,
+      "iou": 0.8755338372655473,
+      "accuracy": 0.9573590959821447,
+      "sensitivity": 0.9272648858459894,
+      "specificity": 0.9717485726069435
+    },
+    "val": {
+      "loss": 0.1920371100306511,
+      "dice": 0.9347393817658333,
+      "iou": 0.8774748317602719,
+      "accuracy": 0.9539937337239677,
+      "sensitivity": 0.9342244169210114,
+      "specificity": 0.9647644520433962
+    },
+    "test": {
+      "loss": 0.2577121138572693,
+      "dice": 0.8772322571677761,
+      "iou": 0.7813123085946561,
+      "accuracy": 0.9317179361979305,
+      "sensitivity": 0.8515769812581394,
+      "specificity": 0.9638935539885992
+    }
+  }
+}
