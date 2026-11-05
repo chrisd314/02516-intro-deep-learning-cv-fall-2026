@@ -1,0 +1,422 @@
+Saving this run to runs/part1_29896596
+Saved Part 1 visualizations to runs/part1_29896596/visualizations
+split_seed=42 training_seed=42
+Training dataset=PH2 model=encdec loss=bce
+epoch 1/20 train_loss=0.6490 val_loss=0.6231 dice=0.0000 time=17.7s
+epoch 2/20 train_loss=0.5358 val_loss=0.6600 dice=0.0000 time=1.2s
+epoch 3/20 train_loss=0.5430 val_loss=0.5625 dice=0.3263 time=1.3s
+epoch 4/20 train_loss=0.4110 val_loss=0.3554 dice=0.8150 time=1.2s
+epoch 5/20 train_loss=0.3362 val_loss=0.3542 dice=0.7599 time=1.3s
+epoch 6/20 train_loss=0.3311 val_loss=0.2878 dice=0.8337 time=1.2s
+epoch 7/20 train_loss=0.2581 val_loss=0.2497 dice=0.8300 time=1.1s
+epoch 8/20 train_loss=0.2293 val_loss=0.2290 dice=0.8570 time=1.1s
+epoch 9/20 train_loss=0.3094 val_loss=0.2679 dice=0.8510 time=1.0s
+epoch 10/20 train_loss=0.2411 val_loss=0.2502 dice=0.8256 time=1.1s
+epoch 11/20 train_loss=0.2374 val_loss=0.2513 dice=0.8652 time=1.0s
+epoch 12/20 train_loss=0.2283 val_loss=0.3551 dice=0.8103 time=1.1s
+epoch 13/20 train_loss=0.2623 val_loss=0.2573 dice=0.8568 time=1.0s
+epoch 14/20 train_loss=0.2086 val_loss=0.1980 dice=0.8832 time=1.0s
+epoch 15/20 train_loss=0.2099 val_loss=0.2003 dice=0.8809 time=1.1s
+epoch 16/20 train_loss=0.1956 val_loss=0.2083 dice=0.8875 time=1.1s
+epoch 17/20 train_loss=0.1681 val_loss=0.1927 dice=0.8900 time=1.1s
+epoch 18/20 train_loss=0.1680 val_loss=0.2156 dice=0.8886 time=1.1s
+epoch 19/20 train_loss=0.2052 val_loss=0.2124 dice=0.8698 time=1.0s
+epoch 20/20 train_loss=0.1831 val_loss=0.1898 dice=0.8997 time=1.1s
+train loss=0.15926 dice=0.90428 iou=0.82528 accuracy=0.93858 sensitivity=0.89682 specificity=0.95855
+val loss=0.18982 dice=0.89966 iou=0.81763 accuracy=0.93004 sensitivity=0.88933 specificity=0.95222
+test loss=0.21977 dice=0.84227 iou=0.72752 accuracy=0.91354 sensitivity=0.80585 specificity=0.95678
+saved checkpoint: runs/part1_29896596/ph2_encdec_bce.pth
+saved run record: runs/part1_29896596/ph2_encdec_bce.pth.json
+split_seed=42 training_seed=42
+Training dataset=PH2 model=encdec loss=focal
+epoch 1/20 train_loss=0.0680 val_loss=0.0586 dice=0.0000 time=2.9s
+epoch 2/20 train_loss=0.0553 val_loss=0.0519 dice=0.0000 time=1.2s
+epoch 3/20 train_loss=0.0475 val_loss=0.0438 dice=0.0000 time=1.3s
+epoch 4/20 train_loss=0.0395 val_loss=0.0354 dice=0.5945 time=1.3s
+epoch 5/20 train_loss=0.0382 val_loss=0.0550 dice=0.4678 time=1.3s
+epoch 6/20 train_loss=0.0357 val_loss=0.0293 dice=0.7113 time=1.3s
+epoch 7/20 train_loss=0.0269 val_loss=0.0321 dice=0.6877 time=1.2s
+epoch 8/20 train_loss=0.0252 val_loss=0.0260 dice=0.7947 time=1.2s
+epoch 9/20 train_loss=0.0311 val_loss=0.0255 dice=0.7983 time=1.1s
+epoch 10/20 train_loss=0.0224 val_loss=0.0248 dice=0.8253 time=1.1s
+epoch 11/20 train_loss=0.0212 val_loss=0.0257 dice=0.8805 time=1.1s
+epoch 12/20 train_loss=0.0211 val_loss=0.0250 dice=0.8216 time=1.1s
+epoch 13/20 train_loss=0.0233 val_loss=0.0269 dice=0.8165 time=1.1s
+epoch 14/20 train_loss=0.0220 val_loss=0.0266 dice=0.7657 time=1.1s
+epoch 15/20 train_loss=0.0282 val_loss=0.0241 dice=0.8454 time=1.1s
+epoch 16/20 train_loss=0.0212 val_loss=0.0213 dice=0.8645 time=1.1s
+epoch 17/20 train_loss=0.0173 val_loss=0.0245 dice=0.8383 time=1.1s
+epoch 18/20 train_loss=0.0168 val_loss=0.0246 dice=0.8734 time=1.1s
+epoch 19/20 train_loss=0.0168 val_loss=0.0215 dice=0.8535 time=1.1s
+epoch 20/20 train_loss=0.0158 val_loss=0.0203 dice=0.8741 time=1.1s
+train loss=0.01445 dice=0.89302 iou=0.80672 accuracy=0.93577 sensitivity=0.82878 specificity=0.98693
+val loss=0.02031 dice=0.87406 iou=0.77630 accuracy=0.91840 sensitivity=0.80296 specificity=0.98129
+test loss=0.02132 dice=0.82369 iou=0.70023 accuracy=0.91053 sensitivity=0.72952 specificity=0.98321
+saved checkpoint: runs/part1_29896596/ph2_encdec_focal.pth
+saved run record: runs/part1_29896596/ph2_encdec_focal.pth.json
+split_seed=42 training_seed=42
+Training dataset=PH2 model=encdec loss=weighted_bce
+epoch 1/20 train_loss=0.9078 val_loss=0.9343 dice=0.0001 time=1.5s
+epoch 2/20 train_loss=0.8379 val_loss=1.0150 dice=0.6181 time=1.1s
+epoch 3/20 train_loss=0.8130 val_loss=0.7640 dice=0.6539 time=1.1s
+epoch 4/20 train_loss=0.7006 val_loss=0.5834 dice=0.7311 time=1.1s
+epoch 5/20 train_loss=0.5888 val_loss=0.5374 dice=0.7896 time=1.1s
+epoch 6/20 train_loss=0.5029 val_loss=0.4524 dice=0.8348 time=1.1s
+epoch 7/20 train_loss=0.4101 val_loss=0.4140 dice=0.8420 time=1.1s
+epoch 8/20 train_loss=0.3805 val_loss=0.4054 dice=0.8751 time=1.1s
+epoch 9/20 train_loss=0.4482 val_loss=0.4051 dice=0.8483 time=1.1s
+epoch 10/20 train_loss=0.3457 val_loss=0.3125 dice=0.8781 time=1.1s
+epoch 11/20 train_loss=0.3261 val_loss=0.3271 dice=0.8660 time=1.1s
+epoch 12/20 train_loss=0.2954 val_loss=0.4015 dice=0.8709 time=1.0s
+epoch 13/20 train_loss=0.3463 val_loss=0.3139 dice=0.8729 time=1.1s
+epoch 14/20 train_loss=0.2728 val_loss=0.2800 dice=0.8893 time=1.1s
+epoch 15/20 train_loss=0.2772 val_loss=0.2742 dice=0.8889 time=1.1s
+epoch 16/20 train_loss=0.2820 val_loss=0.3139 dice=0.8683 time=1.1s
+epoch 17/20 train_loss=0.2304 val_loss=0.3199 dice=0.9000 time=1.0s
+epoch 18/20 train_loss=0.3068 val_loss=0.3376 dice=0.8677 time=1.1s
+epoch 19/20 train_loss=0.2943 val_loss=0.3149 dice=0.8776 time=1.1s
+epoch 20/20 train_loss=0.2456 val_loss=0.2877 dice=0.8854 time=1.1s
+train loss=0.23615 dice=0.89023 iou=0.80218 accuracy=0.92559 sensitivity=0.93287 specificity=0.92210
+val loss=0.27417 dice=0.88887 iou=0.79997 accuracy=0.91832 sensitivity=0.92621 specificity=0.91403
+test loss=0.39318 dice=0.83539 iou=0.71732 accuracy=0.90398 sensitivity=0.85055 specificity=0.92543
+saved checkpoint: runs/part1_29896596/ph2_encdec_weighted_bce.pth
+saved run record: runs/part1_29896596/ph2_encdec_weighted_bce.pth.json
+split_seed=42 training_seed=42
+Training dataset=PH2 model=unet loss=bce
+epoch 1/20 train_loss=0.4176 val_loss=0.8026 dice=0.1231 time=5.6s
+epoch 2/20 train_loss=0.3032 val_loss=0.3877 dice=0.8203 time=1.7s
+epoch 3/20 train_loss=0.2669 val_loss=0.2926 dice=0.8429 time=1.7s
+epoch 4/20 train_loss=0.2755 val_loss=0.3159 dice=0.8363 time=1.7s
+epoch 5/20 train_loss=0.2204 val_loss=0.2442 dice=0.8799 time=1.7s
+epoch 6/20 train_loss=0.2285 val_loss=0.2024 dice=0.8980 time=1.7s
+epoch 7/20 train_loss=0.2022 val_loss=0.2520 dice=0.8673 time=1.7s
+epoch 8/20 train_loss=0.1916 val_loss=0.2257 dice=0.8875 time=1.8s
+epoch 9/20 train_loss=0.2198 val_loss=0.2429 dice=0.8463 time=1.9s
+epoch 10/20 train_loss=0.1967 val_loss=0.6217 dice=0.7439 time=1.9s
+epoch 11/20 train_loss=0.1810 val_loss=0.1863 dice=0.9016 time=1.7s
+epoch 12/20 train_loss=0.2311 val_loss=0.2342 dice=0.8851 time=1.7s
+epoch 13/20 train_loss=0.1809 val_loss=0.1902 dice=0.8975 time=1.7s
+epoch 14/20 train_loss=0.1635 val_loss=0.1642 dice=0.9141 time=1.7s
+epoch 15/20 train_loss=0.1666 val_loss=0.2151 dice=0.8687 time=1.7s
+epoch 16/20 train_loss=0.1665 val_loss=0.1567 dice=0.9205 time=1.7s
+epoch 17/20 train_loss=0.1524 val_loss=0.1731 dice=0.9060 time=1.7s
+epoch 18/20 train_loss=0.1914 val_loss=0.2422 dice=0.8768 time=1.7s
+epoch 19/20 train_loss=0.2142 val_loss=0.1832 dice=0.8864 time=1.7s
+epoch 20/20 train_loss=0.1702 val_loss=0.1719 dice=0.9104 time=1.7s
+train loss=0.12879 dice=0.92697 iou=0.86387 accuracy=0.95416 sensitivity=0.89923 specificity=0.98043
+val loss=0.15667 dice=0.92048 iou=0.85267 accuracy=0.94594 sensitivity=0.88721 specificity=0.97793
+test loss=0.16633 dice=0.87710 iou=0.78109 accuracy=0.93355 sensitivity=0.82764 specificity=0.97608
+saved checkpoint: runs/part1_29896596/ph2_unet_bce.pth
+saved run record: runs/part1_29896596/ph2_unet_bce.pth.json
+split_seed=42 training_seed=42
+Training dataset=PH2 model=unet loss=focal
+epoch 1/20 train_loss=0.0471 val_loss=0.0480 dice=0.3114 time=2.2s
+epoch 2/20 train_loss=0.0299 val_loss=0.0767 dice=0.7766 time=1.7s
+epoch 3/20 train_loss=0.0271 val_loss=0.0399 dice=0.8400 time=1.6s
+epoch 4/20 train_loss=0.0247 val_loss=0.0279 dice=0.8633 time=1.7s
+epoch 5/20 train_loss=0.0210 val_loss=0.0221 dice=0.8905 time=1.6s
+epoch 6/20 train_loss=0.0231 val_loss=0.0252 dice=0.8392 time=1.7s
+epoch 7/20 train_loss=0.0200 val_loss=0.0322 dice=0.8663 time=1.6s
+epoch 8/20 train_loss=0.0199 val_loss=0.0268 dice=0.9062 time=1.6s
+epoch 9/20 train_loss=0.0226 val_loss=0.0255 dice=0.7775 time=1.7s
+epoch 10/20 train_loss=0.0216 val_loss=0.0378 dice=0.8760 time=1.8s
+epoch 11/20 train_loss=0.0190 val_loss=0.0251 dice=0.9047 time=1.7s
+epoch 12/20 train_loss=0.0234 val_loss=0.0270 dice=0.8376 time=1.7s
+epoch 13/20 train_loss=0.0190 val_loss=0.0228 dice=0.8749 time=1.7s
+epoch 14/20 train_loss=0.0167 val_loss=0.0214 dice=0.8816 time=1.7s
+epoch 15/20 train_loss=0.0170 val_loss=0.0206 dice=0.8932 time=1.8s
+epoch 16/20 train_loss=0.0173 val_loss=0.0174 dice=0.9175 time=1.8s
+epoch 17/20 train_loss=0.0163 val_loss=0.0187 dice=0.8736 time=1.8s
+epoch 18/20 train_loss=0.0177 val_loss=0.0228 dice=0.8835 time=1.8s
+epoch 19/20 train_loss=0.0196 val_loss=0.0204 dice=0.8497 time=1.6s
+epoch 20/20 train_loss=0.0219 val_loss=0.0215 dice=0.8293 time=1.6s
+train loss=0.01405 dice=0.91115 iou=0.83680 accuracy=0.94603 sensitivity=0.85553 specificity=0.98930
+val loss=0.01744 dice=0.91751 iou=0.84759 accuracy=0.94487 sensitivity=0.86931 specificity=0.98604
+test loss=0.01810 dice=0.85475 iou=0.74634 accuracy=0.92451 sensitivity=0.77537 specificity=0.98438
+saved checkpoint: runs/part1_29896596/ph2_unet_focal.pth
+saved run record: runs/part1_29896596/ph2_unet_focal.pth.json
+split_seed=42 training_seed=42
+Training dataset=PH2 model=unet loss=weighted_bce
+epoch 1/20 train_loss=0.5452 val_loss=0.8943 dice=0.3945 time=2.4s
+epoch 2/20 train_loss=0.4051 val_loss=0.8033 dice=0.6868 time=1.8s
+epoch 3/20 train_loss=0.3547 val_loss=0.5669 dice=0.7527 time=1.8s
+epoch 4/20 train_loss=0.3662 val_loss=0.3013 dice=0.8902 time=1.8s
+epoch 5/20 train_loss=0.2962 val_loss=0.3227 dice=0.8678 time=1.8s
+epoch 6/20 train_loss=0.3276 val_loss=0.3083 dice=0.8734 time=1.6s
+epoch 7/20 train_loss=0.2794 val_loss=0.4082 dice=0.8147 time=1.6s
+epoch 8/20 train_loss=0.2712 val_loss=0.2826 dice=0.8869 time=1.6s
+epoch 9/20 train_loss=0.3161 val_loss=0.2604 dice=0.8967 time=1.7s
+epoch 10/20 train_loss=0.2780 val_loss=0.3667 dice=0.8405 time=1.7s
+epoch 11/20 train_loss=0.2510 val_loss=0.2240 dice=0.9181 time=1.6s
+epoch 12/20 train_loss=0.3134 val_loss=0.2972 dice=0.8676 time=1.7s
+epoch 13/20 train_loss=0.2363 val_loss=0.2343 dice=0.9163 time=1.6s
+epoch 14/20 train_loss=0.2160 val_loss=0.3493 dice=0.8621 time=1.6s
+epoch 15/20 train_loss=0.2423 val_loss=0.2231 dice=0.9062 time=1.6s
+epoch 16/20 train_loss=0.2516 val_loss=0.1920 dice=0.9347 time=1.7s
+epoch 17/20 train_loss=0.2072 val_loss=0.2206 dice=0.9219 time=1.7s
+epoch 18/20 train_loss=0.2425 val_loss=0.2552 dice=0.8920 time=1.7s
+epoch 19/20 train_loss=0.2860 val_loss=0.2766 dice=0.9110 time=1.7s
+epoch 20/20 train_loss=0.2619 val_loss=0.2282 dice=0.9060 time=1.6s
+train loss=0.17374 dice=0.93364 iou=0.87553 accuracy=0.95736 sensitivity=0.92726 specificity=0.97175
+val loss=0.19204 dice=0.93474 iou=0.87747 accuracy=0.95399 sensitivity=0.93422 specificity=0.96476
+test loss=0.25771 dice=0.87723 iou=0.78131 accuracy=0.93172 sensitivity=0.85158 specificity=0.96389
+saved checkpoint: runs/part1_29896596/ph2_unet_weighted_bce.pth
+saved run record: runs/part1_29896596/ph2_unet_weighted_bce.pth.json
+split_seed=42 training_seed=42
+Training dataset=DRIVE model=encdec loss=bce
+epoch 1/20 train_loss=0.6811 val_loss=0.6093 dice=0.0000 time=0.7s
+epoch 2/20 train_loss=0.5243 val_loss=0.8029 dice=0.0000 time=0.3s
+epoch 3/20 train_loss=0.6077 val_loss=0.4540 dice=0.0000 time=0.3s
+epoch 4/20 train_loss=0.4992 val_loss=0.5408 dice=0.0000 time=0.3s
+epoch 5/20 train_loss=0.5424 val_loss=0.4848 dice=0.0000 time=0.3s
+epoch 6/20 train_loss=0.4650 val_loss=0.3708 dice=0.0000 time=0.3s
+epoch 7/20 train_loss=0.4116 val_loss=0.4160 dice=0.0000 time=0.3s
+epoch 8/20 train_loss=0.4069 val_loss=0.3825 dice=0.0000 time=0.3s
+epoch 9/20 train_loss=0.4042 val_loss=0.3980 dice=0.0000 time=0.3s
+epoch 10/20 train_loss=0.4027 val_loss=0.3684 dice=0.0000 time=0.3s
+epoch 11/20 train_loss=0.3877 val_loss=0.3818 dice=0.0000 time=0.3s
+epoch 12/20 train_loss=0.3914 val_loss=0.3682 dice=0.0000 time=0.3s
+epoch 13/20 train_loss=0.3823 val_loss=0.3719 dice=0.0000 time=0.3s
+epoch 14/20 train_loss=0.3817 val_loss=0.3666 dice=0.0000 time=0.3s
+epoch 15/20 train_loss=0.3791 val_loss=0.3679 dice=0.0000 time=0.3s
+epoch 16/20 train_loss=0.3788 val_loss=0.3672 dice=0.0000 time=0.3s
+epoch 17/20 train_loss=0.3788 val_loss=0.3679 dice=0.0000 time=0.3s
+epoch 18/20 train_loss=0.3776 val_loss=0.3659 dice=0.0000 time=0.3s
+epoch 19/20 train_loss=0.3773 val_loss=0.3653 dice=0.0000 time=0.3s
+epoch 20/20 train_loss=0.3765 val_loss=0.3659 dice=0.0000 time=0.3s
+train loss=0.37622 dice=0.00000 iou=0.00000 accuracy=0.87635 sensitivity=0.00000 specificity=1.00000
+val loss=0.36525 dice=0.00000 iou=0.00000 accuracy=0.87998 sensitivity=0.00000 specificity=1.00000
+test loss=0.40030 dice=0.00000 iou=0.00000 accuracy=0.86418 sensitivity=0.00000 specificity=1.00000
+saved checkpoint: runs/part1_29896596/drive_encdec_bce.pth
+saved run record: runs/part1_29896596/drive_encdec_bce.pth.json
+split_seed=42 training_seed=42
+Training dataset=DRIVE model=encdec loss=focal
+epoch 1/20 train_loss=0.1134 val_loss=0.0823 dice=0.0000 time=0.9s
+epoch 2/20 train_loss=0.0630 val_loss=0.0671 dice=0.0000 time=0.3s
+epoch 3/20 train_loss=0.0519 val_loss=0.0543 dice=0.0000 time=0.3s
+epoch 4/20 train_loss=0.0564 val_loss=0.0416 dice=0.0000 time=0.3s
+epoch 5/20 train_loss=0.0419 val_loss=0.0449 dice=0.0000 time=0.3s
+epoch 6/20 train_loss=0.0430 val_loss=0.0364 dice=0.0000 time=0.3s
+epoch 7/20 train_loss=0.0401 val_loss=0.0405 dice=0.0000 time=0.3s
+epoch 8/20 train_loss=0.0407 val_loss=0.0360 dice=0.0000 time=0.3s
+epoch 9/20 train_loss=0.0388 val_loss=0.0370 dice=0.0000 time=0.3s
+epoch 10/20 train_loss=0.0377 val_loss=0.0364 dice=0.0000 time=0.3s
+epoch 11/20 train_loss=0.0379 val_loss=0.0356 dice=0.0000 time=0.3s
+epoch 12/20 train_loss=0.0367 val_loss=0.0365 dice=0.0000 time=0.3s
+epoch 13/20 train_loss=0.0377 val_loss=0.0353 dice=0.0000 time=0.3s
+epoch 14/20 train_loss=0.0366 val_loss=0.0358 dice=0.0000 time=0.3s
+epoch 15/20 train_loss=0.0368 val_loss=0.0353 dice=0.0000 time=0.3s
+epoch 16/20 train_loss=0.0365 val_loss=0.0354 dice=0.0000 time=0.3s
+epoch 17/20 train_loss=0.0365 val_loss=0.0353 dice=0.0000 time=0.3s
+epoch 18/20 train_loss=0.0363 val_loss=0.0353 dice=0.0000 time=0.3s
+epoch 19/20 train_loss=0.0362 val_loss=0.0352 dice=0.0000 time=0.3s
+epoch 20/20 train_loss=0.0362 val_loss=0.0352 dice=0.0000 time=0.3s
+train loss=0.03617 dice=0.00000 iou=0.00000 accuracy=0.87635 sensitivity=0.00000 specificity=1.00000
+val loss=0.03523 dice=0.00000 iou=0.00000 accuracy=0.87998 sensitivity=0.00000 specificity=1.00000
+test loss=0.03848 dice=0.00000 iou=0.00000 accuracy=0.86418 sensitivity=0.00000 specificity=1.00000
+saved checkpoint: runs/part1_29896596/drive_encdec_focal.pth
+saved run record: runs/part1_29896596/drive_encdec_focal.pth.json
+split_seed=42 training_seed=42
+Training dataset=DRIVE model=encdec loss=weighted_bce
+epoch 1/20 train_loss=0.7688 val_loss=0.7071 dice=0.0000 time=0.8s
+epoch 2/20 train_loss=0.6693 val_loss=0.6129 dice=0.0000 time=0.3s
+epoch 3/20 train_loss=0.6299 val_loss=0.6536 dice=0.0000 time=0.3s
+epoch 4/20 train_loss=0.6608 val_loss=0.6045 dice=0.0000 time=0.3s
+epoch 5/20 train_loss=0.6161 val_loss=0.5968 dice=0.0000 time=0.3s
+epoch 6/20 train_loss=0.6064 val_loss=0.5949 dice=0.0000 time=0.3s
+epoch 7/20 train_loss=0.6130 val_loss=0.5922 dice=0.0000 time=0.3s
+epoch 8/20 train_loss=0.6044 val_loss=0.5851 dice=0.0000 time=0.3s
+epoch 9/20 train_loss=0.6040 val_loss=0.5808 dice=0.0000 time=0.3s
+epoch 10/20 train_loss=0.5987 val_loss=0.5846 dice=0.0000 time=0.3s
+epoch 11/20 train_loss=0.5981 val_loss=0.5799 dice=0.0000 time=0.3s
+epoch 12/20 train_loss=0.5971 val_loss=0.5794 dice=0.0000 time=0.3s
+epoch 13/20 train_loss=0.5949 val_loss=0.5804 dice=0.0000 time=0.3s
+epoch 14/20 train_loss=0.5945 val_loss=0.5787 dice=0.0000 time=0.3s
+epoch 15/20 train_loss=0.5934 val_loss=0.5781 dice=0.0000 time=0.3s
+epoch 16/20 train_loss=0.5931 val_loss=0.5790 dice=0.0000 time=0.3s
+epoch 17/20 train_loss=0.5933 val_loss=0.5768 dice=0.0000 time=0.3s
+epoch 18/20 train_loss=0.5924 val_loss=0.5752 dice=0.0000 time=0.3s
+epoch 19/20 train_loss=0.5912 val_loss=0.5786 dice=0.0000 time=0.3s
+epoch 20/20 train_loss=0.5917 val_loss=0.5740 dice=0.0000 time=0.3s
+train loss=0.58962 dice=0.00000 iou=0.00000 accuracy=0.87635 sensitivity=0.00000 specificity=1.00000
+val loss=0.57399 dice=0.00000 iou=0.00000 accuracy=0.87998 sensitivity=0.00000 specificity=1.00000
+test loss=0.62210 dice=0.00000 iou=0.00000 accuracy=0.86418 sensitivity=0.00000 specificity=1.00000
+saved checkpoint: runs/part1_29896596/drive_encdec_weighted_bce.pth
+saved run record: runs/part1_29896596/drive_encdec_weighted_bce.pth.json
+split_seed=42 training_seed=42
+Training dataset=DRIVE model=unet loss=bce
+epoch 1/20 train_loss=0.6659 val_loss=0.6830 dice=0.0000 time=1.1s
+epoch 2/20 train_loss=0.4926 val_loss=0.6642 dice=0.0000 time=0.4s
+epoch 3/20 train_loss=0.4582 val_loss=0.6181 dice=0.0000 time=0.4s
+epoch 4/20 train_loss=0.4348 val_loss=0.5599 dice=0.0000 time=0.4s
+epoch 5/20 train_loss=0.4183 val_loss=0.4970 dice=0.0000 time=0.4s
+epoch 6/20 train_loss=0.4051 val_loss=0.4321 dice=0.0000 time=0.4s
+epoch 7/20 train_loss=0.3995 val_loss=0.4057 dice=0.0000 time=0.3s
+epoch 8/20 train_loss=0.3869 val_loss=0.3979 dice=0.0000 time=0.4s
+epoch 9/20 train_loss=0.3729 val_loss=0.3996 dice=0.0000 time=0.3s
+epoch 10/20 train_loss=0.3596 val_loss=0.3961 dice=0.0000 time=0.3s
+epoch 11/20 train_loss=0.3504 val_loss=0.3677 dice=0.0000 time=0.3s
+epoch 12/20 train_loss=0.3402 val_loss=0.3563 dice=0.0000 time=0.4s
+epoch 13/20 train_loss=0.3321 val_loss=0.3464 dice=0.0000 time=0.4s
+epoch 14/20 train_loss=0.3228 val_loss=0.3390 dice=0.0054 time=0.3s
+epoch 15/20 train_loss=0.3141 val_loss=0.3295 dice=0.0227 time=0.4s
+epoch 16/20 train_loss=0.3065 val_loss=0.3161 dice=0.0972 time=0.4s
+epoch 17/20 train_loss=0.2973 val_loss=0.3059 dice=0.2046 time=0.4s
+epoch 18/20 train_loss=0.2910 val_loss=0.2938 dice=0.2815 time=0.3s
+epoch 19/20 train_loss=0.2836 val_loss=0.2856 dice=0.3935 time=0.4s
+epoch 20/20 train_loss=0.2765 val_loss=0.2763 dice=0.4707 time=0.4s
+train loss=0.28204 dice=0.37332 iou=0.22950 accuracy=0.90116 sensitivity=0.23810 specificity=0.99471
+val loss=0.27627 dice=0.47073 iou=0.30782 accuracy=0.91221 sensitivity=0.32530 specificity=0.99225
+test loss=0.28137 dice=0.45315 iou=0.29295 accuracy=0.90123 sensitivity=0.30131 specificity=0.99551
+saved checkpoint: runs/part1_29896596/drive_unet_bce.pth
+saved run record: runs/part1_29896596/drive_unet_bce.pth.json
+split_seed=42 training_seed=42
+Training dataset=DRIVE model=unet loss=focal
+epoch 1/20 train_loss=0.1199 val_loss=0.1151 dice=0.0000 time=1.1s
+epoch 2/20 train_loss=0.0506 val_loss=0.1063 dice=0.0000 time=0.4s
+epoch 3/20 train_loss=0.0422 val_loss=0.0903 dice=0.0000 time=0.4s
+epoch 4/20 train_loss=0.0391 val_loss=0.0719 dice=0.0000 time=0.4s
+epoch 5/20 train_loss=0.0372 val_loss=0.0576 dice=0.0000 time=0.4s
+epoch 6/20 train_loss=0.0361 val_loss=0.0473 dice=0.0000 time=0.4s
+epoch 7/20 train_loss=0.0350 val_loss=0.0410 dice=0.0000 time=0.3s
+epoch 8/20 train_loss=0.0340 val_loss=0.0374 dice=0.0000 time=0.4s
+epoch 9/20 train_loss=0.0331 val_loss=0.0355 dice=0.0000 time=0.4s
+epoch 10/20 train_loss=0.0323 val_loss=0.0348 dice=0.0000 time=0.3s
+epoch 11/20 train_loss=0.0316 val_loss=0.0346 dice=0.0000 time=0.4s
+epoch 12/20 train_loss=0.0307 val_loss=0.0343 dice=0.0000 time=0.4s
+epoch 13/20 train_loss=0.0302 val_loss=0.0343 dice=0.0000 time=0.3s
+epoch 14/20 train_loss=0.0293 val_loss=0.0341 dice=0.0000 time=0.3s
+epoch 15/20 train_loss=0.0289 val_loss=0.0330 dice=0.0000 time=0.3s
+epoch 16/20 train_loss=0.0286 val_loss=0.0319 dice=0.0000 time=0.4s
+epoch 17/20 train_loss=0.0276 val_loss=0.0311 dice=0.0000 time=0.4s
+epoch 18/20 train_loss=0.0273 val_loss=0.0313 dice=0.0000 time=0.4s
+epoch 19/20 train_loss=0.0271 val_loss=0.0288 dice=0.0000 time=0.3s
+epoch 20/20 train_loss=0.0270 val_loss=0.0293 dice=0.0059 time=0.4s
+train loss=0.02976 dice=0.00061 iou=0.00031 accuracy=0.87639 sensitivity=0.00031 specificity=1.00000
+val loss=0.02883 dice=0.00000 iou=0.00000 accuracy=0.87998 sensitivity=0.00000 specificity=1.00000
+test loss=0.03219 dice=0.00131 iou=0.00065 accuracy=0.86427 sensitivity=0.00065 specificity=1.00000
+saved checkpoint: runs/part1_29896596/drive_unet_focal.pth
+saved run record: runs/part1_29896596/drive_unet_focal.pth.json
+split_seed=42 training_seed=42
+Training dataset=DRIVE model=unet loss=weighted_bce
+epoch 1/20 train_loss=0.7622 val_loss=0.7675 dice=0.0000 time=1.1s
+epoch 2/20 train_loss=0.6207 val_loss=0.7515 dice=0.0000 time=0.4s
+epoch 3/20 train_loss=0.5851 val_loss=0.7201 dice=0.0000 time=0.4s
+epoch 4/20 train_loss=0.5553 val_loss=0.6790 dice=0.0000 time=0.4s
+epoch 5/20 train_loss=0.5265 val_loss=0.6515 dice=0.0000 time=0.4s
+epoch 6/20 train_loss=0.5021 val_loss=0.6172 dice=0.0000 time=0.4s
+epoch 7/20 train_loss=0.4855 val_loss=0.5974 dice=0.0000 time=0.4s
+epoch 8/20 train_loss=0.4650 val_loss=0.5877 dice=0.0000 time=0.4s
+epoch 9/20 train_loss=0.4445 val_loss=0.5718 dice=0.0000 time=0.4s
+epoch 10/20 train_loss=0.4268 val_loss=0.5506 dice=0.0151 time=0.4s
+epoch 11/20 train_loss=0.4140 val_loss=0.5278 dice=0.0797 time=0.4s
+epoch 12/20 train_loss=0.4008 val_loss=0.5083 dice=0.1440 time=0.4s
+epoch 13/20 train_loss=0.3912 val_loss=0.4894 dice=0.1989 time=0.4s
+epoch 14/20 train_loss=0.3811 val_loss=0.4762 dice=0.2430 time=0.4s
+epoch 15/20 train_loss=0.3757 val_loss=0.4704 dice=0.2568 time=0.4s
+epoch 16/20 train_loss=0.3661 val_loss=0.4461 dice=0.3915 time=0.4s
+epoch 17/20 train_loss=0.3553 val_loss=0.4186 dice=0.4469 time=0.4s
+epoch 18/20 train_loss=0.3480 val_loss=0.3952 dice=0.5047 time=0.4s
+epoch 19/20 train_loss=0.3396 val_loss=0.3633 dice=0.6250 time=0.4s
+epoch 20/20 train_loss=0.3336 val_loss=0.3570 dice=0.6055 time=0.4s
+train loss=0.38108 dice=0.54770 iou=0.37712 accuracy=0.91817 sensitivity=0.40069 specificity=0.99118
+val loss=0.35695 dice=0.60547 iou=0.43417 accuracy=0.92505 sensitivity=0.47922 specificity=0.98585
+test loss=0.38580 dice=0.60341 iou=0.43206 accuracy=0.91936 sensitivity=0.45163 specificity=0.99288
+saved checkpoint: runs/part1_29896596/drive_unet_weighted_bce.pth
+saved run record: runs/part1_29896596/drive_unet_weighted_bce.pth.json
+Parsed 12 experiments
+Saved figures and metrics to runs/part1_29896596/report
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 29896596: <idlcv-segmentation> in cluster <dcc> Done
+
+Job <idlcv-segmentation> was submitted from host <hpclogin1> by user <s263578> in cluster <dcc> at Thu Nov  5 10:16:39 2026
+Job was executed on host(s) <4*n-62-18-13>, in queue <c02516>, as user <s263578> in cluster <dcc> at Thu Nov  5 10:16:40 2026
+</zhome/bf/0/233720> was used as the home directory.
+</zhome/bf/0/233720/IDLCV/Proj3_Git/part1> was used as the working directory.
+Started at Thu Nov  5 10:16:40 2026
+Terminated at Thu Nov  5 10:23:45 2026
+Results reported at Thu Nov  5 10:23:45 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh
+
+#BSUB -q c02516
+#BSUB -gpu "num=1:mode=exclusive_process"
+#BSUB -J idlcv-segmentation
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=20GB]"
+#BSUB -W 12:00
+#BSUB -o modelrun.%J.out
+#BSUB -e modelrun.%J.err
+
+set -eu
+
+PROJECT_DIR="/zhome/bf/0/233720/IDLCV/Proj3_Git/part1"
+cd "$PROJECT_DIR"
+if [ ! -f train.py ]; then
+    echo "Run from Group_Proj3/part1 or set PROJECT_DIR to its absolute path." >&2
+    exit 1
+fi
+
+# Use the already activated course environment, or an explicitly supplied one.
+ENVIRONMENT="/zhome/bf/0/233720/IDLCV/~venvs/IDLCV_venv/bin/activate"
+if [ ! -f "$ENVIRONMENT" ]; then
+    echo "Environment activation script not found: $ENVIRONMENT" >&2
+    exit 1
+fi
+. "$ENVIRONMENT"
+python -c "import torch, torchvision, numpy, PIL, matplotlib"
+
+DATA_ROOT="${DATA_ROOT:-/dtu/datasets1/02516}"
+RUN_DIR="${RUN_DIR:-runs/part1_${LSB_JOBID:-$(date +%Y%m%d_%H%M%S)}}"
+mkdir -p "$(dirname "$RUN_DIR")"
+# Exclusive directory creation stops accidental reuse of an experiment run.
+mkdir "$RUN_DIR"
+echo "Saving this run to $RUN_DIR"
+python -u visualize_data.py \
+    --data-root "$DATA_ROOT" \
+    --size 128 \
+    --split-seed 42 \
+    --output-dir "$RUN_DIR/visualizations"
+
+for dataset in PH2 DRIVE
+do
+    for model in encdec unet
+    do
+        for loss in bce focal weighted_bce
+        do
+            dataset_lower=$(printf '%s' "$dataset" | tr '[:upper:]' '[:lower:]')
+            python -u train.py \
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   642.76 sec.
+    Max Memory :                                 1123 MB
+    Average Memory :                             722.00 MB
+    Total Requested Memory :                     81920.00 MB
+    Delta Memory :                               80797.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                15
+    Run time :                                   425 sec.
+    Turnaround time :                            426 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <modelrun.29896596.err> for stderr output of this job.
+

@@ -1,0 +1,116 @@
+{
+  "status": "completed",
+  "config": {
+    "model": "unet",
+    "size": 128,
+    "batch_size": 6,
+    "epochs": 20,
+    "lr": 0.001,
+    "split_seed": 42,
+    "seed": 42,
+    "num_workers": 0,
+    "num_threads": 4,
+    "data_root": "/dtu/datasets1/02516",
+    "require_cuda": true,
+    "output_dir": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775",
+    "reference_record": null,
+    "click_counts": [
+      1,
+      5,
+      10,
+      20,
+      50
+    ],
+    "strategies": [
+      "uniform",
+      "interior",
+      "boundary"
+    ],
+    "strategy_clicks": 10,
+    "click_seed": 42,
+    "margin": 3,
+    "plan_only": false
+  },
+  "experiments": [
+    {
+      "name": "fully_supervised",
+      "supervision": "full",
+      "record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/full_unet_bce.pth.json",
+      "source_record": null,
+      "record_sha256": "178a288935ec048cd1fe1b85b785ddb05b35e559e8eb5c5cfbbbb6e08659fe87"
+    },
+    {
+      "name": "points_uniform_01p_01n",
+      "supervision": "points",
+      "strategy": "uniform",
+      "positive_clicks": 1,
+      "negative_clicks": 1,
+      "record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_01p_01n.pth.json",
+      "record_sha256": "f867f72e9c91b66bd31a25cfbb3e70b5fdb01be3c83ce8fd811a09254ebb7060"
+    },
+    {
+      "name": "points_uniform_05p_05n",
+      "supervision": "points",
+      "strategy": "uniform",
+      "positive_clicks": 5,
+      "negative_clicks": 5,
+      "record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_05p_05n.pth.json",
+      "record_sha256": "5d4605791789eae9d2c50fff3ab9de006abc14a30e285c13fee2f67a37d72c0e"
+    },
+    {
+      "name": "points_uniform_10p_10n",
+      "supervision": "points",
+      "strategy": "uniform",
+      "positive_clicks": 10,
+      "negative_clicks": 10,
+      "record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_10p_10n.pth.json",
+      "record_sha256": "d2da9bf8f5168c945fe7f17471c5b2267542bc0d554ba55063c693b89820cb12"
+    },
+    {
+      "name": "points_uniform_20p_20n",
+      "supervision": "points",
+      "strategy": "uniform",
+      "positive_clicks": 20,
+      "negative_clicks": 20,
+      "record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_20p_20n.pth.json",
+      "record_sha256": "b851b3fbb16091295fad4de6fdc8a763ceaf02a1e4f55847f1b79a4632dc4667"
+    },
+    {
+      "name": "points_uniform_50p_50n",
+      "supervision": "points",
+      "strategy": "uniform",
+      "positive_clicks": 50,
+      "negative_clicks": 50,
+      "record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_50p_50n.pth.json",
+      "record_sha256": "af5edc96be739c05cb758187617693d38b8921e8d55c0924e86c44d2fe88a586"
+    },
+    {
+      "name": "points_interior_10p_10n",
+      "supervision": "points",
+      "strategy": "interior",
+      "positive_clicks": 10,
+      "negative_clicks": 10,
+      "record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_interior_10p_10n.pth.json",
+      "record_sha256": "5024ab5c22892dc50ce45776a06adcce5e65eb30592a9b272d9578c8dee908b2"
+    },
+    {
+      "name": "points_boundary_10p_10n",
+      "supervision": "points",
+      "strategy": "boundary",
+      "positive_clicks": 10,
+      "negative_clicks": 10,
+      "record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_boundary_10p_10n.pth.json",
+      "record_sha256": "63e0195baf717b2c21c4c413ee52f0a8956e7142fa538023ee1c2ef794042114"
+    }
+  ],
+  "completed": [
+    "fully_supervised",
+    "points_uniform_01p_01n",
+    "points_uniform_05p_05n",
+    "points_uniform_10p_10n",
+    "points_uniform_20p_20n",
+    "points_uniform_50p_50n",
+    "points_interior_10p_10n",
+    "points_boundary_10p_10n"
+  ]
+}

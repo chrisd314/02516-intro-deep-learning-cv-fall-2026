@@ -12,7 +12,7 @@
 
 set -eu
 
-PROJECT_DIR="${PROJECT_DIR:-$PWD}"
+PROJECT_DIR="/zhome/bf/0/233720/IDLCV/Proj3_Git/part1"
 cd "$PROJECT_DIR"
 if [ ! -f train.py ]; then
     echo "Run from Group_Proj3/part1 or set PROJECT_DIR to its absolute path." >&2
@@ -20,13 +20,12 @@ if [ ! -f train.py ]; then
 fi
 
 # Use the already activated course environment, or an explicitly supplied one.
-if [ -n "${ENVIRONMENT:-}" ]; then
-    if [ ! -f "$ENVIRONMENT" ]; then
-        echo "Environment activation script not found: $ENVIRONMENT" >&2
-        exit 1
-    fi
-    . "$ENVIRONMENT"
+ENVIRONMENT="/zhome/bf/0/233720/IDLCV/~venvs/IDLCV_venv/bin/activate"
+if [ ! -f "$ENVIRONMENT" ]; then
+    echo "Environment activation script not found: $ENVIRONMENT" >&2
+    exit 1
 fi
+. "$ENVIRONMENT"
 python -c "import torch, torchvision, numpy, PIL, matplotlib"
 
 DATA_ROOT="${DATA_ROOT:-/dtu/datasets1/02516}"
@@ -35,6 +34,11 @@ mkdir -p "$(dirname "$RUN_DIR")"
 # Exclusive directory creation stops accidental reuse of an experiment run.
 mkdir "$RUN_DIR"
 echo "Saving this run to $RUN_DIR"
+python -u visualize_data.py \
+    --data-root "$DATA_ROOT" \
+    --size 128 \
+    --split-seed 42 \
+    --output-dir "$RUN_DIR/visualizations"
 
 for dataset in PH2 DRIVE
 do

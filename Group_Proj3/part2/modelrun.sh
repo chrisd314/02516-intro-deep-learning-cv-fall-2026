@@ -6,36 +6,41 @@
 #BSUB -R "span[hosts=1]"
 #BSUB -R "rusage[mem=4GB]"
 #BSUB -W 12:00
-#BSUB -o part2.%J.out
-#BSUB -e part2.%J.err
+#BSUB -o /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/part2.%J.out
+#BSUB -e /zhome/bf/0/233720/IDLCV/Proj3_Git/part2/part2.%J.err
 
 set -euo pipefail
 
-PROJECT_DIR="${PROJECT_DIR:-${LS_SUBCWD:-$PWD}}"
+PROJECT_DIR="/zhome/bf/0/233720/IDLCV/Proj3_Git/part2"
 cd "$PROJECT_DIR"
 if [[ ! -f run_experiments.py || ! -f lib/points.py ]]; then
     echo "Set PROJECT_DIR to Group_Proj3/part2, not the Part 1 folder." >&2
     exit 1
 fi
 
-# Supply the course's module names if the virtual environment needs them.
-if [[ -n "${MODULES:-}" ]]; then
-    read -r -a task_modules <<< "$MODULES"
-    module load "${task_modules[@]}"
+ENVIRONMENT="/zhome/bf/0/233720/IDLCV/~venvs/IDLCV_venv/bin/activate"
+if [[ ! -f "$ENVIRONMENT" ]]; then
+    echo "Environment activation file not found: $ENVIRONMENT" >&2
+    exit 1
 fi
-if [[ -n "${ENVIRONMENT:-}" ]]; then
-    if [[ ! -f "$ENVIRONMENT" ]]; then
-        echo "Environment activation file not found: $ENVIRONMENT" >&2
-        exit 1
-    fi
-    source "$ENVIRONMENT"
-fi
+source "$ENVIRONMENT"
 python -c "import torch, torchvision, numpy, PIL, matplotlib; assert torch.cuda.is_available(), 'No CUDA GPU available in this job'"
 
 DATA_ROOT="${DATA_ROOT:-/dtu/datasets1/02516}"
 RUN_DIR="${RUN_DIR:-runs/part2_${LSB_JOBID:-$(date +%Y%m%d_%H%M%S)}}"
+VISUAL_DIR="${RUN_DIR}_visualizations"
 read -r -a task_counts <<< "${CLICK_COUNTS:-1 5 10 20 50}"
 read -r -a task_strategies <<< "${STRATEGIES:-uniform interior boundary}"
+python -u visualize_points.py \
+    --data-root "$DATA_ROOT" \
+    --output-dir "$VISUAL_DIR" \
+    --size "${SIZE:-128}" \
+    --split-seed "${SPLIT_SEED:-42}" \
+    --click-seed "${CLICK_SEED:-42}" \
+    --positive-clicks "${STRATEGY_CLICKS:-10}" \
+    --negative-clicks "${STRATEGY_CLICKS:-10}" \
+    --strategy "${VISUAL_STRATEGY:-uniform}" \
+    --margin "${MARGIN:-3}"
 task_args=(--data-root "$DATA_ROOT" --output-dir "$RUN_DIR" --require-cuda
     --model "${MODEL:-unet}" --size "${SIZE:-128}" --batch-size "${BATCH_SIZE:-6}"
     --epochs "${EPOCHS:-20}" --lr "${LR:-0.001}" --seed "${SEED:-42}"

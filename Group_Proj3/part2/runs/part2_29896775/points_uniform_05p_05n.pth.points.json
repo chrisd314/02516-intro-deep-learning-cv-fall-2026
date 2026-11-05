@@ -1,0 +1,8572 @@
+{
+  "labels": {
+    "unknown": -1,
+    "background": 0,
+    "lesion": 1
+  },
+  "config": {
+    "model": "unet",
+    "size": 128,
+    "batch_size": 6,
+    "epochs": 20,
+    "lr": 0.001,
+    "split_seed": 42,
+    "seed": 42,
+    "num_workers": 0,
+    "num_threads": 4,
+    "data_root": "/dtu/datasets1/02516",
+    "require_cuda": true,
+    "supervision": "points",
+    "positive_clicks": 5,
+    "negative_clicks": 5,
+    "click_seed": 42,
+    "strategy": "uniform",
+    "margin": 3,
+    "checkpoint": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_05p_05n.pth",
+    "reference_record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/full_unet_bce.pth.json",
+    "dataset": "PH2",
+    "loss": "bce"
+  },
+  "cases": {
+    "IMD133": {
+      "seed": 133000441,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1712,
+        "preferred_available": 1712,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            87
+          ],
+          [
+            76,
+            96
+          ],
+          [
+            56,
+            65
+          ],
+          [
+            37,
+            71
+          ],
+          [
+            63,
+            71
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14672,
+        "preferred_available": 14672,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            89,
+            46
+          ],
+          [
+            44,
+            33
+          ],
+          [
+            68,
+            5
+          ],
+          [
+            115,
+            30
+          ],
+          [
+            21,
+            7
+          ]
+        ]
+      }
+    },
+    "IMD424": {
+      "seed": 424001314,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 16108,
+        "preferred_available": 16108,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            20
+          ],
+          [
+            42,
+            33
+          ],
+          [
+            98,
+            57
+          ],
+          [
+            114,
+            31
+          ],
+          [
+            16,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 276,
+        "preferred_available": 276,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            124,
+            127
+          ],
+          [
+            121,
+            125
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            3
+          ]
+        ]
+      }
+    },
+    "IMD196": {
+      "seed": 196000630,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1670,
+        "preferred_available": 1670,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            60
+          ],
+          [
+            88,
+            88
+          ],
+          [
+            55,
+            60
+          ],
+          [
+            95,
+            65
+          ],
+          [
+            73,
+            63
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14714,
+        "preferred_available": 14714,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            125,
+            9
+          ],
+          [
+            127,
+            59
+          ],
+          [
+            122,
+            34
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            6,
+            23
+          ]
+        ]
+      }
+    },
+    "IMD431": {
+      "seed": 431001335,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7211,
+        "preferred_available": 7211,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            23
+          ],
+          [
+            35,
+            29
+          ],
+          [
+            100,
+            74
+          ],
+          [
+            50,
+            41
+          ],
+          [
+            65,
+            95
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9173,
+        "preferred_available": 9173,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            28,
+            112
+          ],
+          [
+            1,
+            58
+          ],
+          [
+            127,
+            107
+          ],
+          [
+            105,
+            6
+          ],
+          [
+            8,
+            69
+          ]
+        ]
+      }
+    },
+    "IMD210": {
+      "seed": 210000672,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5991,
+        "preferred_available": 5991,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            50,
+            75
+          ],
+          [
+            42,
+            78
+          ],
+          [
+            38,
+            51
+          ],
+          [
+            46,
+            36
+          ],
+          [
+            75,
+            23
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10393,
+        "preferred_available": 10393,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            76,
+            13
+          ],
+          [
+            56,
+            110
+          ],
+          [
+            18,
+            96
+          ],
+          [
+            50,
+            17
+          ],
+          [
+            61,
+            124
+          ]
+        ]
+      }
+    },
+    "IMD278": {
+      "seed": 278000876,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1799,
+        "preferred_available": 1799,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            77,
+            69
+          ],
+          [
+            66,
+            73
+          ],
+          [
+            73,
+            66
+          ],
+          [
+            76,
+            60
+          ],
+          [
+            79,
+            60
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14585,
+        "preferred_available": 14585,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            21
+          ],
+          [
+            27,
+            100
+          ],
+          [
+            116,
+            112
+          ],
+          [
+            53,
+            13
+          ],
+          [
+            26,
+            51
+          ]
+        ]
+      }
+    },
+    "IMD019": {
+      "seed": 19000099,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1557,
+        "preferred_available": 1557,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            76,
+            39
+          ],
+          [
+            56,
+            37
+          ],
+          [
+            55,
+            49
+          ],
+          [
+            73,
+            27
+          ],
+          [
+            51,
+            45
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14827,
+        "preferred_available": 14827,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            34,
+            14
+          ],
+          [
+            116,
+            94
+          ],
+          [
+            17,
+            13
+          ],
+          [
+            120,
+            103
+          ],
+          [
+            83,
+            109
+          ]
+        ]
+      }
+    },
+    "IMD004": {
+      "seed": 4000054,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3187,
+        "preferred_available": 3187,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            101,
+            66
+          ],
+          [
+            73,
+            74
+          ],
+          [
+            73,
+            59
+          ],
+          [
+            58,
+            62
+          ],
+          [
+            34,
+            65
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13197,
+        "preferred_available": 13197,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            80,
+            117
+          ],
+          [
+            24,
+            81
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            64,
+            21
+          ],
+          [
+            0,
+            100
+          ]
+        ]
+      }
+    },
+    "IMD126": {
+      "seed": 126000420,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3544,
+        "preferred_available": 3544,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            46,
+            102
+          ],
+          [
+            84,
+            67
+          ],
+          [
+            63,
+            33
+          ],
+          [
+            88,
+            45
+          ],
+          [
+            64,
+            50
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12840,
+        "preferred_available": 12840,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            33,
+            27
+          ],
+          [
+            61,
+            21
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            28,
+            3
+          ],
+          [
+            11,
+            79
+          ]
+        ]
+      }
+    },
+    "IMD064": {
+      "seed": 64000234,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12962,
+        "preferred_available": 12962,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            88,
+            43
+          ],
+          [
+            25,
+            52
+          ],
+          [
+            41,
+            70
+          ],
+          [
+            34,
+            57
+          ],
+          [
+            87,
+            36
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3422,
+        "preferred_available": 3422,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            37,
+            111
+          ],
+          [
+            126,
+            125
+          ],
+          [
+            5,
+            76
+          ],
+          [
+            13,
+            95
+          ],
+          [
+            4,
+            77
+          ]
+        ]
+      }
+    },
+    "IMD356": {
+      "seed": 356001110,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3286,
+        "preferred_available": 3286,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            89,
+            46
+          ],
+          [
+            103,
+            44
+          ],
+          [
+            73,
+            84
+          ],
+          [
+            101,
+            75
+          ],
+          [
+            96,
+            74
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13098,
+        "preferred_available": 13098,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            61,
+            102
+          ],
+          [
+            56,
+            5
+          ],
+          [
+            107,
+            18
+          ],
+          [
+            29,
+            18
+          ],
+          [
+            16,
+            94
+          ]
+        ]
+      }
+    },
+    "IMD402": {
+      "seed": 402001248,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4001,
+        "preferred_available": 4001,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            39,
+            64
+          ],
+          [
+            93,
+            79
+          ],
+          [
+            40,
+            70
+          ],
+          [
+            61,
+            32
+          ],
+          [
+            85,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12383,
+        "preferred_available": 12383,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            15
+          ],
+          [
+            92,
+            125
+          ],
+          [
+            86,
+            124
+          ],
+          [
+            12,
+            121
+          ],
+          [
+            21,
+            71
+          ]
+        ]
+      }
+    },
+    "IMD306": {
+      "seed": 306000960,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1295,
+        "preferred_available": 1295,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            84,
+            73
+          ],
+          [
+            82,
+            70
+          ],
+          [
+            73,
+            65
+          ],
+          [
+            78,
+            82
+          ],
+          [
+            72,
+            82
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15089,
+        "preferred_available": 15089,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            122,
+            9
+          ],
+          [
+            120,
+            100
+          ],
+          [
+            15,
+            35
+          ],
+          [
+            64,
+            20
+          ],
+          [
+            90,
+            84
+          ]
+        ]
+      }
+    },
+    "IMD146": {
+      "seed": 146000480,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2457,
+        "preferred_available": 2457,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            25,
+            77
+          ],
+          [
+            12,
+            63
+          ],
+          [
+            55,
+            83
+          ],
+          [
+            47,
+            67
+          ],
+          [
+            36,
+            61
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13927,
+        "preferred_available": 13927,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            109,
+            127
+          ],
+          [
+            118,
+            42
+          ],
+          [
+            78,
+            42
+          ],
+          [
+            73,
+            16
+          ],
+          [
+            114,
+            98
+          ]
+        ]
+      }
+    },
+    "IMD388": {
+      "seed": 388001206,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 6665,
+        "preferred_available": 6665,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            45,
+            44
+          ],
+          [
+            58,
+            27
+          ],
+          [
+            36,
+            41
+          ],
+          [
+            33,
+            51
+          ],
+          [
+            90,
+            78
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9719,
+        "preferred_available": 9719,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            42,
+            109
+          ],
+          [
+            117,
+            97
+          ],
+          [
+            121,
+            124
+          ],
+          [
+            7,
+            55
+          ],
+          [
+            86,
+            118
+          ]
+        ]
+      }
+    },
+    "IMD398": {
+      "seed": 398001236,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12326,
+        "preferred_available": 12326,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            59,
+            47
+          ],
+          [
+            77,
+            27
+          ],
+          [
+            24,
+            30
+          ],
+          [
+            56,
+            122
+          ],
+          [
+            105,
+            75
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4058,
+        "preferred_available": 4058,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            112
+          ],
+          [
+            126,
+            124
+          ],
+          [
+            3,
+            25
+          ],
+          [
+            114,
+            14
+          ],
+          [
+            28,
+            1
+          ]
+        ]
+      }
+    },
+    "IMD065": {
+      "seed": 65000237,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11295,
+        "preferred_available": 11295,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            105,
+            73
+          ],
+          [
+            39,
+            88
+          ],
+          [
+            50,
+            55
+          ],
+          [
+            19,
+            54
+          ],
+          [
+            29,
+            1
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5089,
+        "preferred_available": 5089,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            106,
+            3
+          ],
+          [
+            107,
+            11
+          ],
+          [
+            100,
+            106
+          ],
+          [
+            123,
+            113
+          ],
+          [
+            76,
+            124
+          ]
+        ]
+      }
+    },
+    "IMD328": {
+      "seed": 328001026,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 911,
+        "preferred_available": 911,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            73,
+            49
+          ],
+          [
+            83,
+            62
+          ],
+          [
+            81,
+            60
+          ],
+          [
+            49,
+            60
+          ],
+          [
+            71,
+            53
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15473,
+        "preferred_available": 15473,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            3,
+            21
+          ],
+          [
+            65,
+            117
+          ],
+          [
+            124,
+            82
+          ],
+          [
+            115,
+            98
+          ],
+          [
+            45,
+            124
+          ]
+        ]
+      }
+    },
+    "IMD040": {
+      "seed": 40000162,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1331,
+        "preferred_available": 1331,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            69
+          ],
+          [
+            79,
+            61
+          ],
+          [
+            63,
+            69
+          ],
+          [
+            67,
+            75
+          ],
+          [
+            69,
+            82
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15053,
+        "preferred_available": 15053,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            107,
+            119
+          ],
+          [
+            15,
+            78
+          ],
+          [
+            112,
+            103
+          ],
+          [
+            116,
+            111
+          ],
+          [
+            107,
+            53
+          ]
+        ]
+      }
+    },
+    "IMD006": {
+      "seed": 6000060,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2420,
+        "preferred_available": 2420,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            46,
+            81
+          ],
+          [
+            104,
+            78
+          ],
+          [
+            110,
+            73
+          ],
+          [
+            60,
+            90
+          ],
+          [
+            103,
+            85
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13964,
+        "preferred_available": 13964,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            29,
+            114
+          ],
+          [
+            52,
+            58
+          ],
+          [
+            88,
+            15
+          ],
+          [
+            95,
+            48
+          ],
+          [
+            11,
+            110
+          ]
+        ]
+      }
+    },
+    "IMD389": {
+      "seed": 389001209,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8849,
+        "preferred_available": 8849,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            46
+          ],
+          [
+            51,
+            77
+          ],
+          [
+            81,
+            43
+          ],
+          [
+            50,
+            24
+          ],
+          [
+            89,
+            95
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7535,
+        "preferred_available": 7535,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            69,
+            7
+          ],
+          [
+            114,
+            106
+          ],
+          [
+            124,
+            3
+          ],
+          [
+            101,
+            7
+          ],
+          [
+            27,
+            25
+          ]
+        ]
+      }
+    },
+    "IMD021": {
+      "seed": 21000105,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2201,
+        "preferred_available": 2201,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            79,
+            76
+          ],
+          [
+            46,
+            81
+          ],
+          [
+            81,
+            91
+          ],
+          [
+            59,
+            60
+          ],
+          [
+            58,
+            79
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14183,
+        "preferred_available": 14183,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            13,
+            107
+          ],
+          [
+            26,
+            57
+          ],
+          [
+            107,
+            127
+          ],
+          [
+            115,
+            124
+          ],
+          [
+            103,
+            115
+          ]
+        ]
+      }
+    },
+    "IMD061": {
+      "seed": 61000225,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11151,
+        "preferred_available": 11151,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            2
+          ],
+          [
+            91,
+            14
+          ],
+          [
+            85,
+            40
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            73,
+            25
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5233,
+        "preferred_available": 5233,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            76
+          ],
+          [
+            101,
+            100
+          ],
+          [
+            102,
+            127
+          ],
+          [
+            6,
+            123
+          ],
+          [
+            124,
+            59
+          ]
+        ]
+      }
+    },
+    "IMD304": {
+      "seed": 304000954,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2473,
+        "preferred_available": 2473,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            50,
+            35
+          ],
+          [
+            63,
+            57
+          ],
+          [
+            61,
+            57
+          ],
+          [
+            68,
+            67
+          ],
+          [
+            41,
+            43
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13911,
+        "preferred_available": 13911,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            19,
+            109
+          ],
+          [
+            98,
+            7
+          ],
+          [
+            36,
+            84
+          ],
+          [
+            58,
+            87
+          ],
+          [
+            67,
+            91
+          ]
+        ]
+      }
+    },
+    "IMD423": {
+      "seed": 423001311,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10747,
+        "preferred_available": 10747,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            89
+          ],
+          [
+            117,
+            16
+          ],
+          [
+            66,
+            80
+          ],
+          [
+            92,
+            62
+          ],
+          [
+            118,
+            45
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5637,
+        "preferred_available": 5637,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            116,
+            122
+          ],
+          [
+            26,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            4,
+            65
+          ],
+          [
+            34,
+            107
+          ]
+        ]
+      }
+    },
+    "IMD393": {
+      "seed": 393001221,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8629,
+        "preferred_available": 8629,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            49,
+            86
+          ],
+          [
+            37,
+            98
+          ],
+          [
+            104,
+            77
+          ],
+          [
+            47,
+            55
+          ],
+          [
+            91,
+            34
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7755,
+        "preferred_available": 7755,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            31,
+            2
+          ],
+          [
+            18,
+            37
+          ],
+          [
+            22,
+            7
+          ],
+          [
+            7,
+            109
+          ],
+          [
+            102,
+            9
+          ]
+        ]
+      }
+    },
+    "IMD076": {
+      "seed": 76000270,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4262,
+        "preferred_available": 4262,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            102,
+            66
+          ],
+          [
+            25,
+            65
+          ],
+          [
+            118,
+            61
+          ],
+          [
+            17,
+            69
+          ],
+          [
+            81,
+            71
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12122,
+        "preferred_available": 12122,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            101
+          ],
+          [
+            50,
+            121
+          ],
+          [
+            119,
+            89
+          ],
+          [
+            30,
+            90
+          ],
+          [
+            70,
+            8
+          ]
+        ]
+      }
+    },
+    "IMD208": {
+      "seed": 208000666,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4097,
+        "preferred_available": 4097,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            91
+          ],
+          [
+            54,
+            89
+          ],
+          [
+            61,
+            105
+          ],
+          [
+            69,
+            82
+          ],
+          [
+            91,
+            67
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12287,
+        "preferred_available": 12287,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            112
+          ],
+          [
+            117,
+            84
+          ],
+          [
+            21,
+            38
+          ],
+          [
+            104,
+            105
+          ],
+          [
+            119,
+            96
+          ]
+        ]
+      }
+    },
+    "IMD009": {
+      "seed": 9000069,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1874,
+        "preferred_available": 1874,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            57,
+            45
+          ],
+          [
+            82,
+            62
+          ],
+          [
+            44,
+            56
+          ],
+          [
+            70,
+            74
+          ],
+          [
+            64,
+            48
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14510,
+        "preferred_available": 14510,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            22,
+            103
+          ],
+          [
+            89,
+            119
+          ],
+          [
+            104,
+            88
+          ],
+          [
+            13,
+            84
+          ],
+          [
+            31,
+            90
+          ]
+        ]
+      }
+    },
+    "IMD432": {
+      "seed": 432001338,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3394,
+        "preferred_available": 3394,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            53,
+            83
+          ],
+          [
+            61,
+            31
+          ],
+          [
+            56,
+            73
+          ],
+          [
+            71,
+            50
+          ],
+          [
+            84,
+            47
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12990,
+        "preferred_available": 12990,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            43
+          ],
+          [
+            110,
+            61
+          ],
+          [
+            10,
+            89
+          ],
+          [
+            110,
+            121
+          ],
+          [
+            97,
+            118
+          ]
+        ]
+      }
+    },
+    "IMD048": {
+      "seed": 48000186,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2206,
+        "preferred_available": 2206,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            108,
+            85
+          ],
+          [
+            77,
+            65
+          ],
+          [
+            111,
+            72
+          ],
+          [
+            79,
+            69
+          ],
+          [
+            66,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14178,
+        "preferred_available": 14178,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            14,
+            78
+          ],
+          [
+            37,
+            98
+          ],
+          [
+            74,
+            5
+          ],
+          [
+            65,
+            16
+          ],
+          [
+            95,
+            58
+          ]
+        ]
+      }
+    },
+    "IMD279": {
+      "seed": 279000879,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1795,
+        "preferred_available": 1795,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            91,
+            73
+          ],
+          [
+            93,
+            72
+          ],
+          [
+            86,
+            71
+          ],
+          [
+            88,
+            61
+          ],
+          [
+            79,
+            46
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14589,
+        "preferred_available": 14589,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            69,
+            21
+          ],
+          [
+            27,
+            5
+          ],
+          [
+            39,
+            76
+          ],
+          [
+            43,
+            71
+          ],
+          [
+            36,
+            22
+          ]
+        ]
+      }
+    },
+    "IMD018": {
+      "seed": 18000096,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1474,
+        "preferred_available": 1474,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            81,
+            54
+          ],
+          [
+            48,
+            69
+          ],
+          [
+            83,
+            63
+          ],
+          [
+            55,
+            71
+          ],
+          [
+            76,
+            63
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14910,
+        "preferred_available": 14910,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            28
+          ],
+          [
+            103,
+            70
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            124,
+            73
+          ],
+          [
+            9,
+            47
+          ]
+        ]
+      }
+    },
+    "IMD047": {
+      "seed": 47000183,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3762,
+        "preferred_available": 3762,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            38,
+            73
+          ],
+          [
+            63,
+            99
+          ],
+          [
+            58,
+            71
+          ],
+          [
+            67,
+            85
+          ],
+          [
+            40,
+            93
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12622,
+        "preferred_available": 12622,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            105,
+            105
+          ],
+          [
+            83,
+            0
+          ],
+          [
+            14,
+            14
+          ],
+          [
+            96,
+            111
+          ],
+          [
+            97,
+            21
+          ]
+        ]
+      }
+    },
+    "IMD382": {
+      "seed": 382001188,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4250,
+        "preferred_available": 4250,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            37,
+            53
+          ],
+          [
+            55,
+            76
+          ],
+          [
+            50,
+            63
+          ],
+          [
+            53,
+            109
+          ],
+          [
+            41,
+            56
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12134,
+        "preferred_available": 12134,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            122,
+            49
+          ],
+          [
+            57,
+            14
+          ],
+          [
+            83,
+            19
+          ],
+          [
+            98,
+            81
+          ],
+          [
+            13,
+            111
+          ]
+        ]
+      }
+    },
+    "IMD137": {
+      "seed": 137000453,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2124,
+        "preferred_available": 2124,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            50,
+            73
+          ],
+          [
+            69,
+            67
+          ],
+          [
+            30,
+            70
+          ],
+          [
+            21,
+            52
+          ],
+          [
+            29,
+            57
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14260,
+        "preferred_available": 14260,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            62
+          ],
+          [
+            9,
+            79
+          ],
+          [
+            115,
+            90
+          ],
+          [
+            21,
+            118
+          ],
+          [
+            24,
+            90
+          ]
+        ]
+      }
+    },
+    "IMD118": {
+      "seed": 118000396,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2755,
+        "preferred_available": 2755,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            76
+          ],
+          [
+            71,
+            45
+          ],
+          [
+            93,
+            56
+          ],
+          [
+            50,
+            68
+          ],
+          [
+            55,
+            75
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13629,
+        "preferred_available": 13629,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            100,
+            87
+          ],
+          [
+            44,
+            90
+          ],
+          [
+            103,
+            49
+          ],
+          [
+            11,
+            42
+          ],
+          [
+            119,
+            119
+          ]
+        ]
+      }
+    },
+    "IMD433": {
+      "seed": 433001341,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1932,
+        "preferred_available": 1932,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            44,
+            89
+          ],
+          [
+            60,
+            71
+          ],
+          [
+            54,
+            92
+          ],
+          [
+            86,
+            63
+          ],
+          [
+            87,
+            74
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14452,
+        "preferred_available": 14452,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            0,
+            20
+          ],
+          [
+            110,
+            55
+          ],
+          [
+            104,
+            71
+          ],
+          [
+            48,
+            59
+          ],
+          [
+            103,
+            125
+          ]
+        ]
+      }
+    },
+    "IMD042": {
+      "seed": 42000168,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4122,
+        "preferred_available": 4122,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            69,
+            42
+          ],
+          [
+            45,
+            43
+          ],
+          [
+            50,
+            33
+          ],
+          [
+            53,
+            75
+          ],
+          [
+            35,
+            79
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12262,
+        "preferred_available": 12262,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            106,
+            27
+          ],
+          [
+            118,
+            3
+          ],
+          [
+            49,
+            17
+          ],
+          [
+            97,
+            37
+          ],
+          [
+            48,
+            26
+          ]
+        ]
+      }
+    },
+    "IMD404": {
+      "seed": 404001254,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7605,
+        "preferred_available": 7605,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            45,
+            54
+          ],
+          [
+            73,
+            58
+          ],
+          [
+            42,
+            31
+          ],
+          [
+            5,
+            84
+          ],
+          [
+            50,
+            62
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8779,
+        "preferred_available": 8779,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            94,
+            8
+          ],
+          [
+            127,
+            121
+          ],
+          [
+            124,
+            45
+          ],
+          [
+            99,
+            43
+          ],
+          [
+            11,
+            99
+          ]
+        ]
+      }
+    },
+    "IMD403": {
+      "seed": 403001251,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11918,
+        "preferred_available": 11918,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            52,
+            28
+          ],
+          [
+            55,
+            72
+          ],
+          [
+            41,
+            30
+          ],
+          [
+            16,
+            51
+          ],
+          [
+            84,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4466,
+        "preferred_available": 4466,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            94,
+            1
+          ],
+          [
+            44,
+            117
+          ],
+          [
+            59,
+            1
+          ],
+          [
+            43,
+            0
+          ],
+          [
+            2,
+            42
+          ]
+        ]
+      }
+    },
+    "IMD112": {
+      "seed": 112000378,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 6517,
+        "preferred_available": 6517,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            27,
+            37
+          ],
+          [
+            39,
+            96
+          ],
+          [
+            40,
+            71
+          ],
+          [
+            26,
+            46
+          ],
+          [
+            52,
+            36
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9867,
+        "preferred_available": 9867,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            106,
+            124
+          ],
+          [
+            93,
+            105
+          ],
+          [
+            9,
+            55
+          ],
+          [
+            7,
+            33
+          ],
+          [
+            75,
+            105
+          ]
+        ]
+      }
+    },
+    "IMD016": {
+      "seed": 16000090,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2762,
+        "preferred_available": 2762,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            74,
+            41
+          ],
+          [
+            42,
+            56
+          ],
+          [
+            80,
+            67
+          ],
+          [
+            77,
+            47
+          ],
+          [
+            41,
+            62
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13622,
+        "preferred_available": 13622,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            50
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            12,
+            107
+          ],
+          [
+            70,
+            111
+          ],
+          [
+            112,
+            127
+          ]
+        ]
+      }
+    },
+    "IMD371": {
+      "seed": 371001155,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7606,
+        "preferred_available": 7606,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            30
+          ],
+          [
+            40,
+            71
+          ],
+          [
+            76,
+            93
+          ],
+          [
+            36,
+            47
+          ],
+          [
+            36,
+            77
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8778,
+        "preferred_available": 8778,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            30,
+            22
+          ],
+          [
+            23,
+            39
+          ],
+          [
+            105,
+            98
+          ],
+          [
+            122,
+            37
+          ],
+          [
+            118,
+            33
+          ]
+        ]
+      }
+    },
+    "IMD390": {
+      "seed": 390001212,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3007,
+        "preferred_available": 3007,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            65,
+            84
+          ],
+          [
+            63,
+            56
+          ],
+          [
+            61,
+            88
+          ],
+          [
+            53,
+            54
+          ],
+          [
+            81,
+            94
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13377,
+        "preferred_available": 13377,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            119,
+            5
+          ],
+          [
+            92,
+            110
+          ],
+          [
+            76,
+            5
+          ],
+          [
+            14,
+            82
+          ],
+          [
+            93,
+            102
+          ]
+        ]
+      }
+    },
+    "IMD090": {
+      "seed": 90000312,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11931,
+        "preferred_available": 11931,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            95,
+            51
+          ],
+          [
+            4,
+            94
+          ],
+          [
+            79,
+            18
+          ],
+          [
+            11,
+            118
+          ],
+          [
+            64,
+            114
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4453,
+        "preferred_available": 4453,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            115,
+            20
+          ],
+          [
+            127,
+            41
+          ],
+          [
+            123,
+            33
+          ],
+          [
+            87,
+            51
+          ],
+          [
+            39,
+            7
+          ]
+        ]
+      }
+    },
+    "IMD285": {
+      "seed": 285000897,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7333,
+        "preferred_available": 7333,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            31,
+            98
+          ],
+          [
+            59,
+            82
+          ],
+          [
+            93,
+            46
+          ],
+          [
+            87,
+            93
+          ],
+          [
+            86,
+            80
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9051,
+        "preferred_available": 9051,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            114,
+            93
+          ],
+          [
+            125,
+            100
+          ],
+          [
+            117,
+            62
+          ],
+          [
+            10,
+            23
+          ],
+          [
+            20,
+            0
+          ]
+        ]
+      }
+    },
+    "IMD203": {
+      "seed": 203000651,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1748,
+        "preferred_available": 1748,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            72,
+            79
+          ],
+          [
+            83,
+            79
+          ],
+          [
+            83,
+            63
+          ],
+          [
+            82,
+            37
+          ],
+          [
+            90,
+            60
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14636,
+        "preferred_available": 14636,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            65,
+            93
+          ],
+          [
+            126,
+            24
+          ],
+          [
+            122,
+            114
+          ],
+          [
+            70,
+            118
+          ],
+          [
+            36,
+            85
+          ]
+        ]
+      }
+    },
+    "IMD142": {
+      "seed": 142000468,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2320,
+        "preferred_available": 2320,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            79,
+            76
+          ],
+          [
+            62,
+            78
+          ],
+          [
+            71,
+            43
+          ],
+          [
+            70,
+            77
+          ],
+          [
+            69,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14064,
+        "preferred_available": 14064,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            52
+          ],
+          [
+            57,
+            122
+          ],
+          [
+            104,
+            6
+          ],
+          [
+            15,
+            121
+          ],
+          [
+            33,
+            77
+          ]
+        ]
+      }
+    },
+    "IMD219": {
+      "seed": 219000699,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11551,
+        "preferred_available": 11551,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            51
+          ],
+          [
+            20,
+            20
+          ],
+          [
+            55,
+            39
+          ],
+          [
+            59,
+            100
+          ],
+          [
+            84,
+            83
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4833,
+        "preferred_available": 4833,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            89
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            23,
+            11
+          ],
+          [
+            11,
+            121
+          ]
+        ]
+      }
+    },
+    "IMD200": {
+      "seed": 200000642,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2623,
+        "preferred_available": 2623,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            76
+          ],
+          [
+            63,
+            61
+          ],
+          [
+            62,
+            77
+          ],
+          [
+            114,
+            49
+          ],
+          [
+            81,
+            52
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13761,
+        "preferred_available": 13761,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            52,
+            80
+          ],
+          [
+            66,
+            108
+          ],
+          [
+            49,
+            118
+          ],
+          [
+            54,
+            40
+          ],
+          [
+            78,
+            26
+          ]
+        ]
+      }
+    },
+    "IMD171": {
+      "seed": 171000555,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2296,
+        "preferred_available": 2296,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            65
+          ],
+          [
+            54,
+            69
+          ],
+          [
+            59,
+            81
+          ],
+          [
+            51,
+            81
+          ],
+          [
+            102,
+            74
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14088,
+        "preferred_available": 14088,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            44,
+            25
+          ],
+          [
+            100,
+            13
+          ],
+          [
+            40,
+            66
+          ],
+          [
+            117,
+            29
+          ],
+          [
+            18,
+            125
+          ]
+        ]
+      }
+    },
+    "IMD198": {
+      "seed": 198000636,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2005,
+        "preferred_available": 2005,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            44,
+            69
+          ],
+          [
+            39,
+            71
+          ],
+          [
+            64,
+            46
+          ],
+          [
+            47,
+            60
+          ],
+          [
+            68,
+            47
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14379,
+        "preferred_available": 14379,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            24,
+            11
+          ],
+          [
+            90,
+            30
+          ],
+          [
+            7,
+            45
+          ],
+          [
+            26,
+            33
+          ],
+          [
+            92,
+            30
+          ]
+        ]
+      }
+    },
+    "IMD372": {
+      "seed": 372001158,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2590,
+        "preferred_available": 2590,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            73
+          ],
+          [
+            72,
+            69
+          ],
+          [
+            79,
+            48
+          ],
+          [
+            67,
+            46
+          ],
+          [
+            47,
+            78
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13794,
+        "preferred_available": 13794,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            15,
+            44
+          ],
+          [
+            22,
+            126
+          ],
+          [
+            3,
+            48
+          ],
+          [
+            18,
+            99
+          ],
+          [
+            127,
+            74
+          ]
+        ]
+      }
+    },
+    "IMD063": {
+      "seed": 63000231,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7909,
+        "preferred_available": 7909,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            94,
+            52
+          ],
+          [
+            71,
+            36
+          ],
+          [
+            122,
+            36
+          ],
+          [
+            83,
+            49
+          ],
+          [
+            63,
+            102
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8475,
+        "preferred_available": 8475,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            116,
+            112
+          ],
+          [
+            105,
+            93
+          ],
+          [
+            121,
+            30
+          ],
+          [
+            115,
+            12
+          ],
+          [
+            126,
+            11
+          ]
+        ]
+      }
+    },
+    "IMD002": {
+      "seed": 2000048,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4511,
+        "preferred_available": 4511,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            63,
+            88
+          ],
+          [
+            23,
+            62
+          ],
+          [
+            80,
+            84
+          ],
+          [
+            91,
+            69
+          ],
+          [
+            77,
+            97
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11873,
+        "preferred_available": 11873,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            117
+          ],
+          [
+            79,
+            6
+          ],
+          [
+            39,
+            4
+          ],
+          [
+            33,
+            30
+          ],
+          [
+            19,
+            52
+          ]
+        ]
+      }
+    },
+    "IMD392": {
+      "seed": 392001218,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2280,
+        "preferred_available": 2280,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            54,
+            66
+          ],
+          [
+            51,
+            56
+          ],
+          [
+            66,
+            42
+          ],
+          [
+            60,
+            60
+          ],
+          [
+            41,
+            69
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14104,
+        "preferred_available": 14104,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            95,
+            96
+          ],
+          [
+            15,
+            94
+          ],
+          [
+            55,
+            21
+          ],
+          [
+            25,
+            83
+          ],
+          [
+            60,
+            101
+          ]
+        ]
+      }
+    },
+    "IMD430": {
+      "seed": 430001332,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3146,
+        "preferred_available": 3146,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            51,
+            30
+          ],
+          [
+            94,
+            68
+          ],
+          [
+            49,
+            35
+          ],
+          [
+            40,
+            44
+          ],
+          [
+            44,
+            64
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13238,
+        "preferred_available": 13238,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            43,
+            7
+          ],
+          [
+            71,
+            119
+          ],
+          [
+            41,
+            67
+          ],
+          [
+            73,
+            15
+          ],
+          [
+            74,
+            79
+          ]
+        ]
+      }
+    },
+    "IMD022": {
+      "seed": 22000108,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4479,
+        "preferred_available": 4479,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            56
+          ],
+          [
+            47,
+            26
+          ],
+          [
+            36,
+            35
+          ],
+          [
+            46,
+            75
+          ],
+          [
+            84,
+            44
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11905,
+        "preferred_available": 11905,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            73,
+            87
+          ],
+          [
+            127,
+            3
+          ],
+          [
+            45,
+            100
+          ],
+          [
+            27,
+            0
+          ],
+          [
+            22,
+            76
+          ]
+        ]
+      }
+    },
+    "IMD152": {
+      "seed": 152000498,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 6026,
+        "preferred_available": 6026,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            30,
+            26
+          ],
+          [
+            103,
+            49
+          ],
+          [
+            47,
+            88
+          ],
+          [
+            96,
+            77
+          ],
+          [
+            40,
+            77
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10358,
+        "preferred_available": 10358,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            73,
+            104
+          ],
+          [
+            84,
+            14
+          ],
+          [
+            76,
+            11
+          ],
+          [
+            2,
+            27
+          ],
+          [
+            6,
+            76
+          ]
+        ]
+      }
+    },
+    "IMD197": {
+      "seed": 197000633,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4263,
+        "preferred_available": 4263,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            87,
+            47
+          ],
+          [
+            86,
+            70
+          ],
+          [
+            93,
+            47
+          ],
+          [
+            112,
+            72
+          ],
+          [
+            82,
+            42
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12121,
+        "preferred_available": 12121,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            9,
+            116
+          ],
+          [
+            97,
+            39
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            63,
+            100
+          ],
+          [
+            106,
+            61
+          ]
+        ]
+      }
+    },
+    "IMD049": {
+      "seed": 49000189,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2216,
+        "preferred_available": 2216,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            56,
+            50
+          ],
+          [
+            63,
+            63
+          ],
+          [
+            49,
+            65
+          ],
+          [
+            31,
+            63
+          ],
+          [
+            30,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14168,
+        "preferred_available": 14168,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            28,
+            97
+          ],
+          [
+            116,
+            17
+          ],
+          [
+            111,
+            67
+          ],
+          [
+            95,
+            31
+          ],
+          [
+            105,
+            3
+          ]
+        ]
+      }
+    },
+    "IMD385": {
+      "seed": 385001197,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3671,
+        "preferred_available": 3671,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            68,
+            77
+          ],
+          [
+            68,
+            83
+          ],
+          [
+            84,
+            77
+          ],
+          [
+            61,
+            38
+          ],
+          [
+            99,
+            91
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12713,
+        "preferred_available": 12713,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            126,
+            43
+          ],
+          [
+            20,
+            39
+          ],
+          [
+            21,
+            80
+          ],
+          [
+            116,
+            65
+          ],
+          [
+            109,
+            64
+          ]
+        ]
+      }
+    },
+    "IMD408": {
+      "seed": 408001266,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14392,
+        "preferred_available": 14392,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            79,
+            112
+          ],
+          [
+            9,
+            98
+          ],
+          [
+            69,
+            24
+          ],
+          [
+            68,
+            18
+          ],
+          [
+            125,
+            44
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1992,
+        "preferred_available": 1992,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            82,
+            2
+          ],
+          [
+            121,
+            9
+          ],
+          [
+            112,
+            115
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            10,
+            15
+          ]
+        ]
+      }
+    },
+    "IMD349": {
+      "seed": 349001089,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9865,
+        "preferred_available": 9865,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            12,
+            49
+          ],
+          [
+            59,
+            90
+          ],
+          [
+            63,
+            45
+          ],
+          [
+            34,
+            18
+          ],
+          [
+            41,
+            15
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 6519,
+        "preferred_available": 6519,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            14
+          ],
+          [
+            46,
+            7
+          ],
+          [
+            92,
+            95
+          ],
+          [
+            124,
+            0
+          ],
+          [
+            116,
+            5
+          ]
+        ]
+      }
+    },
+    "IMD149": {
+      "seed": 149000489,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5999,
+        "preferred_available": 5999,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            43
+          ],
+          [
+            26,
+            55
+          ],
+          [
+            61,
+            14
+          ],
+          [
+            23,
+            32
+          ],
+          [
+            38,
+            25
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10385,
+        "preferred_available": 10385,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            53,
+            101
+          ],
+          [
+            83,
+            119
+          ],
+          [
+            15,
+            34
+          ],
+          [
+            102,
+            92
+          ],
+          [
+            32,
+            86
+          ]
+        ]
+      }
+    },
+    "IMD240": {
+      "seed": 240000762,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15280,
+        "preferred_available": 15280,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            67
+          ],
+          [
+            5,
+            36
+          ],
+          [
+            125,
+            83
+          ],
+          [
+            21,
+            113
+          ],
+          [
+            82,
+            23
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1104,
+        "preferred_available": 1104,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            124,
+            0
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            2,
+            15
+          ],
+          [
+            9,
+            124
+          ]
+        ]
+      }
+    },
+    "IMD025": {
+      "seed": 25000117,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2872,
+        "preferred_available": 2872,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            88
+          ],
+          [
+            44,
+            86
+          ],
+          [
+            45,
+            67
+          ],
+          [
+            80,
+            44
+          ],
+          [
+            77,
+            68
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13512,
+        "preferred_available": 13512,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            11,
+            109
+          ],
+          [
+            54,
+            113
+          ],
+          [
+            117,
+            38
+          ],
+          [
+            23,
+            65
+          ],
+          [
+            86,
+            122
+          ]
+        ]
+      }
+    },
+    "IMD020": {
+      "seed": 20000102,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1942,
+        "preferred_available": 1942,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            84,
+            65
+          ],
+          [
+            73,
+            79
+          ],
+          [
+            100,
+            52
+          ],
+          [
+            64,
+            64
+          ],
+          [
+            92,
+            64
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14442,
+        "preferred_available": 14442,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            24,
+            0
+          ],
+          [
+            73,
+            40
+          ],
+          [
+            8,
+            49
+          ],
+          [
+            121,
+            58
+          ],
+          [
+            69,
+            12
+          ]
+        ]
+      }
+    },
+    "IMD409": {
+      "seed": 409001269,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10691,
+        "preferred_available": 10691,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            96
+          ],
+          [
+            41,
+            40
+          ],
+          [
+            13,
+            119
+          ],
+          [
+            106,
+            51
+          ],
+          [
+            16,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5693,
+        "preferred_available": 5693,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            1,
+            18
+          ],
+          [
+            31,
+            27
+          ],
+          [
+            115,
+            0
+          ],
+          [
+            122,
+            13
+          ],
+          [
+            0,
+            49
+          ]
+        ]
+      }
+    },
+    "IMD374": {
+      "seed": 374001164,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1467,
+        "preferred_available": 1467,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            64
+          ],
+          [
+            67,
+            49
+          ],
+          [
+            69,
+            74
+          ],
+          [
+            76,
+            73
+          ],
+          [
+            60,
+            74
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14917,
+        "preferred_available": 14917,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            118,
+            111
+          ],
+          [
+            44,
+            40
+          ],
+          [
+            33,
+            44
+          ],
+          [
+            2,
+            78
+          ],
+          [
+            59,
+            125
+          ]
+        ]
+      }
+    },
+    "IMD411": {
+      "seed": 411001275,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15673,
+        "preferred_available": 15673,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            83
+          ],
+          [
+            115,
+            60
+          ],
+          [
+            55,
+            85
+          ],
+          [
+            91,
+            12
+          ],
+          [
+            20,
+            95
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 711,
+        "preferred_available": 711,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            122
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            121,
+            122
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            125,
+            1
+          ]
+        ]
+      }
+    },
+    "IMD132": {
+      "seed": 132000438,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1059,
+        "preferred_available": 1059,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            72,
+            51
+          ],
+          [
+            71,
+            70
+          ],
+          [
+            81,
+            76
+          ],
+          [
+            80,
+            54
+          ],
+          [
+            65,
+            78
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15325,
+        "preferred_available": 15325,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            17,
+            37
+          ],
+          [
+            107,
+            121
+          ],
+          [
+            124,
+            85
+          ],
+          [
+            52,
+            22
+          ],
+          [
+            15,
+            77
+          ]
+        ]
+      }
+    },
+    "IMD156": {
+      "seed": 156000510,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 960,
+        "preferred_available": 960,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            48
+          ],
+          [
+            42,
+            51
+          ],
+          [
+            60,
+            54
+          ],
+          [
+            51,
+            65
+          ],
+          [
+            57,
+            68
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15424,
+        "preferred_available": 15424,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            83
+          ],
+          [
+            37,
+            94
+          ],
+          [
+            2,
+            118
+          ],
+          [
+            113,
+            0
+          ],
+          [
+            35,
+            10
+          ]
+        ]
+      }
+    },
+    "IMD396": {
+      "seed": 396001230,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3229,
+        "preferred_available": 3229,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            38,
+            76
+          ],
+          [
+            53,
+            48
+          ],
+          [
+            92,
+            75
+          ],
+          [
+            104,
+            64
+          ],
+          [
+            77,
+            43
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13155,
+        "preferred_available": 13155,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            42,
+            119
+          ],
+          [
+            22,
+            105
+          ],
+          [
+            106,
+            86
+          ],
+          [
+            105,
+            94
+          ],
+          [
+            21,
+            98
+          ]
+        ]
+      }
+    },
+    "IMD075": {
+      "seed": 75000267,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3844,
+        "preferred_available": 3844,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            51,
+            75
+          ],
+          [
+            47,
+            46
+          ],
+          [
+            43,
+            50
+          ],
+          [
+            58,
+            63
+          ],
+          [
+            82,
+            66
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12540,
+        "preferred_available": 12540,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            76,
+            127
+          ],
+          [
+            104,
+            111
+          ],
+          [
+            83,
+            87
+          ],
+          [
+            9,
+            17
+          ],
+          [
+            116,
+            50
+          ]
+        ]
+      }
+    },
+    "IMD199": {
+      "seed": 199000639,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2677,
+        "preferred_available": 2677,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            97,
+            40
+          ],
+          [
+            49,
+            47
+          ],
+          [
+            91,
+            34
+          ],
+          [
+            69,
+            52
+          ],
+          [
+            66,
+            61
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13707,
+        "preferred_available": 13707,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            90,
+            1
+          ],
+          [
+            87,
+            115
+          ],
+          [
+            29,
+            109
+          ],
+          [
+            4,
+            92
+          ],
+          [
+            64,
+            4
+          ]
+        ]
+      }
+    },
+    "IMD150": {
+      "seed": 150000492,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 6497,
+        "preferred_available": 6497,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            53,
+            95
+          ],
+          [
+            85,
+            97
+          ],
+          [
+            99,
+            72
+          ],
+          [
+            54,
+            34
+          ],
+          [
+            58,
+            93
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9887,
+        "preferred_available": 9887,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            75,
+            107
+          ],
+          [
+            121,
+            114
+          ],
+          [
+            2,
+            15
+          ],
+          [
+            100,
+            22
+          ],
+          [
+            70,
+            16
+          ]
+        ]
+      }
+    },
+    "IMD092": {
+      "seed": 92000318,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 516,
+        "preferred_available": 516,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            81
+          ],
+          [
+            77,
+            83
+          ],
+          [
+            76,
+            74
+          ],
+          [
+            59,
+            85
+          ],
+          [
+            58,
+            75
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15868,
+        "preferred_available": 15868,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            75,
+            116
+          ],
+          [
+            56,
+            16
+          ],
+          [
+            14,
+            81
+          ],
+          [
+            105,
+            108
+          ],
+          [
+            112,
+            47
+          ]
+        ]
+      }
+    },
+    "IMD434": {
+      "seed": 434001344,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3217,
+        "preferred_available": 3217,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            89
+          ],
+          [
+            40,
+            68
+          ],
+          [
+            56,
+            45
+          ],
+          [
+            73,
+            71
+          ],
+          [
+            40,
+            33
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13167,
+        "preferred_available": 13167,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            17,
+            22
+          ],
+          [
+            68,
+            25
+          ],
+          [
+            1,
+            56
+          ],
+          [
+            102,
+            93
+          ],
+          [
+            97,
+            73
+          ]
+        ]
+      }
+    },
+    "IMD157": {
+      "seed": 157000513,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4243,
+        "preferred_available": 4243,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            38,
+            50
+          ],
+          [
+            69,
+            39
+          ],
+          [
+            40,
+            92
+          ],
+          [
+            56,
+            82
+          ],
+          [
+            62,
+            82
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12141,
+        "preferred_available": 12141,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            88,
+            100
+          ],
+          [
+            12,
+            99
+          ],
+          [
+            115,
+            1
+          ],
+          [
+            18,
+            46
+          ],
+          [
+            10,
+            96
+          ]
+        ]
+      }
+    },
+    "IMD251": {
+      "seed": 251000795,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1847,
+        "preferred_available": 1847,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            45,
+            38
+          ],
+          [
+            50,
+            39
+          ],
+          [
+            66,
+            50
+          ],
+          [
+            70,
+            37
+          ],
+          [
+            80,
+            40
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14537,
+        "preferred_available": 14537,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            19,
+            65
+          ],
+          [
+            57,
+            5
+          ],
+          [
+            58,
+            80
+          ],
+          [
+            89,
+            86
+          ],
+          [
+            104,
+            114
+          ]
+        ]
+      }
+    },
+    "IMD207": {
+      "seed": 207000663,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3363,
+        "preferred_available": 3363,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            69
+          ],
+          [
+            44,
+            73
+          ],
+          [
+            58,
+            57
+          ],
+          [
+            61,
+            56
+          ],
+          [
+            51,
+            55
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13021,
+        "preferred_available": 13021,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            1,
+            82
+          ],
+          [
+            88,
+            0
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            20,
+            80
+          ],
+          [
+            61,
+            117
+          ]
+        ]
+      }
+    },
+    "IMD347": {
+      "seed": 347001083,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8787,
+        "preferred_available": 8787,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            54,
+            39
+          ],
+          [
+            53,
+            80
+          ],
+          [
+            114,
+            93
+          ],
+          [
+            22,
+            24
+          ],
+          [
+            38,
+            68
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7597,
+        "preferred_available": 7597,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            12,
+            16
+          ],
+          [
+            57,
+            114
+          ],
+          [
+            125,
+            26
+          ],
+          [
+            69,
+            110
+          ],
+          [
+            127,
+            125
+          ]
+        ]
+      }
+    },
+    "IMD369": {
+      "seed": 369001149,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4187,
+        "preferred_available": 4187,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            52,
+            59
+          ],
+          [
+            55,
+            96
+          ],
+          [
+            66,
+            67
+          ],
+          [
+            36,
+            90
+          ],
+          [
+            27,
+            42
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12197,
+        "preferred_available": 12197,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            123
+          ],
+          [
+            18,
+            8
+          ],
+          [
+            16,
+            59
+          ],
+          [
+            126,
+            23
+          ],
+          [
+            92,
+            1
+          ]
+        ]
+      }
+    },
+    "IMD043": {
+      "seed": 43000171,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2827,
+        "preferred_available": 2827,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            65
+          ],
+          [
+            54,
+            53
+          ],
+          [
+            46,
+            29
+          ],
+          [
+            93,
+            46
+          ],
+          [
+            45,
+            53
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13557,
+        "preferred_available": 13557,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            123,
+            82
+          ],
+          [
+            79,
+            87
+          ],
+          [
+            9,
+            65
+          ],
+          [
+            125,
+            12
+          ],
+          [
+            119,
+            112
+          ]
+        ]
+      }
+    },
+    "IMD024": {
+      "seed": 24000114,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1381,
+        "preferred_available": 1381,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            66
+          ],
+          [
+            79,
+            48
+          ],
+          [
+            80,
+            68
+          ],
+          [
+            72,
+            67
+          ],
+          [
+            80,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15003,
+        "preferred_available": 15003,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            36,
+            91
+          ],
+          [
+            21,
+            100
+          ],
+          [
+            122,
+            85
+          ],
+          [
+            95,
+            116
+          ],
+          [
+            25,
+            21
+          ]
+        ]
+      }
+    },
+    "IMD367": {
+      "seed": 367001143,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3455,
+        "preferred_available": 3455,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            30,
+            75
+          ],
+          [
+            48,
+            50
+          ],
+          [
+            43,
+            62
+          ],
+          [
+            69,
+            78
+          ],
+          [
+            49,
+            32
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12929,
+        "preferred_available": 12929,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            123,
+            80
+          ],
+          [
+            120,
+            46
+          ],
+          [
+            45,
+            103
+          ],
+          [
+            93,
+            3
+          ],
+          [
+            119,
+            106
+          ]
+        ]
+      }
+    },
+    "IMD280": {
+      "seed": 280000882,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1738,
+        "preferred_available": 1738,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            59,
+            42
+          ],
+          [
+            54,
+            67
+          ],
+          [
+            50,
+            60
+          ],
+          [
+            67,
+            78
+          ],
+          [
+            43,
+            70
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14646,
+        "preferred_available": 14646,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            105,
+            100
+          ],
+          [
+            58,
+            116
+          ],
+          [
+            3,
+            116
+          ],
+          [
+            25,
+            18
+          ],
+          [
+            101,
+            109
+          ]
+        ]
+      }
+    },
+    "IMD407": {
+      "seed": 407001263,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 6142,
+        "preferred_available": 6142,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            94,
+            54
+          ],
+          [
+            100,
+            82
+          ],
+          [
+            85,
+            97
+          ],
+          [
+            73,
+            88
+          ],
+          [
+            68,
+            60
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10242,
+        "preferred_available": 10242,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            120,
+            115
+          ],
+          [
+            127,
+            78
+          ],
+          [
+            125,
+            88
+          ],
+          [
+            43,
+            12
+          ],
+          [
+            93,
+            107
+          ]
+        ]
+      }
+    },
+    "IMD125": {
+      "seed": 125000417,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2792,
+        "preferred_available": 2792,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            62,
+            76
+          ],
+          [
+            86,
+            73
+          ],
+          [
+            66,
+            81
+          ],
+          [
+            78,
+            62
+          ],
+          [
+            76,
+            68
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13592,
+        "preferred_available": 13592,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            127,
+            58
+          ],
+          [
+            114,
+            7
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            40,
+            117
+          ],
+          [
+            102,
+            89
+          ]
+        ]
+      }
+    },
+    "IMD155": {
+      "seed": 155000507,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 6497,
+        "preferred_available": 6497,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            39,
+            75
+          ],
+          [
+            49,
+            71
+          ],
+          [
+            77,
+            53
+          ],
+          [
+            33,
+            91
+          ],
+          [
+            75,
+            98
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9887,
+        "preferred_available": 9887,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            112,
+            74
+          ],
+          [
+            91,
+            115
+          ],
+          [
+            112,
+            38
+          ],
+          [
+            122,
+            0
+          ],
+          [
+            31,
+            3
+          ]
+        ]
+      }
+    },
+    "IMD376": {
+      "seed": 376001170,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2421,
+        "preferred_available": 2421,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            74,
+            43
+          ],
+          [
+            63,
+            77
+          ],
+          [
+            61,
+            39
+          ],
+          [
+            57,
+            59
+          ],
+          [
+            47,
+            49
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13963,
+        "preferred_available": 13963,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            25,
+            26
+          ],
+          [
+            99,
+            57
+          ],
+          [
+            9,
+            121
+          ],
+          [
+            28,
+            127
+          ],
+          [
+            7,
+            20
+          ]
+        ]
+      }
+    },
+    "IMD182": {
+      "seed": 182000588,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4966,
+        "preferred_available": 4966,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            77,
+            96
+          ],
+          [
+            88,
+            72
+          ],
+          [
+            91,
+            64
+          ],
+          [
+            76,
+            69
+          ],
+          [
+            108,
+            72
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11418,
+        "preferred_available": 11418,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            18
+          ],
+          [
+            125,
+            7
+          ],
+          [
+            100,
+            126
+          ],
+          [
+            97,
+            109
+          ],
+          [
+            89,
+            124
+          ]
+        ]
+      }
+    },
+    "IMD384": {
+      "seed": 384001194,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1996,
+        "preferred_available": 1996,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            83,
+            57
+          ],
+          [
+            87,
+            67
+          ],
+          [
+            67,
+            53
+          ],
+          [
+            60,
+            46
+          ],
+          [
+            71,
+            80
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14388,
+        "preferred_available": 14388,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            104,
+            87
+          ],
+          [
+            48,
+            108
+          ],
+          [
+            108,
+            30
+          ],
+          [
+            49,
+            82
+          ],
+          [
+            83,
+            91
+          ]
+        ]
+      }
+    },
+    "IMD140": {
+      "seed": 140000462,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1863,
+        "preferred_available": 1863,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            72,
+            60
+          ],
+          [
+            57,
+            57
+          ],
+          [
+            67,
+            64
+          ],
+          [
+            78,
+            66
+          ],
+          [
+            47,
+            69
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14521,
+        "preferred_available": 14521,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            48,
+            51
+          ],
+          [
+            42,
+            30
+          ],
+          [
+            57,
+            36
+          ],
+          [
+            69,
+            35
+          ],
+          [
+            5,
+            96
+          ]
+        ]
+      }
+    },
+    "IMD037": {
+      "seed": 37000153,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2222,
+        "preferred_available": 2222,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            92,
+            67
+          ],
+          [
+            27,
+            75
+          ],
+          [
+            66,
+            82
+          ],
+          [
+            52,
+            65
+          ],
+          [
+            29,
+            64
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14162,
+        "preferred_available": 14162,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            2
+          ],
+          [
+            120,
+            8
+          ],
+          [
+            53,
+            123
+          ],
+          [
+            99,
+            99
+          ],
+          [
+            16,
+            107
+          ]
+        ]
+      }
+    },
+    "IMD420": {
+      "seed": 420001302,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11968,
+        "preferred_available": 11968,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            63,
+            66
+          ],
+          [
+            30,
+            120
+          ],
+          [
+            31,
+            93
+          ],
+          [
+            69,
+            54
+          ],
+          [
+            74,
+            14
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4416,
+        "preferred_available": 4416,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            103,
+            3
+          ],
+          [
+            47,
+            15
+          ],
+          [
+            90,
+            111
+          ],
+          [
+            88,
+            97
+          ],
+          [
+            124,
+            98
+          ]
+        ]
+      }
+    },
+    "IMD211": {
+      "seed": 211000675,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4837,
+        "preferred_available": 4837,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            84,
+            86
+          ],
+          [
+            38,
+            27
+          ],
+          [
+            94,
+            68
+          ],
+          [
+            39,
+            56
+          ],
+          [
+            74,
+            53
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11547,
+        "preferred_available": 11547,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            20,
+            65
+          ],
+          [
+            123,
+            66
+          ],
+          [
+            29,
+            87
+          ],
+          [
+            58,
+            111
+          ],
+          [
+            104,
+            26
+          ]
+        ]
+      }
+    },
+    "IMD088": {
+      "seed": 88000306,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7473,
+        "preferred_available": 7473,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            90,
+            91
+          ],
+          [
+            63,
+            39
+          ],
+          [
+            12,
+            90
+          ],
+          [
+            87,
+            62
+          ],
+          [
+            86,
+            74
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8911,
+        "preferred_available": 8911,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            106,
+            93
+          ],
+          [
+            73,
+            23
+          ],
+          [
+            65,
+            14
+          ],
+          [
+            84,
+            121
+          ],
+          [
+            4,
+            119
+          ]
+        ]
+      }
+    },
+    "IMD406": {
+      "seed": 406001260,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7778,
+        "preferred_available": 7778,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            39,
+            77
+          ],
+          [
+            57,
+            35
+          ],
+          [
+            108,
+            40
+          ],
+          [
+            9,
+            62
+          ],
+          [
+            62,
+            81
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8606,
+        "preferred_available": 8606,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            22,
+            116
+          ],
+          [
+            64,
+            113
+          ],
+          [
+            77,
+            12
+          ],
+          [
+            125,
+            64
+          ],
+          [
+            104,
+            126
+          ]
+        ]
+      }
+    },
+    "IMD008": {
+      "seed": 8000066,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1919,
+        "preferred_available": 1919,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            72,
+            88
+          ],
+          [
+            69,
+            60
+          ],
+          [
+            72,
+            78
+          ],
+          [
+            58,
+            48
+          ],
+          [
+            40,
+            65
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14465,
+        "preferred_available": 14465,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            7,
+            55
+          ],
+          [
+            96,
+            93
+          ],
+          [
+            68,
+            117
+          ],
+          [
+            105,
+            55
+          ],
+          [
+            38,
+            102
+          ]
+        ]
+      }
+    },
+    "IMD039": {
+      "seed": 39000159,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1255,
+        "preferred_available": 1255,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            36,
+            63
+          ],
+          [
+            31,
+            62
+          ],
+          [
+            45,
+            67
+          ],
+          [
+            38,
+            59
+          ],
+          [
+            61,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15129,
+        "preferred_available": 15129,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            92,
+            105
+          ],
+          [
+            27,
+            89
+          ],
+          [
+            114,
+            111
+          ],
+          [
+            110,
+            80
+          ],
+          [
+            54,
+            91
+          ]
+        ]
+      }
+    },
+    "IMD419": {
+      "seed": 419001299,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13160,
+        "preferred_available": 13160,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            84,
+            111
+          ],
+          [
+            47,
+            104
+          ],
+          [
+            79,
+            75
+          ],
+          [
+            21,
+            104
+          ],
+          [
+            119,
+            89
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3224,
+        "preferred_available": 3224,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            119
+          ],
+          [
+            4,
+            23
+          ],
+          [
+            10,
+            123
+          ],
+          [
+            12,
+            21
+          ],
+          [
+            10,
+            110
+          ]
+        ]
+      }
+    },
+    "IMD177": {
+      "seed": 177000573,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2442,
+        "preferred_available": 2442,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            53,
+            83
+          ],
+          [
+            70,
+            73
+          ],
+          [
+            102,
+            72
+          ],
+          [
+            98,
+            69
+          ],
+          [
+            65,
+            83
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13942,
+        "preferred_available": 13942,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            43,
+            11
+          ],
+          [
+            22,
+            19
+          ],
+          [
+            90,
+            116
+          ],
+          [
+            93,
+            17
+          ],
+          [
+            62,
+            41
+          ]
+        ]
+      }
+    },
+    "IMD176": {
+      "seed": 176000570,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5363,
+        "preferred_available": 5363,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            55,
+            108
+          ],
+          [
+            80,
+            44
+          ],
+          [
+            79,
+            35
+          ],
+          [
+            60,
+            51
+          ],
+          [
+            79,
+            84
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11021,
+        "preferred_available": 11021,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            13,
+            84
+          ],
+          [
+            14,
+            95
+          ],
+          [
+            12,
+            63
+          ],
+          [
+            17,
+            64
+          ],
+          [
+            20,
+            40
+          ]
+        ]
+      }
+    },
+    "IMD331": {
+      "seed": 331001035,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1636,
+        "preferred_available": 1636,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            57,
+            52
+          ],
+          [
+            81,
+            39
+          ],
+          [
+            95,
+            65
+          ],
+          [
+            84,
+            39
+          ],
+          [
+            80,
+            38
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14748,
+        "preferred_available": 14748,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            29,
+            28
+          ],
+          [
+            17,
+            77
+          ],
+          [
+            30,
+            26
+          ],
+          [
+            102,
+            18
+          ],
+          [
+            2,
+            88
+          ]
+        ]
+      }
+    },
+    "IMD284": {
+      "seed": 284000894,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14147,
+        "preferred_available": 14147,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            8,
+            103
+          ],
+          [
+            16,
+            16
+          ],
+          [
+            77,
+            10
+          ],
+          [
+            117,
+            88
+          ],
+          [
+            73,
+            6
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2237,
+        "preferred_available": 2237,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            105,
+            110
+          ],
+          [
+            23,
+            10
+          ],
+          [
+            92,
+            108
+          ],
+          [
+            124,
+            102
+          ],
+          [
+            27,
+            5
+          ]
+        ]
+      }
+    },
+    "IMD436": {
+      "seed": 436001350,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9053,
+        "preferred_available": 9053,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            88,
+            64
+          ],
+          [
+            99,
+            79
+          ],
+          [
+            124,
+            49
+          ],
+          [
+            60,
+            9
+          ],
+          [
+            64,
+            78
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7331,
+        "preferred_available": 7331,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            10,
+            58
+          ],
+          [
+            117,
+            116
+          ],
+          [
+            90,
+            127
+          ],
+          [
+            112,
+            83
+          ],
+          [
+            28,
+            122
+          ]
+        ]
+      }
+    },
+    "IMD348": {
+      "seed": 348001086,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12211,
+        "preferred_available": 12211,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            101,
+            100
+          ],
+          [
+            66,
+            55
+          ],
+          [
+            14,
+            116
+          ],
+          [
+            119,
+            78
+          ],
+          [
+            8,
+            74
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4173,
+        "preferred_available": 4173,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            101,
+            12
+          ],
+          [
+            116,
+            122
+          ],
+          [
+            89,
+            0
+          ],
+          [
+            64,
+            12
+          ],
+          [
+            94,
+            24
+          ]
+        ]
+      }
+    },
+    "IMD410": {
+      "seed": 410001272,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8936,
+        "preferred_available": 8936,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            82
+          ],
+          [
+            102,
+            57
+          ],
+          [
+            32,
+            78
+          ],
+          [
+            83,
+            91
+          ],
+          [
+            100,
+            12
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7448,
+        "preferred_available": 7448,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            79,
+            124
+          ],
+          [
+            1,
+            97
+          ],
+          [
+            126,
+            9
+          ],
+          [
+            70,
+            8
+          ],
+          [
+            105,
+            98
+          ]
+        ]
+      }
+    },
+    "IMD256": {
+      "seed": 256000810,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3501,
+        "preferred_available": 3501,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            40
+          ],
+          [
+            53,
+            81
+          ],
+          [
+            67,
+            40
+          ],
+          [
+            47,
+            73
+          ],
+          [
+            68,
+            53
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12883,
+        "preferred_available": 12883,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            63,
+            103
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            114,
+            95
+          ],
+          [
+            88,
+            120
+          ],
+          [
+            77,
+            94
+          ]
+        ]
+      }
+    },
+    "IMD044": {
+      "seed": 44000174,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7631,
+        "preferred_available": 7631,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            76,
+            79
+          ],
+          [
+            86,
+            90
+          ],
+          [
+            62,
+            49
+          ],
+          [
+            93,
+            69
+          ],
+          [
+            101,
+            25
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8753,
+        "preferred_available": 8753,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            108,
+            112
+          ],
+          [
+            126,
+            108
+          ],
+          [
+            117,
+            7
+          ],
+          [
+            0,
+            40
+          ],
+          [
+            12,
+            55
+          ]
+        ]
+      }
+    },
+    "IMD078": {
+      "seed": 78000276,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3296,
+        "preferred_available": 3296,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            102,
+            66
+          ],
+          [
+            109,
+            51
+          ],
+          [
+            75,
+            50
+          ],
+          [
+            89,
+            85
+          ],
+          [
+            55,
+            46
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13088,
+        "preferred_available": 13088,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            57,
+            11
+          ],
+          [
+            90,
+            118
+          ],
+          [
+            61,
+            112
+          ],
+          [
+            43,
+            14
+          ],
+          [
+            121,
+            109
+          ]
+        ]
+      }
+    },
+    "IMD400": {
+      "seed": 400001242,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7507,
+        "preferred_available": 7507,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            74
+          ],
+          [
+            77,
+            53
+          ],
+          [
+            34,
+            23
+          ],
+          [
+            64,
+            59
+          ],
+          [
+            104,
+            63
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8877,
+        "preferred_available": 8877,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            20,
+            77
+          ],
+          [
+            114,
+            108
+          ],
+          [
+            113,
+            41
+          ],
+          [
+            18,
+            6
+          ],
+          [
+            116,
+            97
+          ]
+        ]
+      }
+    },
+    "IMD364": {
+      "seed": 364001134,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1964,
+        "preferred_available": 1964,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            55,
+            70
+          ],
+          [
+            94,
+            68
+          ],
+          [
+            57,
+            83
+          ],
+          [
+            61,
+            64
+          ],
+          [
+            70,
+            70
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14420,
+        "preferred_available": 14420,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            18,
+            45
+          ],
+          [
+            60,
+            24
+          ],
+          [
+            34,
+            3
+          ],
+          [
+            42,
+            111
+          ],
+          [
+            110,
+            73
+          ]
+        ]
+      }
+    },
+    "IMD378": {
+      "seed": 378001176,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8231,
+        "preferred_available": 8231,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            85,
+            45
+          ],
+          [
+            49,
+            75
+          ],
+          [
+            63,
+            74
+          ],
+          [
+            15,
+            58
+          ],
+          [
+            102,
+            47
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8153,
+        "preferred_available": 8153,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            47,
+            9
+          ],
+          [
+            123,
+            123
+          ],
+          [
+            47,
+            120
+          ],
+          [
+            112,
+            31
+          ],
+          [
+            1,
+            94
+          ]
+        ]
+      }
+    },
+    "IMD339": {
+      "seed": 339001059,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2532,
+        "preferred_available": 2532,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            60
+          ],
+          [
+            42,
+            59
+          ],
+          [
+            90,
+            51
+          ],
+          [
+            82,
+            67
+          ],
+          [
+            79,
+            70
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13852,
+        "preferred_available": 13852,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            35
+          ],
+          [
+            22,
+            68
+          ],
+          [
+            87,
+            78
+          ],
+          [
+            22,
+            103
+          ],
+          [
+            57,
+            84
+          ]
+        ]
+      }
+    },
+    "IMD305": {
+      "seed": 305000957,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3177,
+        "preferred_available": 3177,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            68,
+            54
+          ],
+          [
+            72,
+            46
+          ],
+          [
+            69,
+            39
+          ],
+          [
+            31,
+            50
+          ],
+          [
+            87,
+            40
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13207,
+        "preferred_available": 13207,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            14,
+            89
+          ],
+          [
+            39,
+            103
+          ],
+          [
+            36,
+            0
+          ],
+          [
+            2,
+            101
+          ],
+          [
+            30,
+            37
+          ]
+        ]
+      }
+    },
+    "IMD030": {
+      "seed": 30000132,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8687,
+        "preferred_available": 8687,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            119,
+            41
+          ],
+          [
+            114,
+            46
+          ],
+          [
+            39,
+            81
+          ],
+          [
+            57,
+            22
+          ],
+          [
+            55,
+            96
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7697,
+        "preferred_available": 7697,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            19,
+            21
+          ],
+          [
+            101,
+            105
+          ],
+          [
+            108,
+            94
+          ],
+          [
+            126,
+            9
+          ],
+          [
+            120,
+            71
+          ]
+        ]
+      }
+    },
+    "IMD153": {
+      "seed": 153000501,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7250,
+        "preferred_available": 7250,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            43
+          ],
+          [
+            85,
+            29
+          ],
+          [
+            124,
+            49
+          ],
+          [
+            86,
+            52
+          ],
+          [
+            47,
+            86
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9134,
+        "preferred_available": 9134,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            123,
+            120
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            70,
+            99
+          ],
+          [
+            84,
+            125
+          ]
+        ]
+      }
+    },
+    "IMD147": {
+      "seed": 147000483,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7802,
+        "preferred_available": 7802,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            26,
+            54
+          ],
+          [
+            81,
+            81
+          ],
+          [
+            20,
+            91
+          ],
+          [
+            40,
+            27
+          ],
+          [
+            110,
+            65
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8582,
+        "preferred_available": 8582,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            0,
+            42
+          ],
+          [
+            27,
+            20
+          ],
+          [
+            121,
+            7
+          ],
+          [
+            98,
+            112
+          ],
+          [
+            31,
+            20
+          ]
+        ]
+      }
+    },
+    "IMD015": {
+      "seed": 15000087,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3802,
+        "preferred_available": 3802,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            44
+          ],
+          [
+            85,
+            65
+          ],
+          [
+            71,
+            52
+          ],
+          [
+            57,
+            76
+          ],
+          [
+            67,
+            52
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12582,
+        "preferred_available": 12582,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            44,
+            93
+          ],
+          [
+            83,
+            108
+          ],
+          [
+            10,
+            47
+          ],
+          [
+            83,
+            96
+          ],
+          [
+            51,
+            24
+          ]
+        ]
+      }
+    },
+    "IMD154": {
+      "seed": 154000504,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 9565,
+        "preferred_available": 9565,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            114,
+            48
+          ],
+          [
+            102,
+            66
+          ],
+          [
+            101,
+            33
+          ],
+          [
+            115,
+            58
+          ],
+          [
+            53,
+            85
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 6819,
+        "preferred_available": 6819,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            100,
+            126
+          ],
+          [
+            93,
+            127
+          ],
+          [
+            55,
+            10
+          ],
+          [
+            45,
+            13
+          ],
+          [
+            107,
+            117
+          ]
+        ]
+      }
+    },
+    "IMD395": {
+      "seed": 395001227,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5240,
+        "preferred_available": 5240,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            85,
+            87
+          ],
+          [
+            47,
+            77
+          ],
+          [
+            85,
+            45
+          ],
+          [
+            58,
+            56
+          ],
+          [
+            78,
+            50
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11144,
+        "preferred_available": 11144,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            99
+          ],
+          [
+            11,
+            30
+          ],
+          [
+            100,
+            91
+          ],
+          [
+            21,
+            123
+          ],
+          [
+            85,
+            22
+          ]
+        ]
+      }
+    },
+    "IMD254": {
+      "seed": 254000804,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5673,
+        "preferred_available": 5673,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            48,
+            63
+          ],
+          [
+            19,
+            45
+          ],
+          [
+            106,
+            77
+          ],
+          [
+            57,
+            87
+          ],
+          [
+            33,
+            48
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10711,
+        "preferred_available": 10711,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            109
+          ],
+          [
+            119,
+            5
+          ],
+          [
+            92,
+            89
+          ],
+          [
+            44,
+            106
+          ],
+          [
+            22,
+            6
+          ]
+        ]
+      }
+    },
+    "IMD162": {
+      "seed": 162000528,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2548,
+        "preferred_available": 2548,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            47,
+            81
+          ],
+          [
+            85,
+            66
+          ],
+          [
+            35,
+            86
+          ],
+          [
+            21,
+            57
+          ],
+          [
+            79,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13836,
+        "preferred_available": 13836,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            126,
+            37
+          ],
+          [
+            127,
+            14
+          ],
+          [
+            111,
+            86
+          ],
+          [
+            3,
+            122
+          ],
+          [
+            112,
+            4
+          ]
+        ]
+      }
+    },
+    "IMD135": {
+      "seed": 135000447,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 7913,
+        "preferred_available": 7913,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            87,
+            18
+          ],
+          [
+            82,
+            27
+          ],
+          [
+            90,
+            33
+          ],
+          [
+            61,
+            74
+          ],
+          [
+            59,
+            21
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8471,
+        "preferred_available": 8471,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            118,
+            71
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            80,
+            123
+          ],
+          [
+            5,
+            87
+          ],
+          [
+            57,
+            102
+          ]
+        ]
+      }
+    },
+    "IMD091": {
+      "seed": 91000315,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10945,
+        "preferred_available": 10945,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            62
+          ],
+          [
+            18,
+            51
+          ],
+          [
+            90,
+            73
+          ],
+          [
+            62,
+            117
+          ],
+          [
+            102,
+            56
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5439,
+        "preferred_available": 5439,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            116,
+            0
+          ],
+          [
+            19,
+            120
+          ],
+          [
+            84,
+            126
+          ],
+          [
+            67,
+            123
+          ],
+          [
+            15,
+            7
+          ]
+        ]
+      }
+    },
+    "IMD164": {
+      "seed": 164000534,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3703,
+        "preferred_available": 3703,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            25,
+            51
+          ],
+          [
+            34,
+            65
+          ],
+          [
+            25,
+            67
+          ],
+          [
+            86,
+            55
+          ],
+          [
+            40,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12681,
+        "preferred_available": 12681,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            115,
+            6
+          ],
+          [
+            27,
+            115
+          ],
+          [
+            68,
+            98
+          ],
+          [
+            75,
+            113
+          ],
+          [
+            111,
+            10
+          ]
+        ]
+      }
+    },
+    "IMD170": {
+      "seed": 170000552,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11948,
+        "preferred_available": 11948,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            62
+          ],
+          [
+            125,
+            45
+          ],
+          [
+            38,
+            86
+          ],
+          [
+            60,
+            21
+          ],
+          [
+            39,
+            104
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4436,
+        "preferred_available": 4436,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            124,
+            2
+          ],
+          [
+            22,
+            26
+          ],
+          [
+            44,
+            16
+          ],
+          [
+            117,
+            109
+          ],
+          [
+            46,
+            5
+          ]
+        ]
+      }
+    },
+    "IMD058": {
+      "seed": 58000216,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 10505,
+        "preferred_available": 10505,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            54,
+            46
+          ],
+          [
+            125,
+            17
+          ],
+          [
+            127,
+            40
+          ],
+          [
+            57,
+            11
+          ],
+          [
+            24,
+            65
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 5879,
+        "preferred_available": 5879,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            52,
+            107
+          ],
+          [
+            121,
+            106
+          ],
+          [
+            6,
+            116
+          ],
+          [
+            65,
+            118
+          ],
+          [
+            92,
+            96
+          ]
+        ]
+      }
+    },
+    "IMD169": {
+      "seed": 169000549,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 3630,
+        "preferred_available": 3630,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            51
+          ],
+          [
+            83,
+            78
+          ],
+          [
+            45,
+            66
+          ],
+          [
+            53,
+            41
+          ],
+          [
+            82,
+            79
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 12754,
+        "preferred_available": 12754,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            69,
+            28
+          ],
+          [
+            118,
+            86
+          ],
+          [
+            104,
+            15
+          ],
+          [
+            63,
+            97
+          ],
+          [
+            54,
+            109
+          ]
+        ]
+      }
+    },
+    "IMD242": {
+      "seed": 242000768,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 4795,
+        "preferred_available": 4795,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            23,
+            39
+          ],
+          [
+            55,
+            28
+          ],
+          [
+            83,
+            80
+          ],
+          [
+            50,
+            49
+          ],
+          [
+            61,
+            45
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 11589,
+        "preferred_available": 11589,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            2,
+            51
+          ],
+          [
+            109,
+            10
+          ],
+          [
+            69,
+            118
+          ],
+          [
+            126,
+            94
+          ],
+          [
+            104,
+            20
+          ]
+        ]
+      }
+    },
+    "IMD437": {
+      "seed": 437001353,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8062,
+        "preferred_available": 8062,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            104,
+            63
+          ],
+          [
+            14,
+            63
+          ],
+          [
+            24,
+            40
+          ],
+          [
+            23,
+            77
+          ],
+          [
+            73,
+            29
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 8322,
+        "preferred_available": 8322,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            111
+          ],
+          [
+            46,
+            108
+          ],
+          [
+            23,
+            116
+          ],
+          [
+            76,
+            107
+          ],
+          [
+            71,
+            8
+          ]
+        ]
+      }
+    },
+    "IMD386": {
+      "seed": 386001200,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1995,
+        "preferred_available": 1995,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            74,
+            90
+          ],
+          [
+            79,
+            70
+          ],
+          [
+            82,
+            79
+          ],
+          [
+            54,
+            79
+          ],
+          [
+            84,
+            53
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14389,
+        "preferred_available": 14389,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            13,
+            8
+          ],
+          [
+            66,
+            34
+          ],
+          [
+            83,
+            105
+          ],
+          [
+            82,
+            49
+          ],
+          [
+            97,
+            16
+          ]
+        ]
+      }
+    },
+    "IMD035": {
+      "seed": 35000147,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 2409,
+        "preferred_available": 2409,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            22,
+            62
+          ],
+          [
+            68,
+            48
+          ],
+          [
+            47,
+            55
+          ],
+          [
+            13,
+            68
+          ],
+          [
+            44,
+            60
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 13975,
+        "preferred_available": 13975,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            104,
+            66
+          ],
+          [
+            11,
+            60
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            23,
+            95
+          ],
+          [
+            117,
+            115
+          ]
+        ]
+      }
+    },
+    "IMD413": {
+      "seed": 413001281,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15499,
+        "preferred_available": 15499,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            62,
+            68
+          ],
+          [
+            25,
+            87
+          ],
+          [
+            21,
+            36
+          ],
+          [
+            19,
+            21
+          ],
+          [
+            71,
+            107
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 885,
+        "preferred_available": 885,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            1,
+            125
+          ],
+          [
+            8,
+            122
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            103,
+            124
+          ],
+          [
+            115,
+            119
+          ]
+        ]
+      }
+    },
+    "IMD375": {
+      "seed": 375001167,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 1984,
+        "preferred_available": 1984,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            56
+          ],
+          [
+            74,
+            79
+          ],
+          [
+            47,
+            59
+          ],
+          [
+            51,
+            84
+          ],
+          [
+            61,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 14400,
+        "preferred_available": 14400,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            4,
+            46
+          ],
+          [
+            88,
+            90
+          ],
+          [
+            32,
+            13
+          ],
+          [
+            116,
+            94
+          ],
+          [
+            122,
+            38
+          ]
+        ]
+      }
+    },
+    "IMD143": {
+      "seed": 143000471,
+      "positive": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 963,
+        "preferred_available": 963,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            71
+          ],
+          [
+            61,
+            59
+          ],
+          [
+            71,
+            61
+          ],
+          [
+            50,
+            70
+          ],
+          [
+            62,
+            78
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 5,
+        "sampled": 5,
+        "available": 15421,
+        "preferred_available": 15421,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            102
+          ],
+          [
+            117,
+            47
+          ],
+          [
+            22,
+            80
+          ],
+          [
+            31,
+            56
+          ],
+          [
+            119,
+            68
+          ]
+        ]
+      }
+    }
+  }
+}

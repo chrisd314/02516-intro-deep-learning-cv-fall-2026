@@ -1,0 +1,4092 @@
+{
+  "labels": {
+    "unknown": -1,
+    "background": 0,
+    "lesion": 1
+  },
+  "config": {
+    "model": "unet",
+    "size": 128,
+    "batch_size": 6,
+    "epochs": 20,
+    "lr": 0.001,
+    "split_seed": 42,
+    "seed": 42,
+    "num_workers": 0,
+    "num_threads": 4,
+    "data_root": "/dtu/datasets1/02516",
+    "require_cuda": true,
+    "supervision": "points",
+    "positive_clicks": 1,
+    "negative_clicks": 1,
+    "click_seed": 42,
+    "strategy": "uniform",
+    "margin": 3,
+    "checkpoint": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/points_uniform_01p_01n.pth",
+    "reference_record": "/zhome/bf/0/233720/IDLCV/Proj3_Git/part2/runs/part2_29896775/full_unet_bce.pth.json",
+    "dataset": "PH2",
+    "loss": "bce"
+  },
+  "cases": {
+    "IMD133": {
+      "seed": 133000441,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1712,
+        "preferred_available": 1712,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            87
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14672,
+        "preferred_available": 14672,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            89,
+            46
+          ]
+        ]
+      }
+    },
+    "IMD424": {
+      "seed": 424001314,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 16108,
+        "preferred_available": 16108,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            20
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 276,
+        "preferred_available": 276,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            124,
+            127
+          ]
+        ]
+      }
+    },
+    "IMD196": {
+      "seed": 196000630,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1670,
+        "preferred_available": 1670,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            60
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14714,
+        "preferred_available": 14714,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            125,
+            9
+          ]
+        ]
+      }
+    },
+    "IMD431": {
+      "seed": 431001335,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7211,
+        "preferred_available": 7211,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            23
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9173,
+        "preferred_available": 9173,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            28,
+            112
+          ]
+        ]
+      }
+    },
+    "IMD210": {
+      "seed": 210000672,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5991,
+        "preferred_available": 5991,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            50,
+            75
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10393,
+        "preferred_available": 10393,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            76,
+            13
+          ]
+        ]
+      }
+    },
+    "IMD278": {
+      "seed": 278000876,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1799,
+        "preferred_available": 1799,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            77,
+            69
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14585,
+        "preferred_available": 14585,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            21
+          ]
+        ]
+      }
+    },
+    "IMD019": {
+      "seed": 19000099,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1557,
+        "preferred_available": 1557,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            76,
+            39
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14827,
+        "preferred_available": 14827,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            34,
+            14
+          ]
+        ]
+      }
+    },
+    "IMD004": {
+      "seed": 4000054,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3187,
+        "preferred_available": 3187,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            101,
+            66
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13197,
+        "preferred_available": 13197,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            80,
+            117
+          ]
+        ]
+      }
+    },
+    "IMD126": {
+      "seed": 126000420,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3544,
+        "preferred_available": 3544,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            46,
+            102
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12840,
+        "preferred_available": 12840,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            33,
+            27
+          ]
+        ]
+      }
+    },
+    "IMD064": {
+      "seed": 64000234,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12962,
+        "preferred_available": 12962,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            88,
+            43
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3422,
+        "preferred_available": 3422,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            37,
+            111
+          ]
+        ]
+      }
+    },
+    "IMD356": {
+      "seed": 356001110,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3286,
+        "preferred_available": 3286,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            89,
+            46
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13098,
+        "preferred_available": 13098,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            61,
+            102
+          ]
+        ]
+      }
+    },
+    "IMD402": {
+      "seed": 402001248,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4001,
+        "preferred_available": 4001,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            39,
+            64
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12383,
+        "preferred_available": 12383,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            15
+          ]
+        ]
+      }
+    },
+    "IMD306": {
+      "seed": 306000960,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1295,
+        "preferred_available": 1295,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            84,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15089,
+        "preferred_available": 15089,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            122,
+            9
+          ]
+        ]
+      }
+    },
+    "IMD146": {
+      "seed": 146000480,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2457,
+        "preferred_available": 2457,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            25,
+            77
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13927,
+        "preferred_available": 13927,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            109,
+            127
+          ]
+        ]
+      }
+    },
+    "IMD388": {
+      "seed": 388001206,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 6665,
+        "preferred_available": 6665,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            45,
+            44
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9719,
+        "preferred_available": 9719,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            42,
+            109
+          ]
+        ]
+      }
+    },
+    "IMD398": {
+      "seed": 398001236,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12326,
+        "preferred_available": 12326,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            59,
+            47
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4058,
+        "preferred_available": 4058,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            112
+          ]
+        ]
+      }
+    },
+    "IMD065": {
+      "seed": 65000237,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11295,
+        "preferred_available": 11295,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            105,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5089,
+        "preferred_available": 5089,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            106,
+            3
+          ]
+        ]
+      }
+    },
+    "IMD328": {
+      "seed": 328001026,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 911,
+        "preferred_available": 911,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            73,
+            49
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15473,
+        "preferred_available": 15473,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            3,
+            21
+          ]
+        ]
+      }
+    },
+    "IMD040": {
+      "seed": 40000162,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1331,
+        "preferred_available": 1331,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            69
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15053,
+        "preferred_available": 15053,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            107,
+            119
+          ]
+        ]
+      }
+    },
+    "IMD006": {
+      "seed": 6000060,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2420,
+        "preferred_available": 2420,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            46,
+            81
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13964,
+        "preferred_available": 13964,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            29,
+            114
+          ]
+        ]
+      }
+    },
+    "IMD389": {
+      "seed": 389001209,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8849,
+        "preferred_available": 8849,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            46
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7535,
+        "preferred_available": 7535,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            69,
+            7
+          ]
+        ]
+      }
+    },
+    "IMD021": {
+      "seed": 21000105,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2201,
+        "preferred_available": 2201,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            79,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14183,
+        "preferred_available": 14183,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            13,
+            107
+          ]
+        ]
+      }
+    },
+    "IMD061": {
+      "seed": 61000225,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11151,
+        "preferred_available": 11151,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            2
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5233,
+        "preferred_available": 5233,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            76
+          ]
+        ]
+      }
+    },
+    "IMD304": {
+      "seed": 304000954,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2473,
+        "preferred_available": 2473,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            50,
+            35
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13911,
+        "preferred_available": 13911,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            19,
+            109
+          ]
+        ]
+      }
+    },
+    "IMD423": {
+      "seed": 423001311,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10747,
+        "preferred_available": 10747,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            89
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5637,
+        "preferred_available": 5637,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            116,
+            122
+          ]
+        ]
+      }
+    },
+    "IMD393": {
+      "seed": 393001221,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8629,
+        "preferred_available": 8629,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            49,
+            86
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7755,
+        "preferred_available": 7755,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            31,
+            2
+          ]
+        ]
+      }
+    },
+    "IMD076": {
+      "seed": 76000270,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4262,
+        "preferred_available": 4262,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            102,
+            66
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12122,
+        "preferred_available": 12122,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            101
+          ]
+        ]
+      }
+    },
+    "IMD208": {
+      "seed": 208000666,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4097,
+        "preferred_available": 4097,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            91
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12287,
+        "preferred_available": 12287,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            112
+          ]
+        ]
+      }
+    },
+    "IMD009": {
+      "seed": 9000069,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1874,
+        "preferred_available": 1874,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            57,
+            45
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14510,
+        "preferred_available": 14510,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            22,
+            103
+          ]
+        ]
+      }
+    },
+    "IMD432": {
+      "seed": 432001338,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3394,
+        "preferred_available": 3394,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            53,
+            83
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12990,
+        "preferred_available": 12990,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            43
+          ]
+        ]
+      }
+    },
+    "IMD048": {
+      "seed": 48000186,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2206,
+        "preferred_available": 2206,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            108,
+            85
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14178,
+        "preferred_available": 14178,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            14,
+            78
+          ]
+        ]
+      }
+    },
+    "IMD279": {
+      "seed": 279000879,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1795,
+        "preferred_available": 1795,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            91,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14589,
+        "preferred_available": 14589,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            69,
+            21
+          ]
+        ]
+      }
+    },
+    "IMD018": {
+      "seed": 18000096,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1474,
+        "preferred_available": 1474,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            81,
+            54
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14910,
+        "preferred_available": 14910,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            28
+          ]
+        ]
+      }
+    },
+    "IMD047": {
+      "seed": 47000183,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3762,
+        "preferred_available": 3762,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            38,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12622,
+        "preferred_available": 12622,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            105,
+            105
+          ]
+        ]
+      }
+    },
+    "IMD382": {
+      "seed": 382001188,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4250,
+        "preferred_available": 4250,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            37,
+            53
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12134,
+        "preferred_available": 12134,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            122,
+            49
+          ]
+        ]
+      }
+    },
+    "IMD137": {
+      "seed": 137000453,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2124,
+        "preferred_available": 2124,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            50,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14260,
+        "preferred_available": 14260,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            62
+          ]
+        ]
+      }
+    },
+    "IMD118": {
+      "seed": 118000396,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2755,
+        "preferred_available": 2755,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13629,
+        "preferred_available": 13629,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            100,
+            87
+          ]
+        ]
+      }
+    },
+    "IMD433": {
+      "seed": 433001341,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1932,
+        "preferred_available": 1932,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            44,
+            89
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14452,
+        "preferred_available": 14452,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            0,
+            20
+          ]
+        ]
+      }
+    },
+    "IMD042": {
+      "seed": 42000168,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4122,
+        "preferred_available": 4122,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            69,
+            42
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12262,
+        "preferred_available": 12262,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            106,
+            27
+          ]
+        ]
+      }
+    },
+    "IMD404": {
+      "seed": 404001254,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7605,
+        "preferred_available": 7605,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            45,
+            54
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8779,
+        "preferred_available": 8779,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            94,
+            8
+          ]
+        ]
+      }
+    },
+    "IMD403": {
+      "seed": 403001251,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11918,
+        "preferred_available": 11918,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            52,
+            28
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4466,
+        "preferred_available": 4466,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            94,
+            1
+          ]
+        ]
+      }
+    },
+    "IMD112": {
+      "seed": 112000378,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 6517,
+        "preferred_available": 6517,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            27,
+            37
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9867,
+        "preferred_available": 9867,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            106,
+            124
+          ]
+        ]
+      }
+    },
+    "IMD016": {
+      "seed": 16000090,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2762,
+        "preferred_available": 2762,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            74,
+            41
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13622,
+        "preferred_available": 13622,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            50
+          ]
+        ]
+      }
+    },
+    "IMD371": {
+      "seed": 371001155,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7606,
+        "preferred_available": 7606,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            30
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8778,
+        "preferred_available": 8778,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            30,
+            22
+          ]
+        ]
+      }
+    },
+    "IMD390": {
+      "seed": 390001212,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3007,
+        "preferred_available": 3007,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            65,
+            84
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13377,
+        "preferred_available": 13377,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            119,
+            5
+          ]
+        ]
+      }
+    },
+    "IMD090": {
+      "seed": 90000312,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11931,
+        "preferred_available": 11931,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            95,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4453,
+        "preferred_available": 4453,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            115,
+            20
+          ]
+        ]
+      }
+    },
+    "IMD285": {
+      "seed": 285000897,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7333,
+        "preferred_available": 7333,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            31,
+            98
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9051,
+        "preferred_available": 9051,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            114,
+            93
+          ]
+        ]
+      }
+    },
+    "IMD203": {
+      "seed": 203000651,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1748,
+        "preferred_available": 1748,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            72,
+            79
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14636,
+        "preferred_available": 14636,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            65,
+            93
+          ]
+        ]
+      }
+    },
+    "IMD142": {
+      "seed": 142000468,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2320,
+        "preferred_available": 2320,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            79,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14064,
+        "preferred_available": 14064,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            52
+          ]
+        ]
+      }
+    },
+    "IMD219": {
+      "seed": 219000699,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11551,
+        "preferred_available": 11551,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4833,
+        "preferred_available": 4833,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            89
+          ]
+        ]
+      }
+    },
+    "IMD200": {
+      "seed": 200000642,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2623,
+        "preferred_available": 2623,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13761,
+        "preferred_available": 13761,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            52,
+            80
+          ]
+        ]
+      }
+    },
+    "IMD171": {
+      "seed": 171000555,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2296,
+        "preferred_available": 2296,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            65
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14088,
+        "preferred_available": 14088,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            44,
+            25
+          ]
+        ]
+      }
+    },
+    "IMD198": {
+      "seed": 198000636,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2005,
+        "preferred_available": 2005,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            44,
+            69
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14379,
+        "preferred_available": 14379,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            24,
+            11
+          ]
+        ]
+      }
+    },
+    "IMD372": {
+      "seed": 372001158,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2590,
+        "preferred_available": 2590,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            73
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13794,
+        "preferred_available": 13794,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            15,
+            44
+          ]
+        ]
+      }
+    },
+    "IMD063": {
+      "seed": 63000231,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7909,
+        "preferred_available": 7909,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            94,
+            52
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8475,
+        "preferred_available": 8475,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            116,
+            112
+          ]
+        ]
+      }
+    },
+    "IMD002": {
+      "seed": 2000048,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4511,
+        "preferred_available": 4511,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            63,
+            88
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11873,
+        "preferred_available": 11873,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            117
+          ]
+        ]
+      }
+    },
+    "IMD392": {
+      "seed": 392001218,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2280,
+        "preferred_available": 2280,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            54,
+            66
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14104,
+        "preferred_available": 14104,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            95,
+            96
+          ]
+        ]
+      }
+    },
+    "IMD430": {
+      "seed": 430001332,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3146,
+        "preferred_available": 3146,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            51,
+            30
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13238,
+        "preferred_available": 13238,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            43,
+            7
+          ]
+        ]
+      }
+    },
+    "IMD022": {
+      "seed": 22000108,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4479,
+        "preferred_available": 4479,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            56
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11905,
+        "preferred_available": 11905,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            73,
+            87
+          ]
+        ]
+      }
+    },
+    "IMD152": {
+      "seed": 152000498,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 6026,
+        "preferred_available": 6026,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            30,
+            26
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10358,
+        "preferred_available": 10358,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            73,
+            104
+          ]
+        ]
+      }
+    },
+    "IMD197": {
+      "seed": 197000633,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4263,
+        "preferred_available": 4263,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            87,
+            47
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12121,
+        "preferred_available": 12121,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            9,
+            116
+          ]
+        ]
+      }
+    },
+    "IMD049": {
+      "seed": 49000189,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2216,
+        "preferred_available": 2216,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            56,
+            50
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14168,
+        "preferred_available": 14168,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            28,
+            97
+          ]
+        ]
+      }
+    },
+    "IMD385": {
+      "seed": 385001197,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3671,
+        "preferred_available": 3671,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            68,
+            77
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12713,
+        "preferred_available": 12713,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            126,
+            43
+          ]
+        ]
+      }
+    },
+    "IMD408": {
+      "seed": 408001266,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14392,
+        "preferred_available": 14392,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            79,
+            112
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1992,
+        "preferred_available": 1992,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            82,
+            2
+          ]
+        ]
+      }
+    },
+    "IMD349": {
+      "seed": 349001089,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9865,
+        "preferred_available": 9865,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            12,
+            49
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 6519,
+        "preferred_available": 6519,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            14
+          ]
+        ]
+      }
+    },
+    "IMD149": {
+      "seed": 149000489,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5999,
+        "preferred_available": 5999,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            43
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10385,
+        "preferred_available": 10385,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            53,
+            101
+          ]
+        ]
+      }
+    },
+    "IMD240": {
+      "seed": 240000762,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15280,
+        "preferred_available": 15280,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            40,
+            67
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1104,
+        "preferred_available": 1104,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            124,
+            0
+          ]
+        ]
+      }
+    },
+    "IMD025": {
+      "seed": 25000117,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2872,
+        "preferred_available": 2872,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            88
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13512,
+        "preferred_available": 13512,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            11,
+            109
+          ]
+        ]
+      }
+    },
+    "IMD020": {
+      "seed": 20000102,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1942,
+        "preferred_available": 1942,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            84,
+            65
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14442,
+        "preferred_available": 14442,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            24,
+            0
+          ]
+        ]
+      }
+    },
+    "IMD409": {
+      "seed": 409001269,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10691,
+        "preferred_available": 10691,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            96
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5693,
+        "preferred_available": 5693,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            1,
+            18
+          ]
+        ]
+      }
+    },
+    "IMD374": {
+      "seed": 374001164,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1467,
+        "preferred_available": 1467,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            64
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14917,
+        "preferred_available": 14917,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            118,
+            111
+          ]
+        ]
+      }
+    },
+    "IMD411": {
+      "seed": 411001275,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15673,
+        "preferred_available": 15673,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            83
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 711,
+        "preferred_available": 711,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            122
+          ]
+        ]
+      }
+    },
+    "IMD132": {
+      "seed": 132000438,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1059,
+        "preferred_available": 1059,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            72,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15325,
+        "preferred_available": 15325,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            17,
+            37
+          ]
+        ]
+      }
+    },
+    "IMD156": {
+      "seed": 156000510,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 960,
+        "preferred_available": 960,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            48
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15424,
+        "preferred_available": 15424,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            83
+          ]
+        ]
+      }
+    },
+    "IMD396": {
+      "seed": 396001230,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3229,
+        "preferred_available": 3229,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            38,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13155,
+        "preferred_available": 13155,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            42,
+            119
+          ]
+        ]
+      }
+    },
+    "IMD075": {
+      "seed": 75000267,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3844,
+        "preferred_available": 3844,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            51,
+            75
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12540,
+        "preferred_available": 12540,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            76,
+            127
+          ]
+        ]
+      }
+    },
+    "IMD199": {
+      "seed": 199000639,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2677,
+        "preferred_available": 2677,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            97,
+            40
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13707,
+        "preferred_available": 13707,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            90,
+            1
+          ]
+        ]
+      }
+    },
+    "IMD150": {
+      "seed": 150000492,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 6497,
+        "preferred_available": 6497,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            53,
+            95
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9887,
+        "preferred_available": 9887,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            75,
+            107
+          ]
+        ]
+      }
+    },
+    "IMD092": {
+      "seed": 92000318,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 516,
+        "preferred_available": 516,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            81
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15868,
+        "preferred_available": 15868,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            75,
+            116
+          ]
+        ]
+      }
+    },
+    "IMD434": {
+      "seed": 434001344,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3217,
+        "preferred_available": 3217,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            89
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13167,
+        "preferred_available": 13167,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            17,
+            22
+          ]
+        ]
+      }
+    },
+    "IMD157": {
+      "seed": 157000513,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4243,
+        "preferred_available": 4243,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            38,
+            50
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12141,
+        "preferred_available": 12141,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            88,
+            100
+          ]
+        ]
+      }
+    },
+    "IMD251": {
+      "seed": 251000795,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1847,
+        "preferred_available": 1847,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            45,
+            38
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14537,
+        "preferred_available": 14537,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            19,
+            65
+          ]
+        ]
+      }
+    },
+    "IMD207": {
+      "seed": 207000663,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3363,
+        "preferred_available": 3363,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            69
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13021,
+        "preferred_available": 13021,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            1,
+            82
+          ]
+        ]
+      }
+    },
+    "IMD347": {
+      "seed": 347001083,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8787,
+        "preferred_available": 8787,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            54,
+            39
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7597,
+        "preferred_available": 7597,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            12,
+            16
+          ]
+        ]
+      }
+    },
+    "IMD369": {
+      "seed": 369001149,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4187,
+        "preferred_available": 4187,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            52,
+            59
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12197,
+        "preferred_available": 12197,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            110,
+            123
+          ]
+        ]
+      }
+    },
+    "IMD043": {
+      "seed": 43000171,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2827,
+        "preferred_available": 2827,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            65
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13557,
+        "preferred_available": 13557,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            123,
+            82
+          ]
+        ]
+      }
+    },
+    "IMD024": {
+      "seed": 24000114,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1381,
+        "preferred_available": 1381,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            66
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15003,
+        "preferred_available": 15003,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            36,
+            91
+          ]
+        ]
+      }
+    },
+    "IMD367": {
+      "seed": 367001143,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3455,
+        "preferred_available": 3455,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            30,
+            75
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12929,
+        "preferred_available": 12929,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            123,
+            80
+          ]
+        ]
+      }
+    },
+    "IMD280": {
+      "seed": 280000882,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1738,
+        "preferred_available": 1738,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            59,
+            42
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14646,
+        "preferred_available": 14646,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            105,
+            100
+          ]
+        ]
+      }
+    },
+    "IMD407": {
+      "seed": 407001263,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 6142,
+        "preferred_available": 6142,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            94,
+            54
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10242,
+        "preferred_available": 10242,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            120,
+            115
+          ]
+        ]
+      }
+    },
+    "IMD125": {
+      "seed": 125000417,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2792,
+        "preferred_available": 2792,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            62,
+            76
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13592,
+        "preferred_available": 13592,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            127,
+            58
+          ]
+        ]
+      }
+    },
+    "IMD155": {
+      "seed": 155000507,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 6497,
+        "preferred_available": 6497,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            39,
+            75
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9887,
+        "preferred_available": 9887,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            112,
+            74
+          ]
+        ]
+      }
+    },
+    "IMD376": {
+      "seed": 376001170,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2421,
+        "preferred_available": 2421,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            74,
+            43
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13963,
+        "preferred_available": 13963,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            25,
+            26
+          ]
+        ]
+      }
+    },
+    "IMD182": {
+      "seed": 182000588,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4966,
+        "preferred_available": 4966,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            77,
+            96
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11418,
+        "preferred_available": 11418,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            18
+          ]
+        ]
+      }
+    },
+    "IMD384": {
+      "seed": 384001194,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1996,
+        "preferred_available": 1996,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            83,
+            57
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14388,
+        "preferred_available": 14388,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            104,
+            87
+          ]
+        ]
+      }
+    },
+    "IMD140": {
+      "seed": 140000462,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1863,
+        "preferred_available": 1863,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            72,
+            60
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14521,
+        "preferred_available": 14521,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            48,
+            51
+          ]
+        ]
+      }
+    },
+    "IMD037": {
+      "seed": 37000153,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2222,
+        "preferred_available": 2222,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            92,
+            67
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14162,
+        "preferred_available": 14162,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            2
+          ]
+        ]
+      }
+    },
+    "IMD420": {
+      "seed": 420001302,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11968,
+        "preferred_available": 11968,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            63,
+            66
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4416,
+        "preferred_available": 4416,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            103,
+            3
+          ]
+        ]
+      }
+    },
+    "IMD211": {
+      "seed": 211000675,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4837,
+        "preferred_available": 4837,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            84,
+            86
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11547,
+        "preferred_available": 11547,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            20,
+            65
+          ]
+        ]
+      }
+    },
+    "IMD088": {
+      "seed": 88000306,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7473,
+        "preferred_available": 7473,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            90,
+            91
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8911,
+        "preferred_available": 8911,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            106,
+            93
+          ]
+        ]
+      }
+    },
+    "IMD406": {
+      "seed": 406001260,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7778,
+        "preferred_available": 7778,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            39,
+            77
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8606,
+        "preferred_available": 8606,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            22,
+            116
+          ]
+        ]
+      }
+    },
+    "IMD008": {
+      "seed": 8000066,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1919,
+        "preferred_available": 1919,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            72,
+            88
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14465,
+        "preferred_available": 14465,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            7,
+            55
+          ]
+        ]
+      }
+    },
+    "IMD039": {
+      "seed": 39000159,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1255,
+        "preferred_available": 1255,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            36,
+            63
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15129,
+        "preferred_available": 15129,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            92,
+            105
+          ]
+        ]
+      }
+    },
+    "IMD419": {
+      "seed": 419001299,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13160,
+        "preferred_available": 13160,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            84,
+            111
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3224,
+        "preferred_available": 3224,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            119
+          ]
+        ]
+      }
+    },
+    "IMD177": {
+      "seed": 177000573,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2442,
+        "preferred_available": 2442,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            53,
+            83
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13942,
+        "preferred_available": 13942,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            43,
+            11
+          ]
+        ]
+      }
+    },
+    "IMD176": {
+      "seed": 176000570,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5363,
+        "preferred_available": 5363,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            55,
+            108
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11021,
+        "preferred_available": 11021,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            13,
+            84
+          ]
+        ]
+      }
+    },
+    "IMD331": {
+      "seed": 331001035,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1636,
+        "preferred_available": 1636,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            57,
+            52
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14748,
+        "preferred_available": 14748,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            29,
+            28
+          ]
+        ]
+      }
+    },
+    "IMD284": {
+      "seed": 284000894,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14147,
+        "preferred_available": 14147,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            8,
+            103
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2237,
+        "preferred_available": 2237,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            105,
+            110
+          ]
+        ]
+      }
+    },
+    "IMD436": {
+      "seed": 436001350,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9053,
+        "preferred_available": 9053,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            88,
+            64
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7331,
+        "preferred_available": 7331,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            10,
+            58
+          ]
+        ]
+      }
+    },
+    "IMD348": {
+      "seed": 348001086,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12211,
+        "preferred_available": 12211,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            101,
+            100
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4173,
+        "preferred_available": 4173,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            101,
+            12
+          ]
+        ]
+      }
+    },
+    "IMD410": {
+      "seed": 410001272,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8936,
+        "preferred_available": 8936,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            82
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7448,
+        "preferred_available": 7448,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            79,
+            124
+          ]
+        ]
+      }
+    },
+    "IMD256": {
+      "seed": 256000810,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3501,
+        "preferred_available": 3501,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            40
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12883,
+        "preferred_available": 12883,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            63,
+            103
+          ]
+        ]
+      }
+    },
+    "IMD044": {
+      "seed": 44000174,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7631,
+        "preferred_available": 7631,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            76,
+            79
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8753,
+        "preferred_available": 8753,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            108,
+            112
+          ]
+        ]
+      }
+    },
+    "IMD078": {
+      "seed": 78000276,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3296,
+        "preferred_available": 3296,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            102,
+            66
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13088,
+        "preferred_available": 13088,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            57,
+            11
+          ]
+        ]
+      }
+    },
+    "IMD400": {
+      "seed": 400001242,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7507,
+        "preferred_available": 7507,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            74
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8877,
+        "preferred_available": 8877,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            20,
+            77
+          ]
+        ]
+      }
+    },
+    "IMD364": {
+      "seed": 364001134,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1964,
+        "preferred_available": 1964,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            55,
+            70
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14420,
+        "preferred_available": 14420,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            18,
+            45
+          ]
+        ]
+      }
+    },
+    "IMD378": {
+      "seed": 378001176,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8231,
+        "preferred_available": 8231,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            85,
+            45
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8153,
+        "preferred_available": 8153,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            47,
+            9
+          ]
+        ]
+      }
+    },
+    "IMD339": {
+      "seed": 339001059,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2532,
+        "preferred_available": 2532,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            60
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13852,
+        "preferred_available": 13852,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            93,
+            35
+          ]
+        ]
+      }
+    },
+    "IMD305": {
+      "seed": 305000957,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3177,
+        "preferred_available": 3177,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            68,
+            54
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13207,
+        "preferred_available": 13207,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            14,
+            89
+          ]
+        ]
+      }
+    },
+    "IMD030": {
+      "seed": 30000132,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8687,
+        "preferred_available": 8687,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            119,
+            41
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7697,
+        "preferred_available": 7697,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            19,
+            21
+          ]
+        ]
+      }
+    },
+    "IMD153": {
+      "seed": 153000501,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7250,
+        "preferred_available": 7250,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            43
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9134,
+        "preferred_available": 9134,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            123,
+            120
+          ]
+        ]
+      }
+    },
+    "IMD147": {
+      "seed": 147000483,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7802,
+        "preferred_available": 7802,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            26,
+            54
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8582,
+        "preferred_available": 8582,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            0,
+            42
+          ]
+        ]
+      }
+    },
+    "IMD015": {
+      "seed": 15000087,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3802,
+        "preferred_available": 3802,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            58,
+            44
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12582,
+        "preferred_available": 12582,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            44,
+            93
+          ]
+        ]
+      }
+    },
+    "IMD154": {
+      "seed": 154000504,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 9565,
+        "preferred_available": 9565,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            114,
+            48
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 6819,
+        "preferred_available": 6819,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            100,
+            126
+          ]
+        ]
+      }
+    },
+    "IMD395": {
+      "seed": 395001227,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5240,
+        "preferred_available": 5240,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            85,
+            87
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11144,
+        "preferred_available": 11144,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            16,
+            99
+          ]
+        ]
+      }
+    },
+    "IMD254": {
+      "seed": 254000804,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5673,
+        "preferred_available": 5673,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            48,
+            63
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10711,
+        "preferred_available": 10711,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            67,
+            109
+          ]
+        ]
+      }
+    },
+    "IMD162": {
+      "seed": 162000528,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2548,
+        "preferred_available": 2548,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            47,
+            81
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13836,
+        "preferred_available": 13836,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            126,
+            37
+          ]
+        ]
+      }
+    },
+    "IMD135": {
+      "seed": 135000447,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 7913,
+        "preferred_available": 7913,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            87,
+            18
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8471,
+        "preferred_available": 8471,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            118,
+            71
+          ]
+        ]
+      }
+    },
+    "IMD091": {
+      "seed": 91000315,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10945,
+        "preferred_available": 10945,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            121,
+            62
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5439,
+        "preferred_available": 5439,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            116,
+            0
+          ]
+        ]
+      }
+    },
+    "IMD164": {
+      "seed": 164000534,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3703,
+        "preferred_available": 3703,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            25,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12681,
+        "preferred_available": 12681,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            115,
+            6
+          ]
+        ]
+      }
+    },
+    "IMD170": {
+      "seed": 170000552,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11948,
+        "preferred_available": 11948,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            62
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4436,
+        "preferred_available": 4436,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            124,
+            2
+          ]
+        ]
+      }
+    },
+    "IMD058": {
+      "seed": 58000216,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 10505,
+        "preferred_available": 10505,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            54,
+            46
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 5879,
+        "preferred_available": 5879,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            52,
+            107
+          ]
+        ]
+      }
+    },
+    "IMD169": {
+      "seed": 169000549,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 3630,
+        "preferred_available": 3630,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            71,
+            51
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 12754,
+        "preferred_available": 12754,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            69,
+            28
+          ]
+        ]
+      }
+    },
+    "IMD242": {
+      "seed": 242000768,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 4795,
+        "preferred_available": 4795,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            23,
+            39
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 11589,
+        "preferred_available": 11589,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            2,
+            51
+          ]
+        ]
+      }
+    },
+    "IMD437": {
+      "seed": 437001353,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8062,
+        "preferred_available": 8062,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            104,
+            63
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 8322,
+        "preferred_available": 8322,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            111
+          ]
+        ]
+      }
+    },
+    "IMD386": {
+      "seed": 386001200,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1995,
+        "preferred_available": 1995,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            74,
+            90
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14389,
+        "preferred_available": 14389,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            13,
+            8
+          ]
+        ]
+      }
+    },
+    "IMD035": {
+      "seed": 35000147,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 2409,
+        "preferred_available": 2409,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            22,
+            62
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 13975,
+        "preferred_available": 13975,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            104,
+            66
+          ]
+        ]
+      }
+    },
+    "IMD413": {
+      "seed": 413001281,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15499,
+        "preferred_available": 15499,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            62,
+            68
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 885,
+        "preferred_available": 885,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            1,
+            125
+          ]
+        ]
+      }
+    },
+    "IMD375": {
+      "seed": 375001167,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 1984,
+        "preferred_available": 1984,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            66,
+            56
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 14400,
+        "preferred_available": 14400,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            4,
+            46
+          ]
+        ]
+      }
+    },
+    "IMD143": {
+      "seed": 143000471,
+      "positive": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 963,
+        "preferred_available": 963,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            60,
+            71
+          ]
+        ]
+      },
+      "negative": {
+        "requested": 1,
+        "sampled": 1,
+        "available": 15421,
+        "preferred_available": 15421,
+        "fallback": 0,
+        "coordinates_yx": [
+          [
+            64,
+            102
+          ]
+        ]
+      }
+    }
+  }
+}
